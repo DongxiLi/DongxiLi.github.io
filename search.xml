@@ -4,11 +4,11 @@
   
     
     <entry>
-      <title></title>
+      <title>git</title>
       <link href="/2021/09/07/git/"/>
       <url>/2021/09/07/git/</url>
       
-        <content type="html"><![CDATA[<hr><h2 id="title：-git使用"><a href="#title：-git使用" class="headerlink" title="title： git使用"></a>title： git使用</h2><ol start="6"><li><p>版本控制系统</p><p> 中央集权型版本控制系统 —&gt; 必须有（中央）版本控制服务器</p><p> 1990s —&gt; CVS (Current Version System) / VSS (Visual Source Safe)</p><pre><code>     ---&gt; 锁定模式 ---&gt; 互斥 ---&gt; 一个文件不能被多个人同时维护</code></pre><p> 2000 —&gt; Subversion (SVN)</p><pre><code>     ---&gt; 合并模式 ---&gt; 允许多个人同时维护一个文件 ---&gt; 提交工作成果         ---&gt; 没有冲突：自动合并         ---&gt; 发生冲突：提示你手动解决</code></pre><p> 分布式版本控制系统 —&gt; 没有中央服务器存在一样可以实施版本控制</p><p> 2005 —&gt; Git —&gt; Linus</p><p> ~ Git命令</p><ol><li><p>初始化本地仓库：git init</p></li><li><p>将文件放到暂存区（缓存区）：<br> ~ git add <filename><br> ~ git add .</p></li><li><p>将文件提交到仓库：git commit -m ‘…’<br> 如果是第一次使用Git进行提交，需要先配置用户名和邮箱：<br> ~ git config –global user.email ‘……’<br> ~ git config –global user.name ‘……’</p></li><li><p>查看提交日志：git log</p></li><li><p>查看版本控制状态：git status</p></li><li><p>用缓存区恢复工作区：git restore <filename></p></li><li><p>用仓库恢复缓存区：git restore –staged <filename></p></li><li><p>版本回退：git reset <commit-ID><br> ~ –hard：让仓库、缓存区、工作区都回退到指定的版本（三者一致）<br> ~ –mixed：默认选项，让仓库、缓存区回退到指定的版本，工作区保持现状<br> ~ –soft：让仓库回退到指定的版本，缓存区和工作区保持现状</p></li><li><p>查看过去和未来的日志：git reflog</p></li><li><p>远端仓库：<br>~ 添加：git remote add origin <url><br>~ 删除：git remote remove origin<br>~ 查看：git remote -v</p></li><li><p>上推（向服务器推代码）：git push -u origin master</p></li><li><p>下拉（从服务器获取代码）：git pull<br>git pull = git fetch + git merge</p></li><li><p>克隆：git clone –depth 1 <url></p></li><li><p>生成密钥对：ssh-keygen -t rsa -b 2048 -C “<a href="mailto:&#106;&#x61;&#x63;&#x6b;&#102;&#114;&#117;&#101;&#x64;&#x40;&#49;&#50;&#54;&#x2e;&#99;&#x6f;&#x6d;">&#106;&#x61;&#x63;&#x6b;&#102;&#114;&#117;&#101;&#x64;&#x40;&#49;&#50;&#54;&#x2e;&#99;&#x6f;&#x6d;</a>“</p></li><li><p>查看公钥文件：cat ~/.ssh/id_rsa.pub —&gt; 部署到服务器上<br>提示：免密访问请使用SSH地址</p></li></ol></li><li><p>代码托管平台（Git服务器）</p><p> ~ 国外：github.com<br> ~ 国内：</p><pre><code> - 码云：https://gitee.com ---&gt; 当做Git私服来使用     - coding：https://coding.net     - 行云：https://codeup.teambition.com/tour</code></pre></li></ol><p>10.远端仓库:<br>Йл/Д: git remote add origin <url><br>删除:<br>git remote remove origin<br>查看:<br>git remote -V<br>11.. 上推(向服务器推代码) : git push -u origin master<br>12. FjI (MRRSTREX1tTE) : git pull<br>    git pull = git fetch + git merge</p><ol start="13"><li><p>5ßk: git clone <url></p></li><li><p>分支操作</p><pre><code>~ 查看分支：git branch -a~ 创建分支：git branch &lt;branch-name&gt;~ 切换分支：git switch &lt;branch-name&gt; / git checkout &lt;branch-name&gt;~ 创建和切换分支：git switch -c &lt;branch-name&gt; / git checkout -b &lt;branch-name&gt;~ 合并分支：    - git switch &lt;target-branch&gt;    - git merge --no-ff &lt;branch-name&gt;~ 变基：    - git rebase &lt;target-branch&gt;    - git switch &lt;target-branch&gt;    - git merge &lt;branch-name&gt;</code></pre><p>~遇到冲突如何解决<br>1.从服务器fetch最新的代码，放到一个临时分支</p></li></ol><ul><li>git fetch origin master: temp</li></ul><p>2.查看哪里有冲突<br>git diff temp<br>3.尝试将临时分支合并到当前分支—&gt; CONFLICT<br>-<br>git merge temp<br>-合并虽然是失败的，但是有冲突的代码已经被标记了<br>取消合并: git merge –abort<br>4.解决代码冲突(找到当事人进行沟通，确定保留谁的代码)<br>5.重新提交解决冲突后的代码并上推到服务器</p><ul><li>git add <fi Lename><br>git commit -m</li><li>git push -u origin <branch-name></li></ul><p>6.删除临时分支<br>git branch -d temp<br>7.重新发起Pull Request</p>]]></content>
+        <content type="html"><![CDATA[<ol start="6"><li><p>版本控制系统</p><p> 中央集权型版本控制系统 —&gt; 必须有（中央）版本控制服务器</p><p> 1990s —&gt; CVS (Current Version System) / VSS (Visual Source Safe)</p><pre><code>     ---&gt; 锁定模式 ---&gt; 互斥 ---&gt; 一个文件不能被多个人同时维护</code></pre><p> 2000 —&gt; Subversion (SVN)</p><pre><code>     ---&gt; 合并模式 ---&gt; 允许多个人同时维护一个文件 ---&gt; 提交工作成果         ---&gt; 没有冲突：自动合并         ---&gt; 发生冲突：提示你手动解决</code></pre><p> 分布式版本控制系统 —&gt; 没有中央服务器存在一样可以实施版本控制</p><p> 2005 —&gt; Git —&gt; Linus</p><p> ~ Git命令</p><ol><li><p>初始化本地仓库：git init</p></li><li><p>将文件放到暂存区（缓存区）：<br> ~ git add <filename><br> ~ git add .</p></li><li><p>将文件提交到仓库：git commit -m ‘…’<br> 如果是第一次使用Git进行提交，需要先配置用户名和邮箱：<br> ~ git config –global user.email ‘……’<br> ~ git config –global user.name ‘……’</p></li><li><p>查看提交日志：git log</p></li><li><p>查看版本控制状态：git status</p></li><li><p>用缓存区恢复工作区：git restore <filename></p></li><li><p>用仓库恢复缓存区：git restore –staged <filename></p></li><li><p>版本回退：git reset <commit-ID><br> ~ –hard：让仓库、缓存区、工作区都回退到指定的版本（三者一致）<br> ~ –mixed：默认选项，让仓库、缓存区回退到指定的版本，工作区保持现状<br> ~ –soft：让仓库回退到指定的版本，缓存区和工作区保持现状</p></li><li><p>查看过去和未来的日志：git reflog</p></li><li><p>远端仓库：<br>~ 添加：git remote add origin <url><br>~ 删除：git remote remove origin<br>~ 查看：git remote -v</p></li><li><p>上推（向服务器推代码）：git push -u origin master</p></li><li><p>下拉（从服务器获取代码）：git pull<br>git pull = git fetch + git merge</p></li><li><p>克隆：git clone –depth 1 <url></p></li><li><p>生成密钥对：ssh-keygen -t rsa -b 2048 -C “<a href="mailto:&#x6a;&#97;&#99;&#x6b;&#x66;&#x72;&#117;&#101;&#x64;&#64;&#49;&#50;&#54;&#46;&#99;&#111;&#109;">&#x6a;&#97;&#99;&#x6b;&#x66;&#x72;&#117;&#101;&#x64;&#64;&#49;&#50;&#54;&#46;&#99;&#111;&#109;</a>“</p></li><li><p>查看公钥文件：cat ~/.ssh/id_rsa.pub —&gt; 部署到服务器上<br>提示：免密访问请使用SSH地址</p></li></ol></li><li><p>代码托管平台（Git服务器）</p><p> ~ 国外：github.com<br> ~ 国内：</p><pre><code> - 码云：https://gitee.com ---&gt; 当做Git私服来使用     - coding：https://coding.net     - 行云：https://codeup.teambition.com/tour</code></pre></li></ol><p>10.远端仓库:<br>Йл/Д: git remote add origin <url><br>删除:<br>git remote remove origin<br>查看:<br>git remote -V<br>11.. 上推(向服务器推代码) : git push -u origin master<br>12. FjI (MRRSTREX1tTE) : git pull<br>    git pull = git fetch + git merge</p><ol start="13"><li><p>5ßk: git clone <url></p></li><li><p>分支操作</p><pre><code>~ 查看分支：git branch -a~ 创建分支：git branch &lt;branch-name&gt;~ 切换分支：git switch &lt;branch-name&gt; / git checkout &lt;branch-name&gt;~ 创建和切换分支：git switch -c &lt;branch-name&gt; / git checkout -b &lt;branch-name&gt;~ 合并分支：    - git switch &lt;target-branch&gt;    - git merge --no-ff &lt;branch-name&gt;~ 变基：    - git rebase &lt;target-branch&gt;    - git switch &lt;target-branch&gt;    - git merge &lt;branch-name&gt;</code></pre><p>~遇到冲突如何解决<br>1.从服务器fetch最新的代码，放到一个临时分支</p></li></ol><ul><li>git fetch origin master: temp</li></ul><p>2.查看哪里有冲突<br>git diff temp<br>3.尝试将临时分支合并到当前分支—&gt; CONFLICT<br>-<br>git merge temp<br>-合并虽然是失败的，但是有冲突的代码已经被标记了<br>取消合并: git merge –abort<br>4.解决代码冲突(找到当事人进行沟通，确定保留谁的代码)<br>5.重新提交解决冲突后的代码并上推到服务器</p><ul><li>git add <fi Lename><br>git commit -m</li><li>git push -u origin <branch-name></li></ul><p>6.删除临时分支<br>git branch -d temp<br>7.重新发起Pull Request</p>]]></content>
       
       
       
@@ -17,7 +17,7 @@
     
     
     <entry>
-      <title></title>
+      <title>mysql</title>
       <link href="/2021/08/25/mysql%E7%AC%94%E8%AE%B0/"/>
       <url>/2021/08/25/mysql%E7%AC%94%E8%AE%B0/</url>
       
@@ -30,7 +30,7 @@
     
     
     <entry>
-      <title></title>
+      <title>面向对象编程</title>
       <link href="/2021/08/08/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
       <url>/2021/08/08/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</url>
       
@@ -43,7 +43,20 @@
     
     
     <entry>
-      <title></title>
+      <title>函数</title>
+      <link href="/2021/08/07/%E5%87%BD%E6%95%B0/"/>
+      <url>/2021/08/07/%E5%87%BD%E6%95%B0/</url>
+      
+        <content type="html"><![CDATA[<h2 id="函数定义："><a href="#函数定义：" class="headerlink" title="函数定义："></a>函数定义：</h2><p>Python中使用<code>def</code>关键字来定义函数，通过<code>return</code>关键字来返回函数的执行结果。</p><pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 定义函数：def是定义函数的关键字、fac是函数名，num是参数（自变量）</span><span class="token keyword">def</span> <span class="token function">fac</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span><span class="token punctuation">:</span>    <span class="token triple-quoted-string string">"""求阶乘"""</span>    result <span class="token operator">=</span> <span class="token number">1</span>    <span class="token keyword">for</span> n <span class="token keyword">in</span> range<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> num <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>        result <span class="token operator">*=</span> n    <span class="token comment" spellcheck="true"># 返回num的阶乘（因变量）</span>    <span class="token keyword">return</span> resultm <span class="token operator">=</span> int<span class="token punctuation">(</span>input<span class="token punctuation">(</span><span class="token string">'m = '</span><span class="token punctuation">)</span><span class="token punctuation">)</span>n <span class="token operator">=</span> int<span class="token punctuation">(</span>input<span class="token punctuation">(</span><span class="token string">'n = '</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true"># 当需要计算阶乘的时候不用再写重复的代码而是直接调用函数fac</span><span class="token comment" spellcheck="true"># 调用函数的语法是在函数名后面跟上圆括号并传入参数</span><span class="token keyword">print</span><span class="token punctuation">(</span>fac<span class="token punctuation">(</span>m<span class="token punctuation">)</span> <span class="token operator">//</span> fac<span class="token punctuation">(</span>n<span class="token punctuation">)</span> <span class="token operator">//</span> fac<span class="token punctuation">(</span>m <span class="token operator">-</span> n<span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="函数的作用："><a href="#函数的作用：" class="headerlink" title="函数的作用："></a>函数的作用：</h2><p>世界级的编程大师<em>Martin Fowler</em>先生曾经说过：“<strong>代码有很多种坏味道，重复是最坏的一种！</strong>”因此函数的作用就是解决代码重复的方案之一。</p><h2 id="函数的参数"><a href="#函数的参数" class="headerlink" title="函数的参数"></a>函数的参数</h2><h3 id="参数的默认值"><a href="#参数的默认值" class="headerlink" title="参数的默认值"></a>参数的默认值</h3><p>如果函数中没有<code>return</code>语句，那么函数默认返回代表空值的<code>None</code>。另外，在定义函数时，函数也可以没有自变量，但是函数名后面的圆括号是必须有的。Python中还允许函数的参数拥有默认值。</p><p>带默认值的参数必须放在不带默认值的参数之后，否则将产生<code>SyntaxError</code>错误，错误消息是：<code>non-default argument follows default argument</code>，翻译成中文的意思是“没有默认值的参数放在了带默认值的参数后面”</p><h3 id="可变参数"><a href="#可变参数" class="headerlink" title="可变参数"></a>可变参数</h3><p>Python语言中的函数可以通过星号表达式语法来支持可变参数。</p><p>可变参数指的是在调用函数时，可以向函数传入0个或任意多个参数。</p><p>有的时候我们并不知道函数的调用者会向该函数传入多少个参数，这个时候可变参数就可以派上用场。</p><h3 id="位置参数和关键字参数"><a href="#位置参数和关键字参数" class="headerlink" title="位置参数和关键字参数"></a>位置参数和关键字参数</h3><p>在设计函数的时候，函数的参数个数是暂时无法确定的</p><p>arguments —&gt; args —&gt; 参数</p><p>位置参数 —&gt; positional argument</p><ul><li>*args —&gt; 可变参数 —&gt; 可以接收零个或任意多个位置参数 —&gt; 将所有的位置参数打包成一个元组</li></ul><p>关键字参数 —&gt; keyword argument —&gt; 参数名=参数值</p><ul><li>**kwargs —&gt; 可以接收零个或任意多个关键字参数 —&gt; 将所有的关键字参数打包成一个字典</li></ul><p>关键字参数一定是在位置参数的后面！！！</p><h2 id="匿名函数"><a href="#匿名函数" class="headerlink" title="匿名函数"></a>匿名函数</h2><p>Lambda函数 —&gt; 没有名字而且一句话就能写完的函数，唯一的表达式就是函数的返回值</p><h2 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h2><p>函数如果直接或间接的调用了自身，这种调用称为递归调用。</p><p>不管函数是调用别的函数，还是调用自身，一定要做到快速收敛。<br>在比较有限的调用次数内能够结束，而不是无限制的调用函数。</p><p>如果一个函数（通常指递归调用的函数）不能够快速收敛，那么就很有可能产生下面的错误<br>RecursionError: maximum recursion depth exceeded<br>最终导致程序的崩溃。</p><p>阶乘的定义：<br>~ n! = n * (n - 1) * (n - 2) * … * 2 * 1<br>~ n! = n * (n - 1)!</p><p>递归函数的两个要点：</p><ol><li>递归公式（第n次跟第n-1次的关系）</li><li>收敛条件（什么时候停止递归调用）</li></ol><h2 id="函数的调用过程"><a href="#函数的调用过程" class="headerlink" title="函数的调用过程"></a>函数的调用过程</h2><img src="/Users/lidongxi/Documents/phone1000/weeks_three/课件/函数的调用过程.jpg" alt="函数的调用过程图解" style="zoom:50%;" /><h2 id="Python中函数的地位"><a href="#Python中函数的地位" class="headerlink" title="Python中函数的地位"></a>Python中函数的地位</h2><p>Python中的函数是一等函数（一等公民）：</p><ol><li>函数可以作为函数的参数</li><li>函数可以作为函数的返回值</li><li>函数可以赋值给变量</li></ol><p>如果把函数作为函数的参数或者返回值，这种玩法通常称之为高阶函数。<br>通常使用高阶函数可以实现对原有函数的解耦合操作。</p><p>运算 - operate，运算符 - operator</p><h2 id="全局变量和局部变量"><a href="#全局变量和局部变量" class="headerlink" title="全局变量和局部变量"></a>全局变量和局部变量</h2><p>全局变量（没有写在任何函数里面的变量）<br>局部变量（定义在函数内部的变量）</p><p>Python程序中搜索一个变量是按照 LEGB 顺序进行搜索的</p><p>Local（局部作用域） —&gt; Embeded（嵌套作用域） —&gt; Global（全局作用域）<br>—&gt; Built-in（内置作用域） —&gt; NameError: name … not defined</p><p>global —&gt; 声明使用全局变量或者定义一个局部变量将其放到全局作用域<br>nonlocal —&gt; 声明使用嵌套作用域的变量（不使用局部变量）</p><h2 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h2><h3 id="如何使用其他文件（模块）中定义的函数"><a href="#如何使用其他文件（模块）中定义的函数" class="headerlink" title="如何使用其他文件（模块）中定义的函数"></a>如何使用其他文件（模块）中定义的函数</h3><p>方法一：可以通过import导入模块，然后通过”模块名.函数名”的方式调用函数；<br>方法二：直接从模块中导入函数 —&gt; “from 模块 import 函数” —&gt; 直接通过函数名调用函数</p><h3 id="如何给导入的函数，模块取别名"><a href="#如何给导入的函数，模块取别名" class="headerlink" title="如何给导入的函数，模块取别名"></a>如何给导入的函数，模块取别名</h3><p>import导入函数、模块时，可以使用as关键字（alias）进行别名</p><p>做工程化项目开发时，如果项目中的代码文件非常多，我们可以使用”包”（package）来管理”模块”（module），<br>再通过模块来管理函数，包其实就是一个文件夹，而模块就是一个Python文件，通过这种方式就可以很好的解决</p><h3 id="如何解决命名冲突问题"><a href="#如何解决命名冲突问题" class="headerlink" title="如何解决命名冲突问题"></a>如何解决命名冲突问题</h3><p>大型项目团队开发中经常遇到的命名冲突的问题。</p><p>方法一：导入函数的时候对函数进行别名<br>方法二：使用完全限定名（qualified name） —&gt; [包名.]模块名.函数名</p><h2 id="Python内存管理图解"><a href="#Python内存管理图解" class="headerlink" title="Python内存管理图解"></a>Python内存管理图解</h2><img src="/Users/lidongxi/Documents/phone1000/weeks_three/课件/内存管理图.jpg" alt="内存管理" style="zoom:50%;" /><h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p>写程序的终极原则：高内聚，低耦合 —&gt; high cohesion low coupling</p><p>设计函数最为重要的原则：单一职责原则（一个函数只做好一件事情）—&gt; 高度内聚</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>枚举</title>
       <link href="/2021/08/06/%E6%9E%9A%E4%B8%BE/"/>
       <url>/2021/08/06/%E6%9E%9A%E4%B8%BE/</url>
       
@@ -56,7 +69,7 @@
     
     
     <entry>
-      <title></title>
+      <title>再谈字符串</title>
       <link href="/2021/08/01/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
       <url>/2021/08/01/%E5%AD%97%E7%AC%A6%E4%B8%B2/</url>
       
@@ -69,7 +82,7 @@
     
     
     <entry>
-      <title></title>
+      <title>元组</title>
       <link href="/2021/08/01/%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B9%8B%E5%85%83%E7%BB%84/"/>
       <url>/2021/08/01/%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B9%8B%E5%85%83%E7%BB%84/</url>
       
@@ -82,7 +95,7 @@
     
     
     <entry>
-      <title></title>
+      <title>列表</title>
       <link href="/2021/07/31/%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B9%8B%E5%88%97%E8%A1%A8/"/>
       <url>/2021/07/31/%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B9%8B%E5%88%97%E8%A1%A8/</url>
       
@@ -95,7 +108,7 @@
     
     
     <entry>
-      <title></title>
+      <title>Python三大结构</title>
       <link href="/2021/07/22/Python%E8%8F%9C%E9%B8%9F%E5%BF%85%E7%BB%8F%E4%B9%8B%E8%B7%AF(%E4%B8%89)%20/"/>
       <url>/2021/07/22/Python%E8%8F%9C%E9%B8%9F%E5%BF%85%E7%BB%8F%E4%B9%8B%E8%B7%AF(%E4%B8%89)%20/</url>
       
@@ -108,7 +121,7 @@
     
     
     <entry>
-      <title></title>
+      <title>Python内置数据类型</title>
       <link href="/2021/07/21/Python%E8%8F%9C%E9%B8%9F%E5%BF%85%E7%BB%8F%E4%B9%8B%E8%B7%AF(%E4%BA%8C)/"/>
       <url>/2021/07/21/Python%E8%8F%9C%E9%B8%9F%E5%BF%85%E7%BB%8F%E4%B9%8B%E8%B7%AF(%E4%BA%8C)/</url>
       
