@@ -29,7 +29,10 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="李东西" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
 <link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
@@ -504,7 +507,7 @@
 <ol>
 <li><p>初始化本地仓库：git init</p>
 </li>
-<li><p>将文件放到暂存区（缓存区）：<br> ~ git add <filename><br> ~ git add .</p>
+<li><p>将文件放到暂存区（缓存区）：<br> ~ git add <filename><br> ~ git add .</filename></p>
 </li>
 <li><p>将文件提交到仓库：git commit -m ‘…’<br> 如果是第一次使用Git进行提交，需要先配置用户名和邮箱：<br> ~ git config –global user.email ‘……’<br> ~ git config –global user.name ‘……’</p>
 </li>
@@ -512,23 +515,23 @@
 </li>
 <li><p>查看版本控制状态：git status</p>
 </li>
-<li><p>用缓存区恢复工作区：git restore <filename></p>
+<li><p>用缓存区恢复工作区：git restore <filename></filename></p>
 </li>
-<li><p>用仓库恢复缓存区：git restore –staged <filename></p>
+<li><p>用仓库恢复缓存区：git restore –staged <filename></filename></p>
 </li>
-<li><p>版本回退：git reset <commit-ID><br> ~ –hard：让仓库、缓存区、工作区都回退到指定的版本（三者一致）<br> ~ –mixed：默认选项，让仓库、缓存区回退到指定的版本，工作区保持现状<br> ~ –soft：让仓库回退到指定的版本，缓存区和工作区保持现状</p>
+<li><p>版本回退：git reset <commit-id><br> ~ –hard：让仓库、缓存区、工作区都回退到指定的版本（三者一致）<br> ~ –mixed：默认选项，让仓库、缓存区回退到指定的版本，工作区保持现状<br> ~ –soft：让仓库回退到指定的版本，缓存区和工作区保持现状</commit-id></p>
 </li>
 <li><p>查看过去和未来的日志：git reflog</p>
 </li>
-<li><p>远端仓库：<br>~ 添加：git remote add origin <url><br>~ 删除：git remote remove origin<br>~ 查看：git remote -v</p>
+<li><p>远端仓库：<br>~ 添加：git remote add origin <url><br>~ 删除：git remote remove origin<br>~ 查看：git remote -v</url></p>
 </li>
 <li><p>上推（向服务器推代码）：git push -u origin master</p>
 </li>
 <li><p>下拉（从服务器获取代码）：git pull<br>git pull = git fetch + git merge</p>
 </li>
-<li><p>克隆：git clone –depth 1 <url></p>
+<li><p>克隆：git clone –depth 1 <url></url></p>
 </li>
-<li><p>生成密钥对：ssh-keygen -t rsa -b 2048 -C “<a href="mailto:&#106;&#97;&#x63;&#107;&#102;&#x72;&#117;&#x65;&#x64;&#64;&#x31;&#x32;&#54;&#x2e;&#99;&#x6f;&#109;">&#106;&#97;&#x63;&#107;&#102;&#x72;&#117;&#x65;&#x64;&#64;&#x31;&#x32;&#54;&#x2e;&#99;&#x6f;&#109;</a>“</p>
+<li><p>生成密钥对：ssh-keygen -t rsa -b 2048 -C “<a href="mailto:jackfrued@126.com">jackfrued@126.com</a>“</p>
 </li>
 <li><p>查看公钥文件：cat ~/.ssh/id_rsa.pub —&gt; 部署到服务器上<br>提示：免密访问请使用SSH地址</p>
 </li>
@@ -542,9 +545,9 @@
 </code></pre>
 </li>
 </ol>
-<p>10.远端仓库:<br>Йл/Д: git remote add origin <url><br>删除:<br>git remote remove origin<br>查看:<br>git remote -V<br>11.. 上推(向服务器推代码) : git push -u origin master<br>12. FjI (MRRSTREX1tTE) : git pull<br>    git pull = git fetch + git merge</p>
+<p>10.远端仓库:<br>Йл/Д: git remote add origin <url><br>删除:<br>git remote remove origin<br>查看:<br>git remote -V<br>11.. 上推(向服务器推代码) : git push -u origin master<br>12. FjI (MRRSTREX1tTE) : git pull<br>    git pull = git fetch + git merge</url></p>
 <ol start="13">
-<li><p>5ßk: git clone <url></p>
+<li><p>5ßk: git clone <url></url></p>
 </li>
 <li><p>分支操作</p>
 <pre><code>~ 查看分支：git branch -a
@@ -567,8 +570,8 @@
 </ul>
 <p>2.查看哪里有冲突<br>git diff temp<br>3.尝试将临时分支合并到当前分支—&gt; CONFLICT<br>-<br>git merge temp<br>-合并虽然是失败的，但是有冲突的代码已经被标记了<br>取消合并: git merge –abort<br>4.解决代码冲突(找到当事人进行沟通，确定保留谁的代码)<br>5.重新提交解决冲突后的代码并上推到服务器</p>
 <ul>
-<li>git add <fi Lename><br>git commit -m</li>
-<li>git push -u origin <branch-name></li>
+<li>git add <fi lename=""><br>git commit -m</fi></li>
+<li>git push -u origin <branch-name></branch-name></li>
 </ul>
 <p>6.删除临时分支<br>git branch -d temp<br>7.重新发起Pull Request</p>
 
@@ -1067,60 +1070,6 @@
 
 
     <footer class="page-footer bg-color">
-    
-        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
-<style>
-    .aplayer .aplayer-lrc p {
-        
-        display: none;
-        
-        font-size: 12px;
-        font-weight: 700;
-        line-height: 16px !important;
-    }
-
-    .aplayer .aplayer-lrc p.aplayer-lrc-current {
-        
-        display: none;
-        
-        font-size: 15px;
-        color: #42b983;
-    }
-
-    
-    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
-        left: -66px !important;
-    }
-
-    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
-        left: 0px !important;
-    }
-
-    
-</style>
-<div class="">
-    
-    <div class="row">
-        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
-                   server="netease"
-                   type="playlist"
-                   id="503838841"
-                   fixed='true'
-                   autoplay='false'
-                   theme='#42b983'
-                   loop='all'
-                   order='random'
-                   preload='auto'
-                   volume='0.7'
-                   list-folded='true'
-        >
-        </meting-js>
-    </div>
-</div>
-
-<script src="/libs/aplayer/APlayer.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
-
     
     <div class="container row center-align" style="margin-bottom: 0px !important;">
         <div class="col s12 m8 l8 copy-right">

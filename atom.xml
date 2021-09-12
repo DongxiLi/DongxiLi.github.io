@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>李东西</title>
+  
+  <subtitle>吾生也有涯，而知也无涯.</subtitle>
+  <link href="http://example.com/atom.xml" rel="self"/>
+  
+  <link href="http://example.com/"/>
+  <updated>2021-09-12T11:13:38.400Z</updated>
+  <id>http://example.com/</id>
+  
+  <author>
+    <name>李东西</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>git</title>
+    <link href="http://example.com/2021/09/07/git/"/>
+    <id>http://example.com/2021/09/07/git/</id>
+    <published>2021-09-07T03:10:59.819Z</published>
+    <updated>2021-09-12T11:13:38.400Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;ol start=&quot;6&quot;&gt;
+&lt;li&gt;&lt;p&gt;版本控制系统&lt;/p&gt;
+&lt;p&gt; 中央集权型版本控制系统 —&amp;gt; 必须有（中央）版本控制服务器&lt;/p&gt;
+&lt;p&gt; 1990s —&amp;gt; CVS (Current Version System) / VSS (Visual Source</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>mysql</title>
+    <link href="http://example.com/2021/08/25/mysql%E7%AC%94%E8%AE%B0/"/>
+    <id>http://example.com/2021/08/25/mysql%E7%AC%94%E8%AE%B0/</id>
+    <published>2021-08-25T11:36:03.202Z</published>
+    <updated>2021-09-12T11:14:05.058Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;数据库常见的概念&quot;&gt;&lt;a href=&quot;#数据库常见的概念&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>面向对象编程</title>
+    <link href="http://example.com/2021/08/08/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
+    <id>http://example.com/2021/08/08/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</id>
+    <published>2021-08-08T08:01:49.740Z</published>
+    <updated>2021-09-12T11:18:10.844Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;编程类型&quot;&gt;&lt;a href=&quot;#编程类型&quot; class=&quot;headerlink&quot; title=&quot;编程类型&quot;&gt;&lt;/a&gt;编程类型&lt;/h2&gt;&lt;p&gt;指令式编程 —&amp;gt; 面向过程(函数)编程 —&amp;gt;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>函数</title>
+    <link href="http://example.com/2021/08/07/%E5%87%BD%E6%95%B0/"/>
+    <id>http://example.com/2021/08/07/%E5%87%BD%E6%95%B0/</id>
+    <published>2021-08-07T02:50:30.018Z</published>
+    <updated>2021-09-12T11:18:38.736Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;函数定义：&quot;&gt;&lt;a href=&quot;#函数定义：&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>枚举</title>
+    <link href="http://example.com/2021/08/06/%E6%9E%9A%E4%B8%BE/"/>
+    <id>http://example.com/2021/08/06/%E6%9E%9A%E4%B8%BE/</id>
+    <published>2021-08-06T12:29:28.679Z</published>
+    <updated>2021-09-12T11:18:29.129Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;枚举的定义：&quot;&gt;&lt;a href=&quot;#枚举的定义：&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>再谈字符串</title>
+    <link href="http://example.com/2021/08/01/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+    <id>http://example.com/2021/08/01/%E5%AD%97%E7%AC%A6%E4%B8%B2/</id>
+    <published>2021-08-01T14:30:13.603Z</published>
+    <updated>2021-09-12T11:17:48.379Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;再谈字符串&quot;&gt;&lt;a href=&quot;#再谈字符串&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>元组</title>
+    <link href="http://example.com/2021/08/01/%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B9%8B%E5%85%83%E7%BB%84/"/>
+    <id>http://example.com/2021/08/01/%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B9%8B%E5%85%83%E7%BB%84/</id>
+    <published>2021-08-01T14:18:25.527Z</published>
+    <updated>2021-09-12T11:18:55.852Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;元组的定义和使用&quot;&gt;&lt;a href=&quot;#元组的定义和使用&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>列表</title>
+    <link href="http://example.com/2021/07/31/%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B9%8B%E5%88%97%E8%A1%A8/"/>
+    <id>http://example.com/2021/07/31/%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B9%8B%E5%88%97%E8%A1%A8/</id>
+    <published>2021-07-31T03:09:13.879Z</published>
+    <updated>2021-09-12T11:19:03.896Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;列表&quot;&gt;&lt;a href=&quot;#列表&quot; class=&quot;headerlink&quot; title=&quot;列表&quot;&gt;&lt;/a&gt;列表&lt;/h2&gt;&lt;h3 id=&quot;列表的定义和使用&quot;&gt;&lt;a href=&quot;#列表的定义和使用&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Python三大结构</title>
+    <link href="http://example.com/2021/07/22/Python%E8%8F%9C%E9%B8%9F%E5%BF%85%E7%BB%8F%E4%B9%8B%E8%B7%AF(%E4%B8%89)%20/"/>
+    <id>http://example.com/2021/07/22/Python%E8%8F%9C%E9%B8%9F%E5%BF%85%E7%BB%8F%E4%B9%8B%E8%B7%AF(%E4%B8%89)%20/</id>
+    <published>2021-07-22T15:25:45.728Z</published>
+    <updated>2021-09-12T11:19:14.754Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;Python三大结构&quot;&gt;&lt;a href=&quot;#Python三大结构&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Python内置数据类型</title>
+    <link href="http://example.com/2021/07/21/Python%E8%8F%9C%E9%B8%9F%E5%BF%85%E7%BB%8F%E4%B9%8B%E8%B7%AF(%E4%BA%8C)/"/>
+    <id>http://example.com/2021/07/21/Python%E8%8F%9C%E9%B8%9F%E5%BF%85%E7%BB%8F%E4%B9%8B%E8%B7%AF(%E4%BA%8C)/</id>
+    <published>2021-07-21T15:02:13.901Z</published>
+    <updated>2021-09-12T11:17:25.762Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;1-Python内置并且常见的数据类型&quot;&gt;&lt;a href=&quot;#1-Python内置并且常见的数据类型&quot; class=&quot;headerlink&quot; title=&quot;1. Python内置并且常见的数据类型:&quot;&gt;&lt;/a&gt;1.</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>

@@ -29,7 +29,10 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="李东西" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
 <link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
@@ -488,7 +491,7 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h3 id="再谈字符串"><a href="#再谈字符串" class="headerlink" title="再谈字符串"></a>再谈字符串</h3><p><strong>字符串</strong>，即把<strong>字符按照一定的顺序串起来组成一个有限的序列</strong>。</p>
-<p>Python中，我们使用<code>&#39;&#39;</code>或者<code>&quot;&quot;</code>包围起来，就可以表示一个字符串。字符串中的字符可以使特殊字符，英文字符，中文字符，希腊字母，Emoji字符等</p>
+<p>Python中，我们使用<code>''</code>或者<code>""</code>包围起来，就可以表示一个字符串。字符串中的字符可以使特殊字符，英文字符，中文字符，希腊字母，Emoji字符等</p>
 <pre class="line-numbers language-python"><code class="language-python">character_name <span class="token operator">=</span> <span class="token string">'DongxiLi'</span>
 character_name2 <span class="token operator">=</span> <span class="token string">'李东西'</span>
 
@@ -499,14 +502,14 @@ xi
 Li
 '''</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="转义字符和原始字符串"><a href="#转义字符和原始字符串" class="headerlink" title="转义字符和原始字符串"></a>转义字符和原始字符串</h3><p>可以在字符串中使用<code>\</code>（反斜杠）来表示转义，也就是说<code>\</code>后面的字符不再是它原来的意义，例如：<code>\n</code>不是代表反斜杠和字符<code>n</code>，而是表示换行；<code>\t</code>也不是代表反斜杠和字符<code>t</code>，而是表示制表符。所以如果字符串本身又包含了<code>&#39;</code>、<code>&quot;</code>、<code>\</code>这些特殊的字符，必须要通过<code>\</code>进行转义处理。例如要输出一个带单引号或反斜杠的字符串，需要用如下所示的方法。</p>
+<h3 id="转义字符和原始字符串"><a href="#转义字符和原始字符串" class="headerlink" title="转义字符和原始字符串"></a>转义字符和原始字符串</h3><p>可以在字符串中使用<code>\</code>（反斜杠）来表示转义，也就是说<code>\</code>后面的字符不再是它原来的意义，例如：<code>\n</code>不是代表反斜杠和字符<code>n</code>，而是表示换行；<code>\t</code>也不是代表反斜杠和字符<code>t</code>，而是表示制表符。所以如果字符串本身又包含了<code>'</code>、<code>"</code>、<code>\</code>这些特殊的字符，必须要通过<code>\</code>进行转义处理。例如要输出一个带单引号或反斜杠的字符串，需要用如下所示的方法。</p>
 <pre class="line-numbers language-pyth"><code class="language-pyth">s = '\'hello, world'
 print(s)
 
 s2 = '\\hello, world\\'
 print(s2)
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>Python字符串中可以用<code>r</code>或者<code>R</code>开头，这种字符串被称之为原始字符串，即字符串中的每一个字符都是它本来的含义，不存在转义。例如，在字符串<code>&#39;hello\n&#39;</code>中，<code>\n</code>表示换行；而在<code>r&#39;hello\n&#39;</code>中，<code>\n</code>不再表示换行，就是反斜杠和字符<code>n</code>。大家可以运行下面的代码，看看会输出什么。</p>
+<p>Python字符串中可以用<code>r</code>或者<code>R</code>开头，这种字符串被称之为原始字符串，即字符串中的每一个字符都是它本来的含义，不存在转义。例如，在字符串<code>'hello\n'</code>中，<code>\n</code>表示换行；而在<code>r'hello\n'</code>中，<code>\n</code>不再表示换行，就是反斜杠和字符<code>n</code>。大家可以运行下面的代码，看看会输出什么。</p>
 <pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 字符串s中的\t是制表符,\n是换行符</span>
 s <span class="token operator">=</span> <span class="token string">'\time up \now'</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span>
@@ -525,7 +528,7 @@ s2 <span class="token operator">=</span> <span class="token string">'呵呵'</sp
 s <span class="token operator">+=</span> s2  <span class="token comment" spellcheck="true"># s = s + s2</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># 李东西呵呵呵呵呵呵</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="比较运算符"><a href="#比较运算符" class="headerlink" title="比较运算符"></a>比较运算符</h4><p>字符串在计算机内存中也是以二进制形式存在的，那么字符串的大小比较比的是每个字符对应的编码的大小。例如<code>A</code>的编码是<code>65</code>， 而<code>a</code>的编码是<code>97</code>，所以<code>&#39;A&#39; &lt; &#39;a&#39;</code>的结果相当于就是<code>65 &lt; 97</code>的结果，很显然是<code>True</code>；而<code>&#39;boy&#39; &lt; &#39;bad&#39;</code>，因为第一个字符都是<code>&#39;b&#39;</code>比不出大小，所以实际比较的是第二个字符的大小，显然<code>&#39;o&#39; &lt; &#39;a&#39;</code>的结果是<code>False</code>，所以<code>&#39;boy&#39; &lt; &#39;bad&#39;</code>的结果也是<code>False</code>。如果不清楚两个字符对应的编码到底是多少，可以使用<code>ord</code>函数来获得，例如<code>ord(&#39;A&#39;)</code>的值是<code>65</code></p>
+<h4 id="比较运算符"><a href="#比较运算符" class="headerlink" title="比较运算符"></a>比较运算符</h4><p>字符串在计算机内存中也是以二进制形式存在的，那么字符串的大小比较比的是每个字符对应的编码的大小。例如<code>A</code>的编码是<code>65</code>， 而<code>a</code>的编码是<code>97</code>，所以<code>'A' &lt; 'a'</code>的结果相当于就是<code>65 &lt; 97</code>的结果，很显然是<code>True</code>；而<code>'boy' &lt; 'bad'</code>，因为第一个字符都是<code>'b'</code>比不出大小，所以实际比较的是第二个字符的大小，显然<code>'o' &lt; 'a'</code>的结果是<code>False</code>，所以<code>'boy' &lt; 'bad'</code>的结果也是<code>False</code>。如果不清楚两个字符对应的编码到底是多少，可以使用<code>ord</code>函数来获得，例如<code>ord('A')</code>的值是<code>65</code></p>
 <pre class="line-numbers language-python"><code class="language-python">s1 <span class="token operator">=</span> <span class="token string">'a whole new world'</span>
 s2 <span class="token operator">=</span> <span class="token string">'hello world'</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>s1 <span class="token operator">==</span> s2<span class="token punctuation">,</span> s1 <span class="token operator">&lt;</span> s2<span class="token punctuation">)</span>      <span class="token comment" spellcheck="true"># False True</span>
@@ -717,68 +720,68 @@ s2 <span class="token operator">=</span> <span class="token string">'abc123'</sp
 </thead>
 <tbody><tr>
 <td><code>3.1415926</code></td>
-<td><code>&#123;:.2f&#125;</code></td>
-<td><code>&#39;3.14&#39;</code></td>
+<td><code>{:.2f}</code></td>
+<td><code>'3.14'</code></td>
 <td>保留小数点后两位</td>
 </tr>
 <tr>
 <td><code>3.1415926</code></td>
-<td><code>&#123;:+.2f&#125;</code></td>
-<td><code>&#39;+3.14&#39;</code></td>
+<td><code>{:+.2f}</code></td>
+<td><code>'+3.14'</code></td>
 <td>带符号保留小数点后两位</td>
 </tr>
 <tr>
 <td><code>-1</code></td>
-<td><code>&#123;:+.2f&#125;</code></td>
-<td><code>&#39;-1.00&#39;</code></td>
+<td><code>{:+.2f}</code></td>
+<td><code>'-1.00'</code></td>
 <td>带符号保留小数点后两位</td>
 </tr>
 <tr>
 <td><code>3.1415926</code></td>
-<td><code>&#123;:.0f&#125;</code></td>
-<td><code>&#39;3&#39;</code></td>
+<td><code>{:.0f}</code></td>
+<td><code>'3'</code></td>
 <td>不带小数</td>
 </tr>
 <tr>
 <td><code>123</code></td>
-<td><code>&#123;:0&gt;10d&#125;</code></td>
+<td><code>{:0&gt;10d}</code></td>
 <td><code>0000000123</code></td>
 <td>左边补<code>0</code>，补够10位</td>
 </tr>
 <tr>
 <td><code>123</code></td>
-<td><code>&#123;:x&lt;10d&#125;</code></td>
+<td><code>{:x&lt;10d}</code></td>
 <td><code>123xxxxxxx</code></td>
 <td>右边补<code>x</code> ，补够10位</td>
 </tr>
 <tr>
 <td><code>123</code></td>
-<td><code>&#123;:&gt;10d&#125;</code></td>
-<td><code>&#39;       123&#39;</code></td>
+<td><code>{:&gt;10d}</code></td>
+<td><code>'       123'</code></td>
 <td>左边补空格，补够10位</td>
 </tr>
 <tr>
 <td><code>123</code></td>
-<td><code>&#123;:&lt;10d&#125;</code></td>
-<td><code>&#39;123       &#39;</code></td>
+<td><code>{:&lt;10d}</code></td>
+<td><code>'123       '</code></td>
 <td>右边补空格，补够10位</td>
 </tr>
 <tr>
 <td><code>123456789</code></td>
-<td><code>&#123;:,&#125;</code></td>
-<td><code>&#39;123,456,789&#39;</code></td>
+<td><code>{:,}</code></td>
+<td><code>'123,456,789'</code></td>
 <td>逗号分隔格式</td>
 </tr>
 <tr>
 <td><code>0.123</code></td>
-<td><code>&#123;:.2%&#125;</code></td>
-<td><code>&#39;12.30%&#39;</code></td>
+<td><code>{:.2%}</code></td>
+<td><code>'12.30%'</code></td>
 <td>百分比格式</td>
 </tr>
 <tr>
 <td><code>123456789</code></td>
-<td><code>&#123;:.2e&#125;</code></td>
-<td><code>&#39;1.23e+08&#39;</code></td>
+<td><code>{:.2e}</code></td>
+<td><code>'1.23e+08'</code></td>
 <td>科学计数法格式</td>
 </tr>
 </tbody></table>
@@ -1283,60 +1286,6 @@ s <span class="token operator">=</span> <span class="token string">'   jackfrued
 
 
     <footer class="page-footer bg-color">
-    
-        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
-<style>
-    .aplayer .aplayer-lrc p {
-        
-        display: none;
-        
-        font-size: 12px;
-        font-weight: 700;
-        line-height: 16px !important;
-    }
-
-    .aplayer .aplayer-lrc p.aplayer-lrc-current {
-        
-        display: none;
-        
-        font-size: 15px;
-        color: #42b983;
-    }
-
-    
-    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
-        left: -66px !important;
-    }
-
-    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
-        left: 0px !important;
-    }
-
-    
-</style>
-<div class="">
-    
-    <div class="row">
-        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
-                   server="netease"
-                   type="playlist"
-                   id="503838841"
-                   fixed='true'
-                   autoplay='false'
-                   theme='#42b983'
-                   loop='all'
-                   order='random'
-                   preload='auto'
-                   volume='0.7'
-                   list-folded='true'
-        >
-        </meting-js>
-    </div>
-</div>
-
-<script src="/libs/aplayer/APlayer.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
-
     
     <div class="container row center-align" style="margin-bottom: 0px !important;">
         <div class="col s12 m8 l8 copy-right">
