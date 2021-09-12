@@ -444,7 +444,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2021-09-07
+                    2021-07-21
                 </div>
                 
 
@@ -465,91 +465,60 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <hr>
-<h2 id="title：-git使用"><a href="#title：-git使用" class="headerlink" title="title： git使用"></a>title： git使用</h2><ol start="6">
-<li><p>版本控制系统</p>
-<p> 中央集权型版本控制系统 —&gt; 必须有（中央）版本控制服务器</p>
-<p> 1990s —&gt; CVS (Current Version System) / VSS (Visual Source Safe)</p>
-<pre><code>     ---&gt; 锁定模式 ---&gt; 互斥 ---&gt; 一个文件不能被多个人同时维护
-</code></pre>
-<p> 2000 —&gt; Subversion (SVN)</p>
-<pre><code>     ---&gt; 合并模式 ---&gt; 允许多个人同时维护一个文件 ---&gt; 提交工作成果
-         ---&gt; 没有冲突：自动合并
-         ---&gt; 发生冲突：提示你手动解决
-</code></pre>
-<p> 分布式版本控制系统 —&gt; 没有中央服务器存在一样可以实施版本控制</p>
-<p> 2005 —&gt; Git —&gt; Linus</p>
-<p> ~ Git命令</p>
+                <h3 id="1-Python内置并且常见的数据类型"><a href="#1-Python内置并且常见的数据类型" class="headerlink" title="1. Python内置并且常见的数据类型:"></a>1. Python<strong>内置</strong>并且常见的<strong>数据类型</strong>:</h3><ul>
+<li><p>整型(int)：</p>
+<ul>
+<li>Python中不仅仅有我们生活中常见<strong>自然数</strong>，它和任何一门编程语言一样可以处理<strong>任意大小</strong>的整数</li>
+<li>二进制：</li>
+<li>八进制</li>
+<li>十进制</li>
+<li>十六进制</li>
+</ul>
+</li>
+<li><p>浮点型(float)： 浮点型通俗来说就是我们熟知的小数；这里包括了一切负数，一切整数</p>
+</li>
+<li><p>字符串型(str)：字符串是用<strong>单引号(‘hello’)<strong>或者</strong>双引号（”hello”）</strong>引起来的任意文本，通常字符串里面的内容表示就是表面的那么简单，你看到是什么样就是什么样，当然也有特例存在，那就是转义字符</p>
+  <img src="files(二)\1.png" align='left' style="zoom:80%;" />
+
+<p>  <strong>注意</strong>：python中说的空字符串并非“    ”里面是空格，而是””，也即是在引号里面什么都没有称之为空字符串</p>
+</li>
+<li><p>布尔型(bool)：布尔值<strong>只有</strong>True，False两种值</p>
+</li>
+<li><p>自定义类型：用户根据自己的需求定义数数据类型</p>
+</li>
+</ul>
+<h3 id="2-变量"><a href="#2-变量" class="headerlink" title="2. 变量"></a>2. 变量</h3><ol>
+<li><p>定义：一般我们说的变量是用来方便<strong>存储数据的载体</strong>，而之所以称其为变量是因为<strong>变量的值可以被读取和修改</strong>。</p>
+</li>
+<li><p>对于变量我们一般会为其取一个优雅而漂亮的名字，在为变量命名的时候我们往往会严格遵守一些规则:</p>
+<ul>
+<li><p>变量名由<strong>字母</strong>(Unicode字符)， <strong>数字</strong>和<strong>下划线</strong>构成。切记，数字不能作为变量名的开头(如果不想造成不必要的麻烦，我在这建议都用英文字母来为变量命名)</p>
+  <img src="files(二)\2.png" align='left' style="zoom:80%;" /></li>
+<li><p><strong>大小写敏感</strong>，即大写变量和小写变量属于不同变量</p>
+<img src="\files(二)\3.png" aligin='left' style="zoom:80%;" /></li>
+<li><p>避免与Python语言的关键字<strong>（有特殊含义的单词）和</strong>保留字<strong>（如函数、模块等的名字）</strong>发生重名的冲突。</p>
+<p>  建议:</p>
+<ul>
+<li>变量名通常使用小写英文字母，多个单词用下划线进行连接</li>
+<li>下划线开头的变量通常是受保护的</li>
+<li>私有变量用两个下划线开头(如没有特殊情况请不要以下划线开头)</li>
+<li>在命名是最后做到<strong>见名知意</strong></li>
+</ul>
+  <img src="\files(二)\4.png" align='left' style="zoom:80%;" />
+  </li>
+<li><p><strong>tips</strong>:  </p>
 <ol>
-<li><p>初始化本地仓库：git init</p>
-</li>
-<li><p>将文件放到暂存区（缓存区）：<br> ~ git add <filename><br> ~ git add .</p>
-</li>
-<li><p>将文件提交到仓库：git commit -m ‘…’<br> 如果是第一次使用Git进行提交，需要先配置用户名和邮箱：<br> ~ git config –global user.email ‘……’<br> ~ git config –global user.name ‘……’</p>
-</li>
-<li><p>查看提交日志：git log</p>
-</li>
-<li><p>查看版本控制状态：git status</p>
-</li>
-<li><p>用缓存区恢复工作区：git restore <filename></p>
-</li>
-<li><p>用仓库恢复缓存区：git restore –staged <filename></p>
-</li>
-<li><p>版本回退：git reset <commit-ID><br> ~ –hard：让仓库、缓存区、工作区都回退到指定的版本（三者一致）<br> ~ –mixed：默认选项，让仓库、缓存区回退到指定的版本，工作区保持现状<br> ~ –soft：让仓库回退到指定的版本，缓存区和工作区保持现状</p>
-</li>
-<li><p>查看过去和未来的日志：git reflog</p>
-</li>
-<li><p>远端仓库：<br>~ 添加：git remote add origin <url><br>~ 删除：git remote remove origin<br>~ 查看：git remote -v</p>
-</li>
-<li><p>上推（向服务器推代码）：git push -u origin master</p>
-</li>
-<li><p>下拉（从服务器获取代码）：git pull<br>git pull = git fetch + git merge</p>
-</li>
-<li><p>克隆：git clone –depth 1 <url></p>
-</li>
-<li><p>生成密钥对：ssh-keygen -t rsa -b 2048 -C “<a href="mailto:&#106;&#x61;&#x63;&#x6b;&#102;&#114;&#117;&#101;&#x64;&#x40;&#49;&#50;&#54;&#x2e;&#99;&#x6f;&#x6d;">&#106;&#x61;&#x63;&#x6b;&#102;&#114;&#117;&#101;&#x64;&#x40;&#49;&#50;&#54;&#x2e;&#99;&#x6f;&#x6d;</a>“</p>
-</li>
-<li><p>查看公钥文件：cat ~/.ssh/id_rsa.pub —&gt; 部署到服务器上<br>提示：免密访问请使用SSH地址</p>
-</li>
+<li>在Python中如果循环变量用不到，则可以用 **_ **表示</li>
+</ol>
+  <img src="D:\千锋培训\知乎文章\files(二)\5.png" align='left' style="zoom:80%;" />
+  
+<ol start="2">
+<li>在Python中，给一个变量赋值并<strong>不需要申明数据的类型</strong>，Python会自动识别所给的数据类型 <img src="D:\千锋培训\知乎文章\files(二)\6.png" glign='left' style="zoom:80%;" /></li>
 </ol>
 </li>
-<li><p>代码托管平台（Git服务器）</p>
-<p> ~ 国外：github.com<br> ~ 国内：</p>
-<pre><code> - 码云：https://gitee.com ---&gt; 当做Git私服来使用
-     - coding：https://coding.net
-     - 行云：https://codeup.teambition.com/tour
-</code></pre>
-</li>
-</ol>
-<p>10.远端仓库:<br>Йл/Д: git remote add origin <url><br>删除:<br>git remote remove origin<br>查看:<br>git remote -V<br>11.. 上推(向服务器推代码) : git push -u origin master<br>12. FjI (MRRSTREX1tTE) : git pull<br>    git pull = git fetch + git merge</p>
-<ol start="13">
-<li><p>5ßk: git clone <url></p>
-</li>
-<li><p>分支操作</p>
-<pre><code>~ 查看分支：git branch -a
-~ 创建分支：git branch &lt;branch-name&gt;
-~ 切换分支：git switch &lt;branch-name&gt; / git checkout &lt;branch-name&gt;
-~ 创建和切换分支：git switch -c &lt;branch-name&gt; / git checkout -b &lt;branch-name&gt;
-~ 合并分支：
-    - git switch &lt;target-branch&gt;
-    - git merge --no-ff &lt;branch-name&gt;
-~ 变基：
-    - git rebase &lt;target-branch&gt;
-    - git switch &lt;target-branch&gt;
-    - git merge &lt;branch-name&gt;
-</code></pre>
-<p>~遇到冲突如何解决<br>1.从服务器fetch最新的代码，放到一个临时分支</p>
-</li>
-</ol>
-<ul>
-<li>git fetch origin master: temp</li>
 </ul>
-<p>2.查看哪里有冲突<br>git diff temp<br>3.尝试将临时分支合并到当前分支—&gt; CONFLICT<br>-<br>git merge temp<br>-合并虽然是失败的，但是有冲突的代码已经被标记了<br>取消合并: git merge –abort<br>4.解决代码冲突(找到当事人进行沟通，确定保留谁的代码)<br>5.重新提交解决冲突后的代码并上推到服务器</p>
-<ul>
-<li>git add <fi Lename><br>git commit -m</li>
-<li>git push -u origin <branch-name></li>
-</ul>
-<p>6.删除临时分支<br>git branch -d temp<br>7.重新发起Pull Request</p>
+</li>
+</ol>
 
                 
             </div>
@@ -576,7 +545,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/09/07/git/">http://example.com/2021/09/07/git/</a>
+                    <a href="http://example.com/2021/07/21/Python%E8%8F%9C%E9%B8%9F%E5%BF%85%E7%BB%8F%E4%B9%8B%E8%B7%AF(%E4%BA%8C)/">http://example.com/2021/07/21/Python%E8%8F%9C%E9%B8%9F%E5%BF%85%E7%BB%8F%E4%B9%8B%E8%B7%AF(%E4%BA%8C)/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -781,12 +750,48 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;Current
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+            <div class="card">
+                <a href="/2021/07/22/Python%E8%8F%9C%E9%B8%9F%E5%BF%85%E7%BB%8F%E4%B9%8B%E8%B7%AF(%E4%B8%89)%20/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        
+                        <span class="card-title"></span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-07-22
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            李东西
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Current&nbsp;<i class="far fa-dot-circle"></i>
             </div>
             <div class="card">
-                <a href="/2021/09/07/git/">
+                <a href="/2021/07/21/Python%E8%8F%9C%E9%B8%9F%E5%BF%85%E7%BB%8F%E4%B9%8B%E8%B7%AF(%E4%BA%8C)/">
                     <div class="card-image">
                         
                         
@@ -803,7 +808,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-07
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-21
                             </span>
                         <span class="publish-author">
                             
@@ -814,43 +819,6 @@
                     </div>
                 </div>
 
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                Next&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/08/25/mysql%E7%AC%94%E8%AE%B0/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
-                        
-                        <span class="card-title"></span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-25
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            李东西
-                            
-                        </span>
-                    </div>
-                </div>
                 
             </div>
         </div>

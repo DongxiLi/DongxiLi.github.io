@@ -444,7 +444,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2021-09-07
+                    2021-07-31
                 </div>
                 
 
@@ -465,91 +465,145 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <hr>
-<h2 id="title：-git使用"><a href="#title：-git使用" class="headerlink" title="title： git使用"></a>title： git使用</h2><ol start="6">
-<li><p>版本控制系统</p>
-<p> 中央集权型版本控制系统 —&gt; 必须有（中央）版本控制服务器</p>
-<p> 1990s —&gt; CVS (Current Version System) / VSS (Visual Source Safe)</p>
-<pre><code>     ---&gt; 锁定模式 ---&gt; 互斥 ---&gt; 一个文件不能被多个人同时维护
-</code></pre>
-<p> 2000 —&gt; Subversion (SVN)</p>
-<pre><code>     ---&gt; 合并模式 ---&gt; 允许多个人同时维护一个文件 ---&gt; 提交工作成果
-         ---&gt; 没有冲突：自动合并
-         ---&gt; 发生冲突：提示你手动解决
-</code></pre>
-<p> 分布式版本控制系统 —&gt; 没有中央服务器存在一样可以实施版本控制</p>
-<p> 2005 —&gt; Git —&gt; Linus</p>
-<p> ~ Git命令</p>
+                <h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><h3 id="列表的定义和使用"><a href="#列表的定义和使用" class="headerlink" title="列表的定义和使用"></a>列表的定义和使用</h3><p>Python中，<strong>列表是由一系列元素按特定顺序构成的数据序列</strong>。列表可以<strong>可以保存多个数据</strong>，并且这些数据可以<strong>重复</strong>，以及合一存储多种数据类型(但是一般不建议这么做)。</p>
 <ol>
-<li><p>初始化本地仓库：git init</p>
+<li>通过字面量<code>[]</code>语法来定义列表，列表中的元素使用英文状态下的逗号(,)进行分隔<pre class="line-numbers language-python"><code class="language-python">nums <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">]</span>
+names <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'徐凤年'</span>， <span class="token string">'姜似'</span>， <span class="token string">'裴南苇'</span><span class="token punctuation">]</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 </li>
-<li><p>将文件放到暂存区（缓存区）：<br> ~ git add <filename><br> ~ git add .</p>
-</li>
-<li><p>将文件提交到仓库：git commit -m ‘…’<br> 如果是第一次使用Git进行提交，需要先配置用户名和邮箱：<br> ~ git config –global user.email ‘……’<br> ~ git config –global user.name ‘……’</p>
-</li>
-<li><p>查看提交日志：git log</p>
-</li>
-<li><p>查看版本控制状态：git status</p>
-</li>
-<li><p>用缓存区恢复工作区：git restore <filename></p>
-</li>
-<li><p>用仓库恢复缓存区：git restore –staged <filename></p>
-</li>
-<li><p>版本回退：git reset <commit-ID><br> ~ –hard：让仓库、缓存区、工作区都回退到指定的版本（三者一致）<br> ~ –mixed：默认选项，让仓库、缓存区回退到指定的版本，工作区保持现状<br> ~ –soft：让仓库回退到指定的版本，缓存区和工作区保持现状</p>
-</li>
-<li><p>查看过去和未来的日志：git reflog</p>
-</li>
-<li><p>远端仓库：<br>~ 添加：git remote add origin <url><br>~ 删除：git remote remove origin<br>~ 查看：git remote -v</p>
-</li>
-<li><p>上推（向服务器推代码）：git push -u origin master</p>
-</li>
-<li><p>下拉（从服务器获取代码）：git pull<br>git pull = git fetch + git merge</p>
-</li>
-<li><p>克隆：git clone –depth 1 <url></p>
-</li>
-<li><p>生成密钥对：ssh-keygen -t rsa -b 2048 -C “<a href="mailto:&#106;&#x61;&#x63;&#x6b;&#102;&#114;&#117;&#101;&#x64;&#x40;&#49;&#50;&#54;&#x2e;&#99;&#x6f;&#x6d;">&#106;&#x61;&#x63;&#x6b;&#102;&#114;&#117;&#101;&#x64;&#x40;&#49;&#50;&#54;&#x2e;&#99;&#x6f;&#x6d;</a>“</p>
-</li>
-<li><p>查看公钥文件：cat ~/.ssh/id_rsa.pub —&gt; 部署到服务器上<br>提示：免密访问请使用SSH地址</p>
-</li>
+<li>通过Python内置的<code>list</code>函数姜其他序列编程列表。准确的来说<code>list</code>并不是一个函数，而是创建对象的构造器<br>```python<br>nums = list(range(1, 10))<br>print(nums)  # [1, 2, 3, 4, 5, 6, 7, 8, 9]</li>
 </ol>
-</li>
-<li><p>代码托管平台（Git服务器）</p>
-<p> ~ 国外：github.com<br> ~ 国内：</p>
-<pre><code> - 码云：https://gitee.com ---&gt; 当做Git私服来使用
-     - coding：https://coding.net
-     - 行云：https://codeup.teambition.com/tour
+<p>ch = list(‘hello’)<br>print(ch)  # [‘h’, ‘e’, ‘l’, ‘l’, ‘o’]</p>
+<pre><code>3. 通过列表推导式(列表生成式)生成列表
+```python
+nums = [i ** 2 for i in range(1, 9)]
+print(nums)  # [1, 4, 9, 16, 25, 36, 49, 64, 81]
 </code></pre>
-</li>
-</ol>
-<p>10.远端仓库:<br>Йл/Д: git remote add origin <url><br>删除:<br>git remote remove origin<br>查看:<br>git remote -V<br>11.. 上推(向服务器推代码) : git push -u origin master<br>12. FjI (MRRSTREX1tTE) : git pull<br>    git pull = git fetch + git merge</p>
-<ol start="13">
-<li><p>5ßk: git clone <url></p>
-</li>
-<li><p>分支操作</p>
-<pre><code>~ 查看分支：git branch -a
-~ 创建分支：git branch &lt;branch-name&gt;
-~ 切换分支：git switch &lt;branch-name&gt; / git checkout &lt;branch-name&gt;
-~ 创建和切换分支：git switch -c &lt;branch-name&gt; / git checkout -b &lt;branch-name&gt;
-~ 合并分支：
-    - git switch &lt;target-branch&gt;
-    - git merge --no-ff &lt;branch-name&gt;
-~ 变基：
-    - git rebase &lt;target-branch&gt;
-    - git switch &lt;target-branch&gt;
-    - git merge &lt;branch-name&gt;
+<blockquote>
+<p>注意：<br> 列表是一种可变得数据类型，也即说明列表可以添加元素，删除元素，更新元素</p>
+</blockquote>
+<h4 id="列表的运算符"><a href="#列表的运算符" class="headerlink" title="列表的运算符"></a>列表的运算符</h4><pre class="line-numbers language-python"><code class="language-python">character_names <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'李淳罡'</span><span class="token punctuation">,</span> <span class="token string">'剑九黄'</span><span class="token punctuation">,</span> <span class="token string">'贾嘉佳'</span><span class="token punctuation">]</span>
+character_names2 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'吴六鼎'</span><span class="token punctuation">,</span> <span class="token string">'温华'</span><span class="token punctuation">,</span> <span class="token string">'轩辕青锋'</span><span class="token punctuation">,</span> <span class="token string">'鱼幼薇'</span><span class="token punctuation">,</span> <span class="token string">'王初冬'</span><span class="token punctuation">]</span>
+    
+<span class="token comment" spellcheck="true"># 列表的拼接</span>
+character_names3 <span class="token operator">=</span> character_names <span class="token operator">+</span> character_names2
+<span class="token keyword">print</span><span class="token punctuation">(</span>character_names3<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># ['李淳罡', '剑九黄', '贾嘉佳', '吴六鼎', '温华', '轩辕青锋', '鱼幼薇', '王初冬']</span>
+    
+character_names<span class="token punctuation">.</span>extend<span class="token punctuation">(</span>character_names2<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>character_names<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># ['李淳罡', '剑九黄', '贾嘉佳', '吴六鼎', '温华', '轩辕青锋', '鱼幼薇', '王初冬']</span>
+    
+<span class="token comment" spellcheck="true"># 列表的重复</span>
+names <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'李东西'</span><span class="token punctuation">]</span> <span class="token operator">*</span> <span class="token number">3</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>names<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># ['李东西','李东西', '李东西']</span>
+    
+<span class="token comment" spellcheck="true"># 列表的成员运算</span>
+<span class="token comment" spellcheck="true"># character_names3 = # ['李淳罡', '剑九黄', '贾嘉佳', '吴六鼎', '温华', '轩辕青锋', '鱼幼薇', '王初冬']</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'徐凤年'</span> <span class="token keyword">in</span> character_names3<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># False</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'徐凤年'</span> <span class="token operator">not</span> <span class="token keyword">in</span> character_names3<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># True</span>
+    
+<span class="token comment" spellcheck="true"># 获取列表的长度(元素个数)</span>
+size <span class="token operator">=</span> len<span class="token punctuation">(</span>character_names3<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>size<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># 8</span>
+    
+<span class="token comment" spellcheck="true"># 列表的索引</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>character_names3<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> character_names3<span class="token punctuation">[</span><span class="token operator">-</span>size<span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># 李淳罡 李淳罡</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>character_names3<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># 王初冬</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>character_names3<span class="token punctuation">[</span>size<span class="token number">-1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> character_names3<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># 王初冬 王初冬</span>
+    
+<span class="token comment" spellcheck="true"># 列表的索引</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>character_names3<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token number">7</span><span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># ['剑九黄', '贾嘉佳', '吴六鼎', '温华', '轩辕青锋']</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>character_names3<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">7</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># ['剑九黄', '贾嘉佳', '吴六鼎', '温华', '轩辕青锋']</span>
+    
+<span class="token keyword">print</span><span class="token punctuation">(</span>character_names3<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># ['王初冬', '鱼幼薇', '轩辕青锋', '温华', '吴六鼎', '贾嘉佳', '剑九黄', '李淳罡']</span>
+    
+<span class="token keyword">print</span><span class="token punctuation">(</span>character_names3<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># ['李淳罡', '贾嘉佳', '温华', '鱼幼薇']</span>
+    
+<span class="token keyword">print</span><span class="token punctuation">(</span>character_names3<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># ['王初冬', '轩辕青锋', '吴六鼎', '剑九黄']</span>
+    
+<span class="token comment" spellcheck="true"># 列表的比较运算</span>
+items1 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span>
+items2 <span class="token operator">=</span> list<span class="token punctuation">(</span>range<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># 两个列表比较相等性比的是对应索引位置上的元素是否相等</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>items1 <span class="token operator">==</span> items2<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># True</span>
+items3 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span>
+<span class="token comment" spellcheck="true"># 两个列表比较大小比的是对应索引位置上的元素的大小</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>items1 <span class="token operator">&lt;=</span> items3<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># True</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<p>注意：<br> 由于列表是可变类型，所以通过索引操作既可以获取列表中的元素，也可以更新列表中的元素。对列表做索引操作一样要注意索引越界的问题，对于有<code>N</code>个元素的列表，正向索引的范围是<code>0</code>到<code>N-1</code>，负向索引的范围是<code>-1</code>到<code>-N</code>，如果超出这个范围，将引发<code>IndexError</code>异常，错误信息为：<code>list index out of range</code>。</p>
+</blockquote>
+<h4 id="列表元素的遍历"><a href="#列表元素的遍历" class="headerlink" title="列表元素的遍历"></a>列表元素的遍历</h4><ul>
+<li>通过’for‘循环遍历<br>```python<br>character_names = [‘李淳罡’, ‘剑九黄’, ‘贾嘉佳’, ‘吴六鼎’, ‘温华’, ‘轩辕青锋’, ‘鱼幼薇’, ‘王初冬’]</li>
+</ul>
+<p>for name in character_names:<br>    print(name)</p>
+<p>for index in range(len(character_names)):<br>print(character_names[index])</p>
+<pre><code>
+### 列表的方法
+#### 添加元素和删除元素
+```python
+character_names = [&#39;姜似&#39;, &#39;鱼幼薇&#39;, &#39;南宫仆射&#39;]
+   
+# 使用append方法在列表末尾添加元素
+character_names.append(&#39;红薯&#39;)
+print(character_names)  # [&#39;姜似&#39;, &#39;鱼幼薇&#39;, &#39;南宫仆射&#39;, &#39;红薯&#39;]
+   
+# 使用insetr方法在列表指定索引位置插入元素
+character_names.insert(1, &#39;洛阳&#39;)
+print(character_names)  # [&#39;姜似&#39;, &#39;洛阳&#39;, &#39;鱼幼薇&#39;, &#39;南宫仆射&#39;, &#39;红薯&#39;]
+   
+# 删除元素
+character_names.remove(&#39;红薯&#39;)
+print(character_names)  # [&#39;姜似&#39;, &#39;洛阳&#39;, &#39;鱼幼薇&#39;, &#39;南宫仆射&#39;]
+   
+# 删除指定索引位置的元素
+# 默认删除列表最后一个元素
+# pop方法会返回删除的元素
+character_names.pop(2)  
+print(character_names)  # [&#39;姜似&#39;, &#39;洛阳&#39;, &#39;南宫仆射&#39;]
+   
+# 删除列表末尾元素
+character_names.pop()
+   
+# 清空列表中的元素
+character_names.clear()
+print(character_names)  # []
 </code></pre>
-<p>~遇到冲突如何解决<br>1.从服务器fetch最新的代码，放到一个临时分支</p>
-</li>
-</ol>
-<ul>
-<li>git fetch origin master: temp</li>
-</ul>
-<p>2.查看哪里有冲突<br>git diff temp<br>3.尝试将临时分支合并到当前分支—&gt; CONFLICT<br>-<br>git merge temp<br>-合并虽然是失败的，但是有冲突的代码已经被标记了<br>取消合并: git merge –abort<br>4.解决代码冲突(找到当事人进行沟通，确定保留谁的代码)<br>5.重新提交解决冲突后的代码并上推到服务器</p>
-<ul>
-<li>git add <fi Lename><br>git commit -m</li>
-<li>git push -u origin <branch-name></li>
-</ul>
-<p>6.删除临时分支<br>git branch -d temp<br>7.重新发起Pull Request</p>
+<blockquote>
+<p>注意：<br> 在使用<code>remove</code>方法删除元素时，如果要删除的元素并不在列表中，会引<code>ValueError</code>异常，错误消息是：<code>list.remove(x): x not in list</code>。在使用<code>pop</code>方法删除元素时，如果索引的值超出了范围，会引发<code>IndexError</code>异常，错误消息是：<code>pop index out of range</code>。</p>
+</blockquote>
+<pre class="line-numbers language-python"><code class="language-python">character_names <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'姜似'</span><span class="token punctuation">,</span> <span class="token string">'鱼幼薇'</span><span class="token punctuation">,</span> <span class="token string">'南宫仆射'</span><span class="token punctuation">]</span>
+<span class="token keyword">del</span> character_names<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>character_names<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># ['姜似', '南宫仆射']</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<p>从列表中删除元素其实还有一种方式，就是使用Python中的<code>del</code>关键字后面跟要删除的元素，这种做法跟使用<code>pop</code>方法指定索引删除元素没有实质性的区别，但后者会返回删除的元素，前者在性能上略优（<code>del</code>对应字节码指令是<code>DELETE_SUBSCR</code>，而<code>pop</code>对应的字节码指令是<code>CALL_METHOD</code>和<code>POP_TOP</code>）。</p>
+</blockquote>
+<h4 id="元素排序和反转列表的sort操作可以实现列表元素的排序，而reversre操作可以实现元素的反转"><a href="#元素排序和反转列表的sort操作可以实现列表元素的排序，而reversre操作可以实现元素的反转" class="headerlink" title="元素排序和反转列表的sort操作可以实现列表元素的排序，而reversre操作可以实现元素的反转"></a>元素排序和反转列表的<code>sort</code>操作可以实现列表元素的排序，而<code>reversre</code>操作可以实现元素的反转</h4><pre class="line-numbers language-python"><code class="language-python">character_names <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'姜似'</span><span class="token punctuation">,</span> <span class="token string">'鱼幼薇'</span><span class="token punctuation">,</span> <span class="token string">'南宫仆射'</span><span class="token punctuation">]</span>
+
+<span class="token comment" spellcheck="true"># 排序,sort方法没有返回值，是在原数组上面操作</span>
+character_names<span class="token punctuation">.</span>sort<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>character<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># ['南宫仆射', '姜似', '鱼幼薇']</span>
+
+<span class="token comment" spellcheck="true"># 反转</span>
+character_names<span class="token punctuation">.</span>reverse<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>character_names<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># ['鱼幼薇', '姜似', '南宫仆射'] </span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="嵌套的列表"><a href="#嵌套的列表" class="headerlink" title="嵌套的列表"></a>嵌套的列表</h3><p>如果列表中的元素又是列表，那么可以说这是嵌套的列表。嵌套的列表可以用来表示数学上的矩阵，表格。例如：我们想保存5个学生3门课程的成绩，可以定义一个保存5个元素的列表保存5个学生的信息，而每个列表元素又是3个元素构成的列表，分别代表3门课程的成绩。但是，一定要注意下面的代码是有问题的</p>
+<pre class="line-numbers language-python"><code class="language-python">scores <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">*</span> <span class="token number">3</span><span class="token punctuation">]</span> <span class="token operator">*</span> <span class="token number">5</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>scores<span class="token punctuation">)</span>    <span class="token comment" spellcheck="true"># [[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]]</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>看上去我们好像创建了一个<code>5 * 3</code>的嵌套列表，但实际上当我们录入第一个学生的第一门成绩后，你就会发现问题来了，我们看看下面代码的输出。</p>
+<pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 嵌套的列表需要多次索引操作才能获取元素</span>
+scores<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">95</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>scores<span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># [[95, 0, 0], [95, 0, 0], [95, 0, 0], [95, 0, 0], [95, 0, 0]]</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>我们不去过多的解释为什么会出现这样的问题，如果想深入研究这个问题，可以通过<a target="_blank" rel="noopener" href="http://www.pythontutor.com/visualize.html">Python Tutor</a>网站的可视化代码执行功能，看看创建列表时计算机内存中发生了怎样的变化，下面的图就是在这个网站上生成的。建议大家不去纠结这个问题，现阶段只需要记住不能用<code>[[0] * 3] * 5]</code>这种方式来创建嵌套列表就行了。那么创建嵌套列表的正确做法是什么呢，下面的代码会给你答案。</p>
+<pre class="line-numbers language-python"><code class="language-python">scores <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">*</span> <span class="token number">3</span> <span class="token keyword">for</span> _ <span class="token keyword">in</span> range<span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+scores<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">95</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>scores<span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># [[95, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]]</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
                 
             </div>
@@ -576,7 +630,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/09/07/git/">http://example.com/2021/09/07/git/</a>
+                    <a href="http://example.com/2021/07/31/%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B9%8B%E5%88%97%E8%A1%A8/">http://example.com/2021/07/31/%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B9%8B%E5%88%97%E8%A1%A8/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -781,12 +835,11 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;Current
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2021/09/07/git/">
+                <a href="/2021/08/01/%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B9%8B%E5%85%83%E7%BB%84/">
                     <div class="card-image">
                         
                         
@@ -802,9 +855,9 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-07
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-08-01
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -813,7 +866,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
@@ -824,7 +876,7 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/08/25/mysql%E7%AC%94%E8%AE%B0/">
+                <a href="/2021/07/22/Python%E8%8F%9C%E9%B8%9F%E5%BF%85%E7%BB%8F%E4%B9%8B%E8%B7%AF(%E4%B8%89)%20/">
                     <div class="card-image">
                         
                         
@@ -841,7 +893,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-25
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-22
                             </span>
                         <span class="publish-author">
                             

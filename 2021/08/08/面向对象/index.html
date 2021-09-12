@@ -444,7 +444,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2021-09-07
+                    2021-08-08
                 </div>
                 
 
@@ -465,91 +465,69 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <hr>
-<h2 id="title：-git使用"><a href="#title：-git使用" class="headerlink" title="title： git使用"></a>title： git使用</h2><ol start="6">
-<li><p>版本控制系统</p>
-<p> 中央集权型版本控制系统 —&gt; 必须有（中央）版本控制服务器</p>
-<p> 1990s —&gt; CVS (Current Version System) / VSS (Visual Source Safe)</p>
-<pre><code>     ---&gt; 锁定模式 ---&gt; 互斥 ---&gt; 一个文件不能被多个人同时维护
-</code></pre>
-<p> 2000 —&gt; Subversion (SVN)</p>
-<pre><code>     ---&gt; 合并模式 ---&gt; 允许多个人同时维护一个文件 ---&gt; 提交工作成果
-         ---&gt; 没有冲突：自动合并
-         ---&gt; 发生冲突：提示你手动解决
-</code></pre>
-<p> 分布式版本控制系统 —&gt; 没有中央服务器存在一样可以实施版本控制</p>
-<p> 2005 —&gt; Git —&gt; Linus</p>
-<p> ~ Git命令</p>
-<ol>
-<li><p>初始化本地仓库：git init</p>
-</li>
-<li><p>将文件放到暂存区（缓存区）：<br> ~ git add <filename><br> ~ git add .</p>
-</li>
-<li><p>将文件提交到仓库：git commit -m ‘…’<br> 如果是第一次使用Git进行提交，需要先配置用户名和邮箱：<br> ~ git config –global user.email ‘……’<br> ~ git config –global user.name ‘……’</p>
-</li>
-<li><p>查看提交日志：git log</p>
-</li>
-<li><p>查看版本控制状态：git status</p>
-</li>
-<li><p>用缓存区恢复工作区：git restore <filename></p>
-</li>
-<li><p>用仓库恢复缓存区：git restore –staged <filename></p>
-</li>
-<li><p>版本回退：git reset <commit-ID><br> ~ –hard：让仓库、缓存区、工作区都回退到指定的版本（三者一致）<br> ~ –mixed：默认选项，让仓库、缓存区回退到指定的版本，工作区保持现状<br> ~ –soft：让仓库回退到指定的版本，缓存区和工作区保持现状</p>
-</li>
-<li><p>查看过去和未来的日志：git reflog</p>
-</li>
-<li><p>远端仓库：<br>~ 添加：git remote add origin <url><br>~ 删除：git remote remove origin<br>~ 查看：git remote -v</p>
-</li>
-<li><p>上推（向服务器推代码）：git push -u origin master</p>
-</li>
-<li><p>下拉（从服务器获取代码）：git pull<br>git pull = git fetch + git merge</p>
-</li>
-<li><p>克隆：git clone –depth 1 <url></p>
-</li>
-<li><p>生成密钥对：ssh-keygen -t rsa -b 2048 -C “<a href="mailto:&#106;&#x61;&#x63;&#x6b;&#102;&#114;&#117;&#101;&#x64;&#x40;&#49;&#50;&#54;&#x2e;&#99;&#x6f;&#x6d;">&#106;&#x61;&#x63;&#x6b;&#102;&#114;&#117;&#101;&#x64;&#x40;&#49;&#50;&#54;&#x2e;&#99;&#x6f;&#x6d;</a>“</p>
-</li>
-<li><p>查看公钥文件：cat ~/.ssh/id_rsa.pub —&gt; 部署到服务器上<br>提示：免密访问请使用SSH地址</p>
-</li>
-</ol>
-</li>
-<li><p>代码托管平台（Git服务器）</p>
-<p> ~ 国外：github.com<br> ~ 国内：</p>
-<pre><code> - 码云：https://gitee.com ---&gt; 当做Git私服来使用
-     - coding：https://coding.net
-     - 行云：https://codeup.teambition.com/tour
-</code></pre>
-</li>
-</ol>
-<p>10.远端仓库:<br>Йл/Д: git remote add origin <url><br>删除:<br>git remote remove origin<br>查看:<br>git remote -V<br>11.. 上推(向服务器推代码) : git push -u origin master<br>12. FjI (MRRSTREX1tTE) : git pull<br>    git pull = git fetch + git merge</p>
-<ol start="13">
-<li><p>5ßk: git clone <url></p>
-</li>
-<li><p>分支操作</p>
-<pre><code>~ 查看分支：git branch -a
-~ 创建分支：git branch &lt;branch-name&gt;
-~ 切换分支：git switch &lt;branch-name&gt; / git checkout &lt;branch-name&gt;
-~ 创建和切换分支：git switch -c &lt;branch-name&gt; / git checkout -b &lt;branch-name&gt;
-~ 合并分支：
-    - git switch &lt;target-branch&gt;
-    - git merge --no-ff &lt;branch-name&gt;
-~ 变基：
-    - git rebase &lt;target-branch&gt;
-    - git switch &lt;target-branch&gt;
-    - git merge &lt;branch-name&gt;
-</code></pre>
-<p>~遇到冲突如何解决<br>1.从服务器fetch最新的代码，放到一个临时分支</p>
-</li>
-</ol>
+                <h2 id="编程类型"><a href="#编程类型" class="headerlink" title="编程类型"></a>编程类型</h2><p>指令式编程 —&gt; 面向过程(函数)编程 —&gt; 程序比较简单的时候没有任何问题</p>
+<p>范式编程(程序设计的方法论)：面向对象编程 / 函数式编程</p>
+<h2 id="面向对象编程"><a href="#面向对象编程" class="headerlink" title="面向对象编程"></a>面向对象编程</h2><p>对象：对象是可以接收消息的实体，面向对象编程就是通过狗日对象发消息达到解决问题的目标。</p>
+<p>对象 = 数据 + 方法  —&gt; 对象将数据和操作数据的函数从逻辑上变成了一个整体。</p>
 <ul>
-<li>git fetch origin master: temp</li>
+<li>一切皆为对象</li>
+<li>对象都有属性和行为</li>
+<li>每个对象都是独一无二的</li>
+<li>对象一定属于某个类</li>
 </ul>
-<p>2.查看哪里有冲突<br>git diff temp<br>3.尝试将临时分支合并到当前分支—&gt; CONFLICT<br>-<br>git merge temp<br>-合并虽然是失败的，但是有冲突的代码已经被标记了<br>取消合并: git merge –abort<br>4.解决代码冲突(找到当事人进行沟通，确定保留谁的代码)<br>5.重新提交解决冲突后的代码并上推到服务器</p>
+<p>类：将共同特征（静态特征和动态特征）的对象的共同特征抽取出来之后的得到的一个抽象概念。简单的说，类是对象的蓝图（模板），有了类才能创建出这种类型的对象。</p>
+<h2 id="面向对象编程三步走："><a href="#面向对象编程三步走：" class="headerlink" title="面向对象编程三步走："></a>面向对象编程三步走：</h2><ol>
+<li>定义类<ul>
+<li>数据抽象：找到和对象相关的静态特征（属性）—&gt; 找名词</li>
+<li>行为抽象：找到和对象相关的动态特征（方法）—&gt; 找动词</li>
+</ul>
+</li>
+<li>造对象</li>
+<li>向对象发消息</li>
+</ol>
+<blockquote>
+<p>注意：</p>
+<p>类的命名使用驼峰命名法，即每个单词首字母大写</p>
+</blockquote>
+<h2 id="静态方法"><a href="#静态方法" class="headerlink" title="静态方法"></a>静态方法</h2><p>我们在类里面写的函数，通常称之为方法，它们基本上都是发给对象的消息。<br>但是有的时候，我们的消息并不想发给对象，而是希望发给这个类（类本身也是一个对象），<br>这个时候，我们可以使用静态方法或类方法。</p>
+<p>静态方法 - 发给类的消息 —&gt; <code>@staticmethod</code> —&gt; 装饰器<br>类方法 - 发给类的消息 —&gt; <code>@classmethod</code> —&gt; 装饰器 —&gt; 第一个参数（cls）是接收消息的类</p>
+<h1 id="魔法方法"><a href="#魔法方法" class="headerlink" title="魔法方法"></a>魔法方法</h1><p>魔术方法（魔法方法）—&gt; 有特殊用途和意义的方法</p>
 <ul>
-<li>git add <fi Lename><br>git commit -m</li>
-<li>git push -u origin <branch-name></li>
+<li><code>__init__</code> —&gt; 初始化方法，在调用构造器语法创建对象的时候会被自动调</li>
+<li> <code>__str__</code> —&gt; 获得对象的字符串表示，在调用print函数输出对象时会被自动调用</li>
+<li><code>__repr__</code> —&gt; 获得对象的字符串表示，把对象放到容器中调用print输出时会自动调用—&gt; representation</li>
+<li><code>__lt__</code> —&gt; 在使用 &lt; 运算符比较两个对象大小时会自动调用</li>
+<li><code>__slots__</code> —&gt; 如果要限制一个类的对象只能拥有某些属性，可以在类中使用__slots__魔法属性</li>
 </ul>
-<p>6.删除临时分支<br>git branch -d temp<br>7.重新发起Pull Request</p>
+<h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><p>继承：对已有的类进行扩展创建出新的类，这个过程就叫继承。<br>提供继承信息的类叫做父类（超类、基类），得到继承信息的类称为子类（派生类）。</p>
+<p>继承是实现代码复用的一种手段，但是千万不要滥用继承。</p>
+<p>继承是一种is-a关系。<br>a student is a person.<br>a teacher is a person.<br>a programmer is a person.</p>
+<p>子类直接从父类继承公共的属性和行为，再添加自己特有的属性和行为，<br>所以子类一定是比父类更强大的，任何时候都可以用子类对象去替代父类对象。</p>
+<p>Python中的继承允许多重继承，一个类可以有一个或多个父类。<br>如果不是必须使用多重继承的场景下，请尽量使用单一继承。</p>
+<h2 id="两个类之间可能的关系"><a href="#两个类之间可能的关系" class="headerlink" title="两个类之间可能的关系"></a>两个类之间可能的关系</h2><ul>
+<li>is-a关系：继承 —&gt; 从一个类派生出另一个类<pre><code>a student is a person.
+a teacher is a person.
+</code></pre>
+</li>
+<li>has-a关系：关联 —&gt; 把一个类的对象作为另外一个类的对象的属性<pre><code>a person has an identity card.
+a car has an engine.
+</code></pre>
+<ul>
+<li>（普通）关联 </li>
+<li>强关联：整体和部分的关联，聚合和合成</li>
+</ul>
+</li>
+<li>use-a关系：依赖 —&gt; 一个类的对象作为另外一个类的方法的参数或返回值<pre><code>a person use a vehicle.
+</code></pre>
+</li>
+</ul>
+<h2 id="面向对象编程的四大支柱"><a href="#面向对象编程的四大支柱" class="headerlink" title="面向对象编程的四大支柱"></a>面向对象编程的四大支柱</h2><p>面向对象编程的四大支柱：</p>
+<ul>
+<li>抽象（abstraction）：提取共性（定义类就是一个抽象过程，需要做数据抽象和行为抽象）。</li>
+<li> 封装（encapsulation）：把数据和操作数据的函数从逻辑上组装成一个整体（对象）。隐藏实现细节，暴露简单的调用接口。</li>
+<li> 继承（inheritance）：扩展已有的类创建新类，实现对已有类的代码复用</li>
+<li> 多态（polymorphism）：给不同的对象发出同样的消息，不同的对象执行了不同的行为。 方法重写（override）：子类对父类已有的方法，重新给出自己的实现版本。</li>
+</ul>
 
                 
             </div>
@@ -576,7 +554,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/09/07/git/">http://example.com/2021/09/07/git/</a>
+                    <a href="http://example.com/2021/08/08/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">http://example.com/2021/08/08/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -781,48 +759,9 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
-            <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;Current
-            </div>
-            <div class="card">
-                <a href="/2021/09/07/git/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
-                        
-                        <span class="card-title"></span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-07
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            李东西
-                            
-                        </span>
-                    </div>
-                </div>
-
-                
-            </div>
-        </div>
-        
-        
         <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                Next&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
                 <a href="/2021/08/25/mysql%E7%AC%94%E8%AE%B0/">
                     <div class="card-image">
@@ -840,8 +779,45 @@
                         
                     </div>
                     <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-08-25
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            李东西
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/08/06/%E6%9E%9A%E4%B8%BE/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        
+                        <span class="card-title"></span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-25
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-06
                             </span>
                         <span class="publish-author">
                             
