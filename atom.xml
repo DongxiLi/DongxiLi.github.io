@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>李东西</title>
   
-  <subtitle>吾生也有涯，而知也无涯.</subtitle>
+  <subtitle>吾生也有涯，而知也无涯</subtitle>
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
@@ -28,10 +28,7 @@
       
         
         
-    <summary type="html">&lt;ol start=&quot;6&quot;&gt;
-&lt;li&gt;&lt;p&gt;版本控制系统&lt;/p&gt;
-&lt;p&gt; 中央集权型版本控制系统 —&amp;gt; 必须有（中央）版本控制服务器&lt;/p&gt;
-&lt;p&gt; 1990s —&amp;gt; CVS (Current Version System) / VSS (Visual Source</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
         
       
     
@@ -52,7 +49,7 @@
       
         
         
-    <summary type="html">&lt;h2 id=&quot;数据库常见的概念&quot;&gt;&lt;a href=&quot;#数据库常见的概念&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
         
       
     
@@ -73,7 +70,7 @@
       
         
         
-    <summary type="html">&lt;h2 id=&quot;编程类型&quot;&gt;&lt;a href=&quot;#编程类型&quot; class=&quot;headerlink&quot; title=&quot;编程类型&quot;&gt;&lt;/a&gt;编程类型&lt;/h2&gt;&lt;p&gt;指令式编程 —&amp;gt; 面向过程(函数)编程 —&amp;gt;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
         
       
     
@@ -94,7 +91,7 @@
       
         
         
-    <summary type="html">&lt;h2 id=&quot;函数定义：&quot;&gt;&lt;a href=&quot;#函数定义：&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
         
       
     
@@ -115,7 +112,7 @@
       
         
         
-    <summary type="html">&lt;h2 id=&quot;枚举的定义：&quot;&gt;&lt;a href=&quot;#枚举的定义：&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
         
       
     
@@ -136,7 +133,7 @@
       
         
         
-    <summary type="html">&lt;h3 id=&quot;再谈字符串&quot;&gt;&lt;a href=&quot;#再谈字符串&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
         
       
     
@@ -157,7 +154,7 @@
       
         
         
-    <summary type="html">&lt;h3 id=&quot;元组的定义和使用&quot;&gt;&lt;a href=&quot;#元组的定义和使用&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
         
       
     
@@ -178,7 +175,7 @@
       
         
         
-    <summary type="html">&lt;h2 id=&quot;列表&quot;&gt;&lt;a href=&quot;#列表&quot; class=&quot;headerlink&quot; title=&quot;列表&quot;&gt;&lt;/a&gt;列表&lt;/h2&gt;&lt;h3 id=&quot;列表的定义和使用&quot;&gt;&lt;a href=&quot;#列表的定义和使用&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
         
       
     
@@ -199,7 +196,7 @@
       
         
         
-    <summary type="html">&lt;h3 id=&quot;Python三大结构&quot;&gt;&lt;a href=&quot;#Python三大结构&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
         
       
     
@@ -220,7 +217,7 @@
       
         
         
-    <summary type="html">&lt;h3 id=&quot;1-Python内置并且常见的数据类型&quot;&gt;&lt;a href=&quot;#1-Python内置并且常见的数据类型&quot; class=&quot;headerlink&quot; title=&quot;1. Python内置并且常见的数据类型:&quot;&gt;&lt;/a&gt;1.</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
         
       
     
