@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-09-12T11:13:38.400Z</updated>
+  <updated>2021-09-18T14:50:36.129Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://example.com/2021/09/07/git/"/>
     <id>http://example.com/2021/09/07/git/</id>
     <published>2021-09-07T03:10:59.819Z</published>
-    <updated>2021-09-12T11:13:38.400Z</updated>
+    <updated>2021-09-18T14:50:36.129Z</updated>
     
     
       
@@ -34,6 +34,10 @@
     
     
     
+    <category term="git" scheme="http://example.com/categories/git/"/>
+    
+    
+    <category term="版本控制" scheme="http://example.com/tags/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/"/>
     
   </entry>
   
@@ -42,7 +46,7 @@
     <link href="http://example.com/2021/08/25/mysql%E7%AC%94%E8%AE%B0/"/>
     <id>http://example.com/2021/08/25/mysql%E7%AC%94%E8%AE%B0/</id>
     <published>2021-08-25T11:36:03.202Z</published>
-    <updated>2021-09-12T11:14:05.058Z</updated>
+    <updated>2021-09-18T14:51:21.873Z</updated>
     
     
       
@@ -55,6 +59,10 @@
     
     
     
+    <category term="Mysql" scheme="http://example.com/categories/Mysql/"/>
+    
+    
+    <category term="mysql基础" scheme="http://example.com/tags/mysql%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
@@ -63,7 +71,7 @@
     <link href="http://example.com/2021/08/08/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
     <id>http://example.com/2021/08/08/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</id>
     <published>2021-08-08T08:01:49.740Z</published>
-    <updated>2021-09-12T11:18:10.844Z</updated>
+    <updated>2021-09-18T14:58:13.707Z</updated>
     
     
       
@@ -76,6 +84,12 @@
     
     
     
+    <category term="Python" scheme="http://example.com/categories/Python/"/>
+    
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="面向对象" scheme="http://example.com/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
     
   </entry>
   
@@ -84,7 +98,7 @@
     <link href="http://example.com/2021/08/07/%E5%87%BD%E6%95%B0/"/>
     <id>http://example.com/2021/08/07/%E5%87%BD%E6%95%B0/</id>
     <published>2021-08-07T02:50:30.018Z</published>
-    <updated>2021-09-12T11:18:38.736Z</updated>
+    <updated>2021-09-18T14:58:04.452Z</updated>
     
     
       
@@ -97,6 +111,12 @@
     
     
     
+    <category term="Python" scheme="http://example.com/categories/Python/"/>
+    
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="函数" scheme="http://example.com/tags/%E5%87%BD%E6%95%B0/"/>
     
   </entry>
   
@@ -105,7 +125,7 @@
     <link href="http://example.com/2021/08/06/%E6%9E%9A%E4%B8%BE/"/>
     <id>http://example.com/2021/08/06/%E6%9E%9A%E4%B8%BE/</id>
     <published>2021-08-06T12:29:28.679Z</published>
-    <updated>2021-09-12T11:18:29.129Z</updated>
+    <updated>2021-09-18T14:49:32.178Z</updated>
     
     
       
@@ -118,6 +138,12 @@
     
     
     
+    <category term="Python" scheme="http://example.com/categories/Python/"/>
+    
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="枚举" scheme="http://example.com/tags/%E6%9E%9A%E4%B8%BE/"/>
     
   </entry>
   
@@ -126,7 +152,7 @@
     <link href="http://example.com/2021/08/01/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
     <id>http://example.com/2021/08/01/%E5%AD%97%E7%AC%A6%E4%B8%B2/</id>
     <published>2021-08-01T14:30:13.603Z</published>
-    <updated>2021-09-12T11:17:48.379Z</updated>
+    <updated>2021-09-18T14:51:23.671Z</updated>
     
     
       
@@ -139,6 +165,12 @@
     
     
     
+    <category term="Python" scheme="http://example.com/categories/Python/"/>
+    
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="字符串" scheme="http://example.com/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
     
   </entry>
   
@@ -147,7 +179,7 @@
     <link href="http://example.com/2021/08/01/%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B9%8B%E5%85%83%E7%BB%84/"/>
     <id>http://example.com/2021/08/01/%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B9%8B%E5%85%83%E7%BB%84/</id>
     <published>2021-08-01T14:18:25.527Z</published>
-    <updated>2021-09-12T11:18:55.852Z</updated>
+    <updated>2021-09-18T14:48:59.911Z</updated>
     
     
       
@@ -160,6 +192,12 @@
     
     
     
+    <category term="Python" scheme="http://example.com/categories/Python/"/>
+    
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="元组" scheme="http://example.com/tags/%E5%85%83%E7%BB%84/"/>
     
   </entry>
   
@@ -168,7 +206,7 @@
     <link href="http://example.com/2021/07/31/%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B9%8B%E5%88%97%E8%A1%A8/"/>
     <id>http://example.com/2021/07/31/%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B9%8B%E5%88%97%E8%A1%A8/</id>
     <published>2021-07-31T03:09:13.879Z</published>
-    <updated>2021-09-12T11:19:03.896Z</updated>
+    <updated>2021-09-18T14:48:16.468Z</updated>
     
     
       
@@ -181,27 +219,12 @@
     
     
     
-    
-  </entry>
-  
-  <entry>
-    <title>Python三大结构</title>
-    <link href="http://example.com/2021/07/22/Python%E8%8F%9C%E9%B8%9F%E5%BF%85%E7%BB%8F%E4%B9%8B%E8%B7%AF(%E4%B8%89)%20/"/>
-    <id>http://example.com/2021/07/22/Python%E8%8F%9C%E9%B8%9F%E5%BF%85%E7%BB%8F%E4%B9%8B%E8%B7%AF(%E4%B8%89)%20/</id>
-    <published>2021-07-22T15:25:45.728Z</published>
-    <updated>2021-09-12T11:19:14.754Z</updated>
+    <category term="Python" scheme="http://example.com/categories/Python/"/>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
-        
-      
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
     
-    
-    
+    <category term="列表" scheme="http://example.com/tags/%E5%88%97%E8%A1%A8/"/>
     
   </entry>
   
@@ -210,7 +233,7 @@
     <link href="http://example.com/2021/07/21/Python%E8%8F%9C%E9%B8%9F%E5%BF%85%E7%BB%8F%E4%B9%8B%E8%B7%AF(%E4%BA%8C)/"/>
     <id>http://example.com/2021/07/21/Python%E8%8F%9C%E9%B8%9F%E5%BF%85%E7%BB%8F%E4%B9%8B%E8%B7%AF(%E4%BA%8C)/</id>
     <published>2021-07-21T15:02:13.901Z</published>
-    <updated>2021-09-12T11:17:25.762Z</updated>
+    <updated>2021-09-18T14:53:03.981Z</updated>
     
     
       
@@ -223,6 +246,12 @@
     
     
     
+    <category term="Python" scheme="http://example.com/categories/Python/"/>
+    
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="数据类型" scheme="http://example.com/tags/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
     
   </entry>
   
