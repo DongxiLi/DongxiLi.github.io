@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="元组, 李东西">
+    <meta name="keywords" content="面向对象编程, 李东西">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>元组 | 李东西</title>
+    <title>面向对象编程 | 李东西</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -201,18 +201,20 @@
         
     </nav>
 
+    <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+
 </header>
 
     
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/32.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/34.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">元组</h1>
+                    <h1 class="description center-align post-title">面向对象编程</h1>
                 </div>
             </div>
         </div>
@@ -332,8 +334,8 @@
                                 <span class="chip bg-color">Python</span>
                             </a>
                         
-                            <a href="/tags/%E5%85%83%E7%BB%84/">
-                                <span class="chip bg-color">元组</span>
+                            <a href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">
+                                <span class="chip bg-color">面向对象</span>
                             </a>
                         
                     </div>
@@ -357,7 +359,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-08-01
+                    2021-08-08
                 </div>
                 
 
@@ -378,14 +380,69 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="元组的定义和使用"><a href="#元组的定义和使用" class="headerlink" title="元组的定义和使用"></a>元组的定义和使用</h3><p>Python中元组是把多个元素按照一定的顺序构成的序列。元组不同于列表的是，元组是不可变类型。而不可变类型就说明，元组一旦被定义，元组里面的元素就不能被修改。定义元组可以使用<strong>字面量</strong>语法<code>()</code></p>
-<pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 定义一个三元组</span>
-character_names <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token string">'徐晓'</span>， <span class="token string">'陈芝报'</span><span class="token punctuation">,</span> <span class="token string">'褚禄山'</span><span class="token punctuation">)</span>
-
-<span class="token comment" spellcheck="true"># 定义一个四元组</span>
-info <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token string">'徐晓'</span><span class="token punctuation">,</span> <span class="token number">49</span><span class="token punctuation">,</span> <span class="token boolean">True</span><span class="token punctuation">,</span> <span class="token string">'北凉'</span><span class="token punctuation">)</span>
-
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+                <h2 id="编程类型"><a href="#编程类型" class="headerlink" title="编程类型"></a>编程类型</h2><p>指令式编程 —&gt; 面向过程(函数)编程 —&gt; 程序比较简单的时候没有任何问题</p>
+<p>范式编程(程序设计的方法论)：面向对象编程 / 函数式编程</p>
+<h2 id="面向对象编程"><a href="#面向对象编程" class="headerlink" title="面向对象编程"></a>面向对象编程</h2><p>对象：对象是可以接收消息的实体，面向对象编程就是通过狗日对象发消息达到解决问题的目标。</p>
+<p>对象 = 数据 + 方法  —&gt; 对象将数据和操作数据的函数从逻辑上变成了一个整体。</p>
+<ul>
+<li>一切皆为对象</li>
+<li>对象都有属性和行为</li>
+<li>每个对象都是独一无二的</li>
+<li>对象一定属于某个类</li>
+</ul>
+<p>类：将共同特征（静态特征和动态特征）的对象的共同特征抽取出来之后的得到的一个抽象概念。简单的说，类是对象的蓝图（模板），有了类才能创建出这种类型的对象。</p>
+<h2 id="面向对象编程三步走："><a href="#面向对象编程三步走：" class="headerlink" title="面向对象编程三步走："></a>面向对象编程三步走：</h2><ol>
+<li>定义类<ul>
+<li>数据抽象：找到和对象相关的静态特征（属性）—&gt; 找名词</li>
+<li>行为抽象：找到和对象相关的动态特征（方法）—&gt; 找动词</li>
+</ul>
+</li>
+<li>造对象</li>
+<li>向对象发消息</li>
+</ol>
+<blockquote>
+<p>注意：</p>
+<p>类的命名使用驼峰命名法，即每个单词首字母大写</p>
+</blockquote>
+<h2 id="静态方法"><a href="#静态方法" class="headerlink" title="静态方法"></a>静态方法</h2><p>我们在类里面写的函数，通常称之为方法，它们基本上都是发给对象的消息。<br>但是有的时候，我们的消息并不想发给对象，而是希望发给这个类（类本身也是一个对象），<br>这个时候，我们可以使用静态方法或类方法。</p>
+<p>静态方法 - 发给类的消息 —&gt; <code>@staticmethod</code> —&gt; 装饰器<br>类方法 - 发给类的消息 —&gt; <code>@classmethod</code> —&gt; 装饰器 —&gt; 第一个参数（cls）是接收消息的类</p>
+<h1 id="魔法方法"><a href="#魔法方法" class="headerlink" title="魔法方法"></a>魔法方法</h1><p>魔术方法（魔法方法）—&gt; 有特殊用途和意义的方法</p>
+<ul>
+<li><code>__init__</code> —&gt; 初始化方法，在调用构造器语法创建对象的时候会被自动调</li>
+<li> <code>__str__</code> —&gt; 获得对象的字符串表示，在调用print函数输出对象时会被自动调用</li>
+<li><code>__repr__</code> —&gt; 获得对象的字符串表示，把对象放到容器中调用print输出时会自动调用—&gt; representation</li>
+<li><code>__lt__</code> —&gt; 在使用 &lt; 运算符比较两个对象大小时会自动调用</li>
+<li><code>__slots__</code> —&gt; 如果要限制一个类的对象只能拥有某些属性，可以在类中使用__slots__魔法属性</li>
+</ul>
+<h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><p>继承：对已有的类进行扩展创建出新的类，这个过程就叫继承。<br>提供继承信息的类叫做父类（超类、基类），得到继承信息的类称为子类（派生类）。</p>
+<p>继承是实现代码复用的一种手段，但是千万不要滥用继承。</p>
+<p>继承是一种is-a关系。<br>a student is a person.<br>a teacher is a person.<br>a programmer is a person.</p>
+<p>子类直接从父类继承公共的属性和行为，再添加自己特有的属性和行为，<br>所以子类一定是比父类更强大的，任何时候都可以用子类对象去替代父类对象。</p>
+<p>Python中的继承允许多重继承，一个类可以有一个或多个父类。<br>如果不是必须使用多重继承的场景下，请尽量使用单一继承。</p>
+<h2 id="两个类之间可能的关系"><a href="#两个类之间可能的关系" class="headerlink" title="两个类之间可能的关系"></a>两个类之间可能的关系</h2><ul>
+<li>is-a关系：继承 —&gt; 从一个类派生出另一个类<pre><code>a student is a person.
+a teacher is a person.
+</code></pre>
+</li>
+<li>has-a关系：关联 —&gt; 把一个类的对象作为另外一个类的对象的属性<pre><code>a person has an identity card.
+a car has an engine.
+</code></pre>
+<ul>
+<li>（普通）关联 </li>
+<li>强关联：整体和部分的关联，聚合和合成</li>
+</ul>
+</li>
+<li>use-a关系：依赖 —&gt; 一个类的对象作为另外一个类的方法的参数或返回值<pre><code>a person use a vehicle.
+</code></pre>
+</li>
+</ul>
+<h2 id="面向对象编程的四大支柱"><a href="#面向对象编程的四大支柱" class="headerlink" title="面向对象编程的四大支柱"></a>面向对象编程的四大支柱</h2><p>面向对象编程的四大支柱：</p>
+<ul>
+<li>抽象（abstraction）：提取共性（定义类就是一个抽象过程，需要做数据抽象和行为抽象）。</li>
+<li> 封装（encapsulation）：把数据和操作数据的函数从逻辑上组装成一个整体（对象）。隐藏实现细节，暴露简单的调用接口。</li>
+<li> 继承（inheritance）：扩展已有的类创建新类，实现对已有类的代码复用</li>
+<li> 多态（polymorphism）：给不同的对象发出同样的消息，不同的对象执行了不同的行为。 方法重写（override）：子类对父类已有的方法，重新给出自己的实现版本。</li>
+</ul>
 
                 
             </div>
@@ -412,7 +469,7 @@ info <span class="token operator">=</span> <span class="token punctuation">(</sp
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/08/01/%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B9%8B%E5%85%83%E7%BB%84/">http://example.com/2021/08/01/%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B9%8B%E5%85%83%E7%BB%84/</a>
+                    <a href="http://example.com/posts/7ac8.html">http://example.com/posts/7ac8.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -454,8 +511,8 @@ info <span class="token operator">=</span> <span class="token punctuation">(</sp
                                     <span class="chip bg-color">Python</span>
                                 </a>
                             
-                                <a href="/tags/%E5%85%83%E7%BB%84/">
-                                    <span class="chip bg-color">元组</span>
+                                <a href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">
+                                    <span class="chip bg-color">面向对象</span>
                                 </a>
                             
                         </div>
@@ -629,13 +686,13 @@ info <span class="token operator">=</span> <span class="token punctuation">(</sp
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/08/01/%E5%AD%97%E7%AC%A6%E4%B8%B2/">
+                <a href="/posts/3361.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/34.jpg" class="responsive-img" alt="再谈字符串">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="mysql">
                         
-                        <span class="card-title">再谈字符串</span>
+                        <span class="card-title">mysql</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -646,14 +703,14 @@ info <span class="token operator">=</span> <span class="token punctuation">(</sp
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-08-01
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-08-25
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Python/" class="post-category">
-                                    Python
+                            <a href="/categories/Mysql/" class="post-category">
+                                    Mysql
                                 </a>
                             
                             
@@ -663,12 +720,8 @@ info <span class="token operator">=</span> <span class="token punctuation">(</sp
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Python/">
-                        <span class="chip bg-color">Python</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">
-                        <span class="chip bg-color">字符串</span>
+                    <a href="/tags/mysql%E5%9F%BA%E7%A1%80/">
+                        <span class="chip bg-color">mysql基础</span>
                     </a>
                     
                 </div>
@@ -682,13 +735,13 @@ info <span class="token operator">=</span> <span class="token punctuation">(</sp
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/07/31/%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B9%8B%E5%88%97%E8%A1%A8/">
+                <a href="/posts/5409.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="列表">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="函数">
                         
-                        <span class="card-title">列表</span>
+                        <span class="card-title">函数</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -699,7 +752,7 @@ info <span class="token operator">=</span> <span class="token punctuation">(</sp
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-31
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-07
                             </span>
                         <span class="publish-author">
                             
@@ -720,8 +773,8 @@ info <span class="token operator">=</span> <span class="token punctuation">(</sp
                         <span class="chip bg-color">Python</span>
                     </a>
                     
-                    <a href="/tags/%E5%88%97%E8%A1%A8/">
-                        <span class="chip bg-color">列表</span>
+                    <a href="/tags/%E5%87%BD%E6%95%B0/">
+                        <span class="chip bg-color">函数</span>
                     </a>
                     
                 </div>
@@ -1130,6 +1183,8 @@ $(function () {
     
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
+
+    <script src="/js/cursor.js"></script>
 
 </body>
 

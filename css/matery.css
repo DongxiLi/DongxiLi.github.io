@@ -241,7 +241,8 @@ mark {
 }
 
 .bg-color {
-    background-image: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);
+    background-image: linear-gradient(to right, #c56e8b 0%, #55b9a9 100%);
+    opacity: 0.6
 }
 
 .text-color {
@@ -258,7 +259,7 @@ mark {
     bottom: 0;
     z-index: 300;
     background: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);
-    opacity: 0.8;
+    opacity: 0.;
 }
 
 .sidenav-overlay {

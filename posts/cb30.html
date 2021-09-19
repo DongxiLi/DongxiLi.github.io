@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Python内置数据类型, 李东西">
+    <meta name="keywords" content="元组, 李东西">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Python内置数据类型 | 李东西</title>
+    <title>元组 | 李东西</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -201,18 +201,20 @@
         
     </nav>
 
+    <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+
 </header>
 
     
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/32.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Python内置数据类型</h1>
+                    <h1 class="description center-align post-title">元组</h1>
                 </div>
             </div>
         </div>
@@ -332,8 +334,8 @@
                                 <span class="chip bg-color">Python</span>
                             </a>
                         
-                            <a href="/tags/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
-                                <span class="chip bg-color">数据类型</span>
+                            <a href="/tags/%E5%85%83%E7%BB%84/">
+                                <span class="chip bg-color">元组</span>
                             </a>
                         
                     </div>
@@ -357,7 +359,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-07-21
+                    2021-08-01
                 </div>
                 
 
@@ -378,65 +380,14 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="1-Python内置并且常见的数据类型"><a href="#1-Python内置并且常见的数据类型" class="headerlink" title="1. Python内置并且常见的数据类型:"></a>1. Python<strong>内置</strong>并且常见的<strong>数据类型</strong>:</h3><ul>
-<li><p>整型(int)：</p>
-<ul>
-<li>Python中不仅仅有我们生活中常见<strong>自然数</strong>，它和任何一门编程语言一样可以处理<strong>任意大小</strong>的整数</li>
-<li>二进制：</li>
-<li>八进制</li>
-<li>十进制</li>
-<li>十六进制</li>
-</ul>
-</li>
-<li><p>浮点型(float)： 浮点型通俗来说就是我们熟知的小数；这里包括了一切负数，一切整数</p>
-</li>
-<li><p>字符串型(str)：字符串是用<strong>单引号(‘hello’)<strong>或者</strong>双引号（”hello”）</strong>引起来的任意文本，通常字符串里面的内容表示就是表面的那么简单，你看到是什么样就是什么样，当然也有特例存在，那就是转义字符</p>
-  <img src="files(二)\1.png" align="left" style="zoom:80%;">
+                <h3 id="元组的定义和使用"><a href="#元组的定义和使用" class="headerlink" title="元组的定义和使用"></a>元组的定义和使用</h3><p>Python中元组是把多个元素按照一定的顺序构成的序列。元组不同于列表的是，元组是不可变类型。而不可变类型就说明，元组一旦被定义，元组里面的元素就不能被修改。定义元组可以使用<strong>字面量</strong>语法<code>()</code></p>
+<pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 定义一个三元组</span>
+character_names <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token string">'徐晓'</span>， <span class="token string">'陈芝报'</span><span class="token punctuation">,</span> <span class="token string">'褚禄山'</span><span class="token punctuation">)</span>
 
-<p>  <strong>注意</strong>：python中说的空字符串并非“    ”里面是空格，而是””，也即是在引号里面什么都没有称之为空字符串</p>
-</li>
-<li><p>布尔型(bool)：布尔值<strong>只有</strong>True，False两种值</p>
-</li>
-<li><p>自定义类型：用户根据自己的需求定义数数据类型</p>
-</li>
-</ul>
-<h3 id="2-变量"><a href="#2-变量" class="headerlink" title="2. 变量"></a>2. 变量</h3><ol>
-<li><p>定义：一般我们说的变量是用来方便<strong>存储数据的载体</strong>，而之所以称其为变量是因为<strong>变量的值可以被读取和修改</strong>。</p>
-</li>
-<li><p>对于变量我们一般会为其取一个优雅而漂亮的名字，在为变量命名的时候我们往往会严格遵守一些规则:</p>
-<ul>
-<li><p>变量名由<strong>字母</strong>(Unicode字符)， <strong>数字</strong>和<strong>下划线</strong>构成。切记，数字不能作为变量名的开头(如果不想造成不必要的麻烦，我在这建议都用英文字母来为变量命名)</p>
-  <img src="files(二)\2.png" align="left" style="zoom:80%;"></li>
-<li><p><strong>大小写敏感</strong>，即大写变量和小写变量属于不同变量</p>
-<img src="\files(二)\3.png" aligin="left" style="zoom:80%;"></li>
-<li><p>避免与Python语言的关键字<strong>（有特殊含义的单词）和</strong>保留字<strong>（如函数、模块等的名字）</strong>发生重名的冲突。</p>
-<p>  建议:</p>
-<ul>
-<li>变量名通常使用小写英文字母，多个单词用下划线进行连接</li>
-<li>下划线开头的变量通常是受保护的</li>
-<li>私有变量用两个下划线开头(如没有特殊情况请不要以下划线开头)</li>
-<li>在命名是最后做到<strong>见名知意</strong></li>
-</ul>
-  <img src="\files(二)\4.png" align="left" style="zoom:80%;">
-  </li>
-<li><p><strong>tips</strong>:  </p>
-<ol>
-<li>在Python中如果循环变量用不到，则可以用 **_ **表示</li>
-</ol>
-  <img src="D:\千锋培训\知乎文章\files(二)\5.png" align="left" style="zoom:80%;">
-  
-<ol start="2">
-<li>在Python中，给一个变量赋值并<strong>不需要申明数据的类型</strong>，Python会自动识别所给的数据类型 <img src="D:\千锋培训\知乎文章\files(二)\6.png" glign="left" style="zoom:80%;"></li>
-</ol>
-</li>
-</ul>
-</li>
-</ol>
-<h3 id="3-Python三大结构"><a href="#3-Python三大结构" class="headerlink" title="3. Python三大结构"></a>3. Python三大结构</h3><ul>
-<li>顺序：语句从上到下的执行</li>
-<li>分支：根据不同的情况，走对应的分支，执行不同的代码</li>
-<li>循环：重复运行某一段代码块，直到满足某一个条件才会结束循环，或者是遍历完所有的元素也会跳出循环</li>
-</ul>
+<span class="token comment" spellcheck="true"># 定义一个四元组</span>
+info <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token string">'徐晓'</span><span class="token punctuation">,</span> <span class="token number">49</span><span class="token punctuation">,</span> <span class="token boolean">True</span><span class="token punctuation">,</span> <span class="token string">'北凉'</span><span class="token punctuation">)</span>
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
                 
             </div>
@@ -463,7 +414,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/07/21/Python%E8%8F%9C%E9%B8%9F%E5%BF%85%E7%BB%8F%E4%B9%8B%E8%B7%AF(%E4%BA%8C)/">http://example.com/2021/07/21/Python%E8%8F%9C%E9%B8%9F%E5%BF%85%E7%BB%8F%E4%B9%8B%E8%B7%AF(%E4%BA%8C)/</a>
+                    <a href="http://example.com/posts/cb30.html">http://example.com/posts/cb30.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -505,8 +456,8 @@
                                     <span class="chip bg-color">Python</span>
                                 </a>
                             
-                                <a href="/tags/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
-                                    <span class="chip bg-color">数据类型</span>
+                                <a href="/tags/%E5%85%83%E7%BB%84/">
+                                    <span class="chip bg-color">元组</span>
                                 </a>
                             
                         </div>
@@ -680,7 +631,60 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/07/31/%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B9%8B%E5%88%97%E8%A1%A8/">
+                <a href="/posts/d931.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/34.jpg" class="responsive-img" alt="再谈字符串">
+                        
+                        <span class="card-title">再谈字符串</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-08-01
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Python/" class="post-category">
+                                    Python
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Python/">
+                        <span class="chip bg-color">Python</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">
+                        <span class="chip bg-color">字符串</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/posts/4422.html">
                     <div class="card-image">
                         
                         
@@ -696,9 +700,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-07-31
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-31
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -720,60 +724,6 @@
                     
                     <a href="/tags/%E5%88%97%E8%A1%A8/">
                         <span class="chip bg-color">列表</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/07/21/Python%E8%8F%9C%E9%B8%9F%E5%BF%85%E7%BB%8F%E4%B9%8B%E8%B7%AF(%E4%BA%8C)/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="Python内置数据类型">
-                        
-                        <span class="card-title">Python内置数据类型</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-21
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Python/" class="post-category">
-                                    Python
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Python/">
-                        <span class="chip bg-color">Python</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
-                        <span class="chip bg-color">数据类型</span>
                     </a>
                     
                 </div>
@@ -1182,6 +1132,8 @@ $(function () {
     
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
+
+    <script src="/js/cursor.js"></script>
 
 </body>
 
