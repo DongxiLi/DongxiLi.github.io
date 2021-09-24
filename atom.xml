@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-09-18T16:49:16.223Z</updated>
+  <updated>2021-09-24T08:33:09.173Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>数据分析方法论</title>
+    <link href="http://example.com/posts/6927.html"/>
+    <id>http://example.com/posts/6927.html</id>
+    <published>2021-09-23T16:00:00.000Z</published>
+    <updated>2021-09-24T08:33:09.173Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="数据分析" scheme="http://example.com/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>git</title>
