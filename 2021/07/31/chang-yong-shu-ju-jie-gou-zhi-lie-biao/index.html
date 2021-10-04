@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="枚举, Python,Mysql,Excel,Power BI,数据分析,数据可视化,机器学习">
+    <meta name="keywords" content="列表, Python,Mysql,Excel,Power BI,数据分析,数据可视化,机器学习">
     <meta name="description" content="专注于Web,分享生活,分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>枚举 | 李东西</title>
+    <title>列表 | 李东西</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -219,12 +219,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">枚举</h1>
+                    <h1 class="description center-align post-title">列表</h1>
                 </div>
             </div>
         </div>
@@ -344,8 +344,8 @@
                                 <span class="chip bg-color">Python</span>
                             </a>
                         
-                            <a href="/tags/%E6%9E%9A%E4%B8%BE/">
-                                <span class="chip bg-color">枚举</span>
+                            <a href="/tags/%E5%88%97%E8%A1%A8/">
+                                <span class="chip bg-color">列表</span>
                             </a>
                         
                     </div>
@@ -369,7 +369,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-08-06
+                    2021-07-31
                 </div>
                 
 
@@ -390,87 +390,145 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="枚举的定义："><a href="#枚举的定义：" class="headerlink" title="枚举的定义："></a>枚举的定义：</h2><p>枚举是与多个唯一常量值绑定的一组符号名(即成员)。枚举中的成员可以进行身份比较，并且枚举也属于可迭代类型。</p>
+                <h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><h3 id="列表的定义和使用"><a href="#列表的定义和使用" class="headerlink" title="列表的定义和使用"></a>列表的定义和使用</h3><p>Python中，<strong>列表是由一系列元素按特定顺序构成的数据序列</strong>。列表可以<strong>可以保存多个数据</strong>，并且这些数据可以<strong>重复</strong>，以及合一存储多种数据类型(但是一般不建议这么做)。</p>
+<ol>
+<li>通过字面量<code>[]</code>语法来定义列表，列表中的元素使用英文状态下的逗号(,)进行分隔<pre class="line-numbers language-python"><code class="language-python">nums <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">]</span>
+names <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'徐凤年'</span>， <span class="token string">'姜似'</span>， <span class="token string">'裴南苇'</span><span class="token punctuation">]</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
+<li>通过Python内置的<code>list</code>函数姜其他序列编程列表。准确的来说<code>list</code>并不是一个函数，而是创建对象的构造器<br>```python<br>nums = list(range(1, 10))<br>print(nums)  # [1, 2, 3, 4, 5, 6, 7, 8, 9]</li>
+</ol>
+<p>ch = list(‘hello’)<br>print(ch)  # [‘h’, ‘e’, ‘l’, ‘l’, ‘o’]</p>
+<pre><code>3. 通过列表推导式(列表生成式)生成列表
+```python
+nums = [i ** 2 for i in range(1, 9)]
+print(nums)  # [1, 4, 9, 16, 25, 36, 49, 64, 81]
+</code></pre>
 <blockquote>
-<p>注意：</p>
-<p>枚举表示常量，因此建议枚举成员名称使用大写字母</p>
+<p>注意：<br> 列表是一种可变得数据类型，也即说明列表可以添加元素，删除元素，更新元素</p>
 </blockquote>
-<h2 id="创建Enum"><a href="#创建Enum" class="headerlink" title="创建Enum"></a>创建Enum</h2><p>枚举有<code>class</code>来创建的，当然还有其他创建方法，在此笔者就不赘述。</p>
-<pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">from</span> enum <span class="token keyword">import</span> Enum
-<span class="token keyword">class</span> <span class="token class-name">Colors</span><span class="token punctuation">(</span>Enum<span class="token punctuation">)</span><span class="token punctuation">:</span>
-  PINK <span class="token operator">=</span> <span class="token string">'#FFC0CB'</span>
-  PURPLE <span class="token operator">=</span> <span class="token string">'#800080'</span>
-  BLACK <span class="token operator">=</span> <span class="token string">'#000000'</span>
-
-<span class="token comment" spellcheck="true"># 枚举成员的字符串表现形式</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>Colors<span class="token punctuation">.</span>PINK<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># Color.PINK</span>
-
-<span class="token comment" spellcheck="true"># 枚举成员的 类型 就是它所属于的枚举</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>type<span class="token punctuation">(</span>Colors<span class="token punctuation">.</span>PINK<span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># &lt;enum 'Colors'></span>
-
-<span class="token comment" spellcheck="true"># Enum 成员包含 name 属性</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>Colors<span class="token punctuation">.</span>PINK<span class="token punctuation">,</span>name<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># PINK</span>
-  
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="列表的运算符"><a href="#列表的运算符" class="headerlink" title="列表的运算符"></a>列表的运算符</h4><pre class="line-numbers language-python"><code class="language-python">character_names <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'李淳罡'</span><span class="token punctuation">,</span> <span class="token string">'剑九黄'</span><span class="token punctuation">,</span> <span class="token string">'贾嘉佳'</span><span class="token punctuation">]</span>
+character_names2 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'吴六鼎'</span><span class="token punctuation">,</span> <span class="token string">'温华'</span><span class="token punctuation">,</span> <span class="token string">'轩辕青锋'</span><span class="token punctuation">,</span> <span class="token string">'鱼幼薇'</span><span class="token punctuation">,</span> <span class="token string">'王初冬'</span><span class="token punctuation">]</span>
+    
+<span class="token comment" spellcheck="true"># 列表的拼接</span>
+character_names3 <span class="token operator">=</span> character_names <span class="token operator">+</span> character_names2
+<span class="token keyword">print</span><span class="token punctuation">(</span>character_names3<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># ['李淳罡', '剑九黄', '贾嘉佳', '吴六鼎', '温华', '轩辕青锋', '鱼幼薇', '王初冬']</span>
+    
+character_names<span class="token punctuation">.</span>extend<span class="token punctuation">(</span>character_names2<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>character_names<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># ['李淳罡', '剑九黄', '贾嘉佳', '吴六鼎', '温华', '轩辕青锋', '鱼幼薇', '王初冬']</span>
+    
+<span class="token comment" spellcheck="true"># 列表的重复</span>
+names <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'李东西'</span><span class="token punctuation">]</span> <span class="token operator">*</span> <span class="token number">3</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>names<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># ['李东西','李东西', '李东西']</span>
+    
+<span class="token comment" spellcheck="true"># 列表的成员运算</span>
+<span class="token comment" spellcheck="true"># character_names3 = # ['李淳罡', '剑九黄', '贾嘉佳', '吴六鼎', '温华', '轩辕青锋', '鱼幼薇', '王初冬']</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'徐凤年'</span> <span class="token keyword">in</span> character_names3<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># False</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'徐凤年'</span> <span class="token operator">not</span> <span class="token keyword">in</span> character_names3<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># True</span>
+    
+<span class="token comment" spellcheck="true"># 获取列表的长度(元素个数)</span>
+size <span class="token operator">=</span> len<span class="token punctuation">(</span>character_names3<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>size<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># 8</span>
+    
+<span class="token comment" spellcheck="true"># 列表的索引</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>character_names3<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> character_names3<span class="token punctuation">[</span><span class="token operator">-</span>size<span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># 李淳罡 李淳罡</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>character_names3<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># 王初冬</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>character_names3<span class="token punctuation">[</span>size<span class="token number">-1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> character_names3<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># 王初冬 王初冬</span>
+    
+<span class="token comment" spellcheck="true"># 列表的索引</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>character_names3<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token number">7</span><span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># ['剑九黄', '贾嘉佳', '吴六鼎', '温华', '轩辕青锋']</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>character_names3<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">7</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># ['剑九黄', '贾嘉佳', '吴六鼎', '温华', '轩辕青锋']</span>
+    
+<span class="token keyword">print</span><span class="token punctuation">(</span>character_names3<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># ['王初冬', '鱼幼薇', '轩辕青锋', '温华', '吴六鼎', '贾嘉佳', '剑九黄', '李淳罡']</span>
+    
+<span class="token keyword">print</span><span class="token punctuation">(</span>character_names3<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># ['李淳罡', '贾嘉佳', '温华', '鱼幼薇']</span>
+    
+<span class="token keyword">print</span><span class="token punctuation">(</span>character_names3<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># ['王初冬', '轩辕青锋', '吴六鼎', '剑九黄']</span>
+    
+<span class="token comment" spellcheck="true"># 列表的比较运算</span>
+items1 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span>
+items2 <span class="token operator">=</span> list<span class="token punctuation">(</span>range<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># 两个列表比较相等性比的是对应索引位置上的元素是否相等</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>items1 <span class="token operator">==</span> items2<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># True</span>
+items3 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span>
+<span class="token comment" spellcheck="true"># 两个列表比较大小比的是对应索引位置上的元素的大小</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>items1 <span class="token operator">&lt;=</span> items3<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># True</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <blockquote>
-<p>注解：</p>
-<p>Enum 成员值</p>
-<p>成员值可以使<code>int</code>,<code>str</code>等。若无需设定确切值，<code>auto</code>实例会自动为成员分配合适的值。</p>
-<p>命名法</p>
-<ul>
-<li>类Color 是枚举(enum)</li>
-<li>Color.PINK，Color.PURPLE, Color.BLACK  等属性是 枚举成员(enum成员)，也是常量</li>
-<li>枚举成员具有 名称和值（Color.PINK 的名称是 PINK，值是 #FFC0CB）</li>
+<p>注意：<br> 由于列表是可变类型，所以通过索引操作既可以获取列表中的元素，也可以更新列表中的元素。对列表做索引操作一样要注意索引越界的问题，对于有<code>N</code>个元素的列表，正向索引的范围是<code>0</code>到<code>N-1</code>，负向索引的范围是<code>-1</code>到<code>-N</code>，如果超出这个范围，将引发<code>IndexError</code>异常，错误信息为：<code>list index out of range</code>。</p>
+</blockquote>
+<h4 id="列表元素的遍历"><a href="#列表元素的遍历" class="headerlink" title="列表元素的遍历"></a>列表元素的遍历</h4><ul>
+<li>通过’for‘循环遍历<br>```python<br>character_names = [‘李淳罡’, ‘剑九黄’, ‘贾嘉佳’, ‘吴六鼎’, ‘温华’, ‘轩辕青锋’, ‘鱼幼薇’, ‘王初冬’]</li>
 </ul>
-<p>虽然Enum<code>class</code>语法创建，但是Enum并不是常规的Python类。</p>
-</blockquote>
-<h2 id="枚举的遍历"><a href="#枚举的遍历" class="headerlink" title="枚举的遍历"></a>枚举的遍历</h2><pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">from</span> enum <span class="token keyword">import</span> Enum
-
-
-<span class="token keyword">class</span> <span class="token class-name">Colors</span><span class="token punctuation">(</span>Enum<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    PINK <span class="token operator">=</span> <span class="token string">'#FFC0CB'</span>
-    PURPLE <span class="token operator">=</span> <span class="token string">'#800080'</span>
-    BLACK <span class="token operator">=</span> <span class="token string">'#000000'</span>
-    
-<span class="token keyword">for</span> color <span class="token keyword">in</span> Colors<span class="token punctuation">:</span>
-    <span class="token keyword">print</span><span class="token punctuation">(</span>color<span class="token punctuation">)</span>
-<span class="token comment" spellcheck="true"># Colors.PINK</span>
-<span class="token comment" spellcheck="true"># Colors.PURPLE</span>
-<span class="token comment" spellcheck="true"># Color.BLACK</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>for name in character_names:<br>    print(name)</p>
+<p>for index in range(len(character_names)):<br>print(character_names[index])</p>
+<pre><code>
+### 列表的方法
+#### 添加元素和删除元素
+```python
+character_names = ['姜似', '鱼幼薇', '南宫仆射']
+   
+# 使用append方法在列表末尾添加元素
+character_names.append('红薯')
+print(character_names)  # ['姜似', '鱼幼薇', '南宫仆射', '红薯']
+   
+# 使用insetr方法在列表指定索引位置插入元素
+character_names.insert(1, '洛阳')
+print(character_names)  # ['姜似', '洛阳', '鱼幼薇', '南宫仆射', '红薯']
+   
+# 删除元素
+character_names.remove('红薯')
+print(character_names)  # ['姜似', '洛阳', '鱼幼薇', '南宫仆射']
+   
+# 删除指定索引位置的元素
+# 默认删除列表最后一个元素
+# pop方法会返回删除的元素
+character_names.pop(2)  
+print(character_names)  # ['姜似', '洛阳', '南宫仆射']
+   
+# 删除列表末尾元素
+character_names.pop()
+   
+# 清空列表中的元素
+character_names.clear()
+print(character_names)  # []
+</code></pre>
 <blockquote>
-<p>注意：</p>
-<p>枚举成员可哈希，可用于字典和集合</p>
+<p>注意：<br> 在使用<code>remove</code>方法删除元素时，如果要删除的元素并不在列表中，会引<code>ValueError</code>异常，错误消息是：<code>list.remove(x): x not in list</code>。在使用<code>pop</code>方法删除元素时，如果索引的值超出了范围，会引发<code>IndexError</code>异常，错误消息是：<code>pop index out of range</code>。</p>
 </blockquote>
-<h2 id="枚举成员及其属性的访问"><a href="#枚举成员及其属性的访问" class="headerlink" title="枚举成员及其属性的访问"></a>枚举成员及其属性的访问</h2><pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 使用name访问枚举成员</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>Color<span class="token punctuation">[</span><span class="token string">'PINK'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># Color.PINK</span>
+<pre class="line-numbers language-python"><code class="language-python">character_names <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'姜似'</span><span class="token punctuation">,</span> <span class="token string">'鱼幼薇'</span><span class="token punctuation">,</span> <span class="token string">'南宫仆射'</span><span class="token punctuation">]</span>
+<span class="token keyword">del</span> character_names<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>character_names<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># ['姜似', '南宫仆射']</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<p>从列表中删除元素其实还有一种方式，就是使用Python中的<code>del</code>关键字后面跟要删除的元素，这种做法跟使用<code>pop</code>方法指定索引删除元素没有实质性的区别，但后者会返回删除的元素，前者在性能上略优（<code>del</code>对应字节码指令是<code>DELETE_SUBSCR</code>，而<code>pop</code>对应的字节码指令是<code>CALL_METHOD</code>和<code>POP_TOP</code>）。</p>
+</blockquote>
+<h4 id="元素排序和反转列表的sort操作可以实现列表元素的排序，而reversre操作可以实现元素的反转"><a href="#元素排序和反转列表的sort操作可以实现列表元素的排序，而reversre操作可以实现元素的反转" class="headerlink" title="元素排序和反转列表的sort操作可以实现列表元素的排序，而reversre操作可以实现元素的反转"></a>元素排序和反转列表的<code>sort</code>操作可以实现列表元素的排序，而<code>reversre</code>操作可以实现元素的反转</h4><pre class="line-numbers language-python"><code class="language-python">character_names <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'姜似'</span><span class="token punctuation">,</span> <span class="token string">'鱼幼薇'</span><span class="token punctuation">,</span> <span class="token string">'南宫仆射'</span><span class="token punctuation">]</span>
 
-<span class="token comment" spellcheck="true"># 可访问枚举成员的name,value</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>Color<span class="token punctuation">[</span><span class="token string">'PINK'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># PINK</span>
+<span class="token comment" spellcheck="true"># 排序,sort方法没有返回值，是在原数组上面操作</span>
+character_names<span class="token punctuation">.</span>sort<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>character<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># ['南宫仆射', '姜似', '鱼幼薇']</span>
 
-<span class="token keyword">print</span><span class="token punctuation">(</span>Color<span class="token punctuation">[</span><span class="token string">'PINK'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>value<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># #FFC0CB</span>
-
-
+<span class="token comment" spellcheck="true"># 反转</span>
+character_names<span class="token punctuation">.</span>reverse<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>character_names<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># ['鱼幼薇', '姜似', '南宫仆射'] </span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="重复的枚举成员和值"><a href="#重复的枚举成员和值" class="headerlink" title="重复的枚举成员和值"></a>重复的枚举成员和值</h2><p>两个枚举成员的名称不能相同</p>
-<pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">class</span>  <span class="token class-name">Color</span><span class="token punctuation">(</span>Enum<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    PINK <span class="token operator">=</span> <span class="token string">'#FFC0CB'</span>
-    PINK <span class="token operator">=</span> <span class="token string">'#DFC8BB'</span>
-    
-<span class="token triple-quoted-string string">"""
-Traceback (most recent call last):
-...
-TypeError: Attempted to reuse key: 'PINK'
-"""</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>两个枚举成员的值可以相同。如果先定义成员A再定义成员B且它们的值相同，则B是A的别名。按值查找A和B的值返回的是A。按名称查找B，返回的也是A：</p>
-<pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">class</span>  <span class="token class-name">Color</span><span class="token punctuation">(</span>Enum<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    PINK <span class="token operator">=</span> <span class="token string">'#FFC0CB'</span>
-    RED <span class="token operator">=</span> <span class="token string">'#FFC0CB'</span>
-    
-<span class="token keyword">print</span><span class="token punctuation">(</span>Color<span class="token punctuation">.</span>PINK<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># Color.PINK</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>Color<span class="token punctuation">.</span>RED<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># Color.PINK</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="嵌套的列表"><a href="#嵌套的列表" class="headerlink" title="嵌套的列表"></a>嵌套的列表</h3><p>如果列表中的元素又是列表，那么可以说这是嵌套的列表。嵌套的列表可以用来表示数学上的矩阵，表格。例如：我们想保存5个学生3门课程的成绩，可以定义一个保存5个元素的列表保存5个学生的信息，而每个列表元素又是3个元素构成的列表，分别代表3门课程的成绩。但是，一定要注意下面的代码是有问题的</p>
+<pre class="line-numbers language-python"><code class="language-python">scores <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">*</span> <span class="token number">3</span><span class="token punctuation">]</span> <span class="token operator">*</span> <span class="token number">5</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>scores<span class="token punctuation">)</span>    <span class="token comment" spellcheck="true"># [[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]]</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>看上去我们好像创建了一个<code>5 * 3</code>的嵌套列表，但实际上当我们录入第一个学生的第一门成绩后，你就会发现问题来了，我们看看下面代码的输出。</p>
+<pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 嵌套的列表需要多次索引操作才能获取元素</span>
+scores<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">95</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>scores<span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># [[95, 0, 0], [95, 0, 0], [95, 0, 0], [95, 0, 0], [95, 0, 0]]</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>我们不去过多的解释为什么会出现这样的问题，如果想深入研究这个问题，可以通过<a target="_blank" rel="noopener" href="http://www.pythontutor.com/visualize.html">Python Tutor</a>网站的可视化代码执行功能，看看创建列表时计算机内存中发生了怎样的变化，下面的图就是在这个网站上生成的。建议大家不去纠结这个问题，现阶段只需要记住不能用<code>[[0] * 3] * 5]</code>这种方式来创建嵌套列表就行了。那么创建嵌套列表的正确做法是什么呢，下面的代码会给你答案。</p>
+<pre class="line-numbers language-python"><code class="language-python">scores <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">*</span> <span class="token number">3</span> <span class="token keyword">for</span> _ <span class="token keyword">in</span> range<span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+scores<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">95</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>scores<span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># [[95, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]]</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
                 
             </div>
@@ -497,7 +555,7 @@ TypeError: Attempted to reuse key: 'PINK'
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/posts/4523.html">http://example.com/posts/4523.html</a>
+                    <a href="https://donxili.gitee.io/2021/07/31/chang-yong-shu-ju-jie-gou-zhi-lie-biao/">https://donxili.gitee.io/2021/07/31/chang-yong-shu-ju-jie-gou-zhi-lie-biao/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -539,8 +597,8 @@ TypeError: Attempted to reuse key: 'PINK'
                                     <span class="chip bg-color">Python</span>
                                 </a>
                             
-                                <a href="/tags/%E6%9E%9A%E4%B8%BE/">
-                                    <span class="chip bg-color">枚举</span>
+                                <a href="/tags/%E5%88%97%E8%A1%A8/">
+                                    <span class="chip bg-color">列表</span>
                                 </a>
                             
                         </div>
@@ -714,13 +772,13 @@ TypeError: Attempted to reuse key: 'PINK'
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/5409.html">
+                <a href="/2021/08/01/chang-yong-shu-ju-jie-gou-zhi-yuan-zu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="函数">
+                        <img src="/medias/featureimages/32.jpg" class="responsive-img" alt="元组">
                         
-                        <span class="card-title">函数</span>
+                        <span class="card-title">元组</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -731,7 +789,7 @@ TypeError: Attempted to reuse key: 'PINK'
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-08-07
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-08-01
                         </span>
                         <span class="publish-author">
                             
@@ -752,8 +810,8 @@ TypeError: Attempted to reuse key: 'PINK'
                         <span class="chip bg-color">Python</span>
                     </a>
                     
-                    <a href="/tags/%E5%87%BD%E6%95%B0/">
-                        <span class="chip bg-color">函数</span>
+                    <a href="/tags/%E5%85%83%E7%BB%84/">
+                        <span class="chip bg-color">元组</span>
                     </a>
                     
                 </div>
@@ -767,13 +825,13 @@ TypeError: Attempted to reuse key: 'PINK'
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/d931.html">
+                <a href="/2021/07/21/python-cai-niao-bi-jing-zhi-lu-er/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/34.jpg" class="responsive-img" alt="再谈字符串">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="Python内置数据类型">
                         
-                        <span class="card-title">再谈字符串</span>
+                        <span class="card-title">Python内置数据类型</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -784,7 +842,7 @@ TypeError: Attempted to reuse key: 'PINK'
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-01
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-21
                             </span>
                         <span class="publish-author">
                             
@@ -805,8 +863,8 @@ TypeError: Attempted to reuse key: 'PINK'
                         <span class="chip bg-color">Python</span>
                     </a>
                     
-                    <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">
-                        <span class="chip bg-color">字符串</span>
+                    <a href="/tags/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
+                        <span class="chip bg-color">数据类型</span>
                     </a>
                     
                 </div>

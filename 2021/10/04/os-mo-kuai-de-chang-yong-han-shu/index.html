@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Python内置数据类型, Python,Mysql,Excel,Power BI,数据分析,数据可视化,机器学习">
+    <meta name="keywords" content="Python os模块的常用函数, Python,Mysql,Excel,Power BI,数据分析,数据可视化,机器学习">
     <meta name="description" content="专注于Web,分享生活,分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Python内置数据类型 | 李东西</title>
+    <title>Python os模块的常用函数 | 李东西</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -219,12 +219,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Python内置数据类型</h1>
+                    <h1 class="description center-align post-title">Python os模块的常用函数</h1>
                 </div>
             </div>
         </div>
@@ -234,104 +234,10 @@
 
 
 
-<main class="post-container content">
+<main class="container content">
 
     
-    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
-<style>
-    #articleContent h1::before,
-    #articleContent h2::before,
-    #articleContent h3::before,
-    #articleContent h4::before,
-    #articleContent h5::before,
-    #articleContent h6::before {
-        display: block;
-        content: " ";
-        height: 100px;
-        margin-top: -100px;
-        visibility: hidden;
-    }
-
-    #articleContent :focus {
-        outline: none;
-    }
-
-    .toc-fixed {
-        position: fixed;
-        top: 64px;
-    }
-
-    .toc-widget {
-        width: 345px;
-        padding-left: 20px;
-    }
-
-    .toc-widget .toc-title {
-        padding: 35px 0 15px 17px;
-        font-size: 1.5rem;
-        font-weight: bold;
-        line-height: 1.5rem;
-    }
-
-    .toc-widget ol {
-        padding: 0;
-        list-style: none;
-    }
-
-    #toc-content {
-        padding-bottom: 30px;
-        overflow: auto;
-    }
-
-    #toc-content ol {
-        padding-left: 10px;
-    }
-
-    #toc-content ol li {
-        padding-left: 10px;
-    }
-
-    #toc-content .toc-link:hover {
-        color: #42b983;
-        font-weight: 700;
-        text-decoration: underline;
-    }
-
-    #toc-content .toc-link::before {
-        background-color: transparent;
-        max-height: 25px;
-
-        position: absolute;
-        right: 23.5vw;
-        display: block;
-    }
-
-    #toc-content .is-active-link {
-        color: #42b983;
-    }
-
-    #floating-toc-btn {
-        position: fixed;
-        right: 15px;
-        bottom: 76px;
-        padding-top: 15px;
-        margin-bottom: 0;
-        z-index: 998;
-    }
-
-    #floating-toc-btn .btn-floating {
-        width: 48px;
-        height: 48px;
-    }
-
-    #floating-toc-btn .btn-floating i {
-        line-height: 48px;
-        font-size: 1.4rem;
-    }
-</style>
-<div class="row">
-    <div id="main-content" class="col s12 m12 l9">
-        <!-- 文章内容详情 -->
+    <!-- 文章内容详情 -->
 <div id="artDetail">
     <div class="card">
         <div class="card-content article-info">
@@ -344,8 +250,8 @@
                                 <span class="chip bg-color">Python</span>
                             </a>
                         
-                            <a href="/tags/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
-                                <span class="chip bg-color">数据类型</span>
+                            <a href="/tags/%E6%A0%87%E5%87%86%E5%BA%93/">
+                                <span class="chip bg-color">标准库</span>
                             </a>
                         
                     </div>
@@ -369,7 +275,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-07-21
+                    2021-10-04
                 </div>
                 
 
@@ -390,65 +296,243 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="1-Python内置并且常见的数据类型"><a href="#1-Python内置并且常见的数据类型" class="headerlink" title="1. Python内置并且常见的数据类型:"></a>1. Python<strong>内置</strong>并且常见的<strong>数据类型</strong>:</h3><ul>
-<li><p>整型(int)：</p>
-<ul>
-<li>Python中不仅仅有我们生活中常见<strong>自然数</strong>，它和任何一门编程语言一样可以处理<strong>任意大小</strong>的整数</li>
-<li>二进制：</li>
-<li>八进制</li>
-<li>十进制</li>
-<li>十六进制</li>
-</ul>
-</li>
-<li><p>浮点型(float)： 浮点型通俗来说就是我们熟知的小数；这里包括了一切负数，一切整数</p>
-</li>
-<li><p>字符串型(str)：字符串是用<strong>单引号(‘hello’)<strong>或者</strong>双引号（”hello”）</strong>引起来的任意文本，通常字符串里面的内容表示就是表面的那么简单，你看到是什么样就是什么样，当然也有特例存在，那就是转义字符</p>
-  <img src="files(二)\1.png" align="left" style="zoom:80%;">
-
-<p>  <strong>注意</strong>：python中说的空字符串并非“    ”里面是空格，而是””，也即是在引号里面什么都没有称之为空字符串</p>
-</li>
-<li><p>布尔型(bool)：布尔值<strong>只有</strong>True，False两种值</p>
-</li>
-<li><p>自定义类型：用户根据自己的需求定义数数据类型</p>
-</li>
-</ul>
-<h3 id="2-变量"><a href="#2-变量" class="headerlink" title="2. 变量"></a>2. 变量</h3><ol>
-<li><p>定义：一般我们说的变量是用来方便<strong>存储数据的载体</strong>，而之所以称其为变量是因为<strong>变量的值可以被读取和修改</strong>。</p>
-</li>
-<li><p>对于变量我们一般会为其取一个优雅而漂亮的名字，在为变量命名的时候我们往往会严格遵守一些规则:</p>
-<ul>
-<li><p>变量名由<strong>字母</strong>(Unicode字符)， <strong>数字</strong>和<strong>下划线</strong>构成。切记，数字不能作为变量名的开头(如果不想造成不必要的麻烦，我在这建议都用英文字母来为变量命名)</p>
-  <img src="files(二)\2.png" align="left" style="zoom:80%;"></li>
-<li><p><strong>大小写敏感</strong>，即大写变量和小写变量属于不同变量</p>
-<img src="\files(二)\3.png" aligin="left" style="zoom:80%;"></li>
-<li><p>避免与Python语言的关键字<strong>（有特殊含义的单词）和</strong>保留字<strong>（如函数、模块等的名字）</strong>发生重名的冲突。</p>
-<p>  建议:</p>
-<ul>
-<li>变量名通常使用小写英文字母，多个单词用下划线进行连接</li>
-<li>下划线开头的变量通常是受保护的</li>
-<li>私有变量用两个下划线开头(如没有特殊情况请不要以下划线开头)</li>
-<li>在命名是最后做到<strong>见名知意</strong></li>
-</ul>
-  <img src="\files(二)\4.png" align="left" style="zoom:80%;">
-  </li>
-<li><p><strong>tips</strong>:  </p>
+                <p><code>os</code> 模块的常用方法</p>
 <ol>
-<li>在Python中如果循环变量用不到，则可以用 **_ **表示</li>
+<li><code>os.chdir()</code> 方法用于改变当前工作目录到指定的路径</li>
 </ol>
-  <img src="D:\千锋培训\知乎文章\files(二)\5.png" align="left" style="zoom:80%;">
-  
 <ol start="2">
-<li>在Python中，给一个变量赋值并<strong>不需要申明数据的类型</strong>，Python会自动识别所给的数据类型 <img src="D:\千锋培训\知乎文章\files(二)\6.png" glign="left" style="zoom:80%;"></li>
+<li><code>os.getcwd()</code> 方法用于返回当前工作目录</li>
 </ol>
-</li>
-</ul>
+<ol start="3">
+<li><p><code>os.listdir() </code>方法用于返回指定的文件夹包含的文件或文件夹的名字的列表。</p>
+<p> 它不包括 <strong>.</strong> 和 <strong>..</strong> 即使它在文件夹中。</p>
 </li>
 </ol>
-<h3 id="3-Python三大结构"><a href="#3-Python三大结构" class="headerlink" title="3. Python三大结构"></a>3. Python三大结构</h3><ul>
-<li>顺序：语句从上到下的执行</li>
-<li>分支：根据不同的情况，走对应的分支，执行不同的代码</li>
-<li>循环：重复运行某一段代码块，直到满足某一个条件才会结束循环，或者是遍历完所有的元素也会跳出循环</li>
+<ol start="4">
+<li><p><code>os.makedirs()</code> 方法用于递归创建目录。</p>
+<p> 如果子目录创建失败或者已经存在，会抛出一个 OSError 的异常，Windows上Error 183 即为目录已经存在的异常错误。</p>
+<p> 如果第一个参数 path 只有一级，则与<code>mkdir()</code>函数相同。</p>
+</li>
+</ol>
+<ol start="5">
+<li><p><code>os.mkdir()</code> 方法用于以数字权限模式创建目录。默认的模式为 0777 (八进制)。</p>
+<p> 如果目录有多级，则创建最后一级，如果最后一级目录的上级目录有不存在的，则会抛出一个 OSError。</p>
+</li>
+</ol>
+<ol start="6">
+<li><p><code>os.open()</code> 方法用于打开一个文件，并且设置需要的打开选项，模式参数mode参数是可选的，默认为 0777。</p>
+</li>
+<li><p><code>os.remove()</code> 方法用于删除指定路径的文件。如果指定的路径是一个目录，将抛出OSError。</p>
+</li>
+</ol>
+<ol start="8">
+<li><code>os.removedirs()</code> 方法用于递归删除目录。像<code>rmdir()</code>, 如果子文件夹成功删除, <code>removedirs()</code>才尝试它们的父文件夹,直到抛出一个error(它基本上被忽略,因为它一般意味着你文件夹不为空)。</li>
+</ol>
+<ol start="9">
+<li><code>os.rename()</code> 方法用于命名文件或目录，从 src 到 dst,如果dst是一个存在的目录, 将抛出OSError。</li>
+</ol>
+<ol start="10">
+<li><code>os.renames()</code> 方法用于递归重命名目录或文件。类似rename()。</li>
+</ol>
+<ol start="11">
+<li><code>os.rmdir()</code> 方法用于删除指定路径的目录。仅当这文件夹是空的才可以, 否则, 抛出OSError。</li>
+</ol>
+<pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">import</span> os
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 获取当前工作路径</span>
+<span class="token comment" spellcheck="true"># os.getcwdb()  # b'/Users/lidongxi/Desktop'</span>
+os<span class="token punctuation">.</span>getcwd<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 更改工作路径</span>
+os<span class="token punctuation">.</span>chdir<span class="token punctuation">(</span><span class="token string">'..'</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-python"><code class="language-python">os<span class="token punctuation">.</span>getcwd<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-python"><code class="language-python">os<span class="token punctuation">.</span>chdir<span class="token punctuation">(</span><span class="token string">'Desktop/'</span><span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true"># 查看当前/指令路径下的文件或文件夹的名字，返回列表</span>
+os<span class="token punctuation">.</span>listdir<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 非递归创建文件夹</span>
+<span class="token comment" spellcheck="true"># 如果目录有多级，则创建最后一级，如果最后一级目录的上级目录有不存在的，则会抛出一个</span>
+os<span class="token punctuation">.</span>mkdir<span class="token punctuation">(</span><span class="token string">'demo'</span><span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true"># 错误示例</span>
+<span class="token comment" spellcheck="true"># os.mkdir('demofile/file')  #[Errno 2] No such file or directory: 'demofile/file'</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># os.makedirs()方法用于递归创建目录</span>
+os<span class="token punctuation">.</span>makedirs<span class="token punctuation">(</span><span class="token string">'demo02/new'</span><span class="token punctuation">)</span>
+os<span class="token punctuation">.</span>listdir<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>flags – 该参数可以是以下选项，多个使用 “|” 隔开：</p>
+<ul>
+<li>os.O_RDONLY: 以只读的方式打开</li>
+<li>os.O_WRONLY: 以只写的方式打开</li>
+<li>os.O_RDWR : 以读写的方式打开</li>
+<li>os.O_NONBLOCK: 打开时不阻塞</li>
+<li>os.O_APPEND: 以追加的方式打开</li>
+<li>os.O_CREAT: 创建并打开一个新文件</li>
+<li>os.O_TRUNC: 打开一个文件并截断它的长度为零（必须有写权限）</li>
+<li>os.O_EXCL: 如果指定的文件存在，返回错误</li>
+<li>os.O_SHLOCK: 自动获取共享锁</li>
+<li>os.O_EXLOCK: 自动获取独立锁</li>
+<li>os.O_DIRECT: 消除或减少缓存效果</li>
+<li>os.O_FSYNC : 同步写入</li>
+<li>os.O_NOFOLLOW: 不追踪软链接</li>
 </ul>
+<pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 打开文件</span>
+file <span class="token operator">=</span> os<span class="token punctuation">.</span>open<span class="token punctuation">(</span><span class="token string">'test.txt'</span><span class="token punctuation">,</span> flags<span class="token operator">=</span>os<span class="token punctuation">.</span>O_RDWR<span class="token operator">|</span>os<span class="token punctuation">.</span>O_CREAT<span class="token punctuation">)</span>
+
+
+<span class="token comment" spellcheck="true"># 写入字符串, a bytes-like object is required</span>
+os<span class="token punctuation">.</span>write<span class="token punctuation">(</span>file<span class="token punctuation">,</span> str<span class="token punctuation">.</span>encode<span class="token punctuation">(</span><span class="token string">"This is test"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true"># 关闭文件</span>
+os<span class="token punctuation">.</span>close<span class="token punctuation">(</span>file<span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># os.remove() 方法用于删除指定路径的文件</span>
+os<span class="token punctuation">.</span>remove<span class="token punctuation">(</span><span class="token string">'test.txt'</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># os.rmdir() 删除指定文件夹</span>
+os<span class="token punctuation">.</span>rmdir<span class="token punctuation">(</span><span class="token string">'demo'</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 递归删除一个目录</span>
+os<span class="token punctuation">.</span>removedirs<span class="token punctuation">(</span><span class="token string">'demo02/new/'</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-python"><code class="language-python">! touch test<span class="token punctuation">.</span>txt
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 重命名文件/文件夹名字</span>
+<span class="token comment" spellcheck="true"># os.rename(src, dst)</span>
+
+<span class="token comment" spellcheck="true"># 重命名文件</span>
+os<span class="token punctuation">.</span>rename<span class="token punctuation">(</span><span class="token string">'test.txt'</span><span class="token punctuation">,</span> <span class="token string">'demo.txt'</span><span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true"># 重命名文件夹</span>
+os<span class="token punctuation">.</span>mkdir<span class="token punctuation">(</span><span class="token string">'test'</span><span class="token punctuation">)</span>
+os<span class="token punctuation">.</span>rename<span class="token punctuation">(</span><span class="token string">'test'</span><span class="token punctuation">,</span> <span class="token string">'demo'</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># os.renames() 方法用于递归重命名目录或文件。类似rename()</span>
+<span class="token comment" spellcheck="true"># 在重命名的同时，如果目标文件夹不存在会先递归的创建文件夹，在把文件重命名到目标文件夹下</span>
+os<span class="token punctuation">.</span>renames<span class="token punctuation">(</span><span class="token string">'test.txt'</span><span class="token punctuation">,</span> <span class="token string">'aa/b/demo.txt'</span><span class="token punctuation">)</span>
+os<span class="token punctuation">.</span>listdir<span class="token punctuation">(</span><span class="token string">'./aa/b/'</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>os.path下的常用方法</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>os.path.basename（path）</td>
+<td>返回文件名</td>
+</tr>
+<tr>
+<td>os.path.dirname（path）</td>
+<td>返回目录路径</td>
+</tr>
+<tr>
+<td>os.path.abspath(path)</td>
+<td>返回绝对路径</td>
+</tr>
+<tr>
+<td>os.path.exists（path）</td>
+<td>路径存在则返回True,路径损坏返回False</td>
+</tr>
+<tr>
+<td>os.path.getatime（path）</td>
+<td>返回最近访问时间（浮点型秒数）</td>
+</tr>
+<tr>
+<td>os.path.getmtime（path）</td>
+<td>返回最近文件修改时间</td>
+</tr>
+<tr>
+<td>os.path.getctime（path）</td>
+<td>返回文件 path 创建时间</td>
+</tr>
+<tr>
+<td>os.path.getsize（path）</td>
+<td>返回文件大小，如果文件不存在就返回错误</td>
+</tr>
+<tr>
+<td>os.path.isfile</td>
+<td>判断路径是否为文件</td>
+</tr>
+<tr>
+<td>os.path.isdir（path） （path）</td>
+<td>判断路径是否为目录</td>
+</tr>
+<tr>
+<td>os.path.split（path）</td>
+<td>把路径分割成 dirname 和 basename，返回一个元组</td>
+</tr>
+<tr>
+<td>os.path.join（path1, [, path2[, …]）</td>
+<td>将目录和文件名合成一个路径</td>
+</tr>
+<tr>
+<td>os.path.splitext（path）</td>
+<td>分割路径中的文件名与拓展名</td>
+</tr>
+</tbody></table>
+<pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 获取文件名</span>
+os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>basename<span class="token punctuation">(</span><span class="token string">'/Users/lidongxi/Desktop/douyin.xls'</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 获取文件路径</span>
+os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>dirname<span class="token punctuation">(</span><span class="token string">'/Users/lidongxi/Desktop/douyin.xls'</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 获取绝对路径</span>
+os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>abspath<span class="token punctuation">(</span><span class="token string">'.'</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 判断路径是否存在</span>
+os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>exists<span class="token punctuation">(</span><span class="token string">'/Users/lidongxi/Desktop/douyin.xls'</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 获取最近访问时间，返回浮点型的描述</span>
+os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>getatime<span class="token punctuation">(</span><span class="token string">'/Users/lidongxi/Desktop/douyin.xls'</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 获取文件修改时间</span>
+os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>getmtime<span class="token punctuation">(</span><span class="token string">'/Users/lidongxi/Desktop/douyin.xls'</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 获取文件创建的时间</span>
+os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>getctime<span class="token punctuation">(</span><span class="token string">'/Users/lidongxi/Desktop/douyin.xls'</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 查看文件大小</span>
+os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>getsize<span class="token punctuation">(</span><span class="token string">'/Users/lidongxi/Desktop/douyin.xls'</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">1024</span> <span class="token operator">**</span> <span class="token number">2</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 判断路径是否为文件</span>
+os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>isfile<span class="token punctuation">(</span><span class="token string">'/Users/lidongxi/Desktop/douyin.xls'</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 判断路径是否为目录</span>
+os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>isdir<span class="token punctuation">(</span><span class="token string">'/Users/lidongxi/Desktop/douyin.xls'</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 把路径分隔成路径和文件名，返回元组</span>
+os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">'/Users/lidongxi/Desktop/douyin.xls'</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 分隔路径中的文件名与拓展名，返回元组</span>
+os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>splitext<span class="token punctuation">(</span><span class="token string">'/Users/lidongxi/Desktop/douyin.xls'</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 将目录和文件名合成一个路径</span>
+os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span><span class="token string">'/Users/lidongxi/Desktop'</span><span class="token punctuation">,</span> <span class="token string">'douyin.xls'</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p> os的system原理</p>
+<ul>
+<li>os.system() 函数可以将字符串转化成命令在服务器上运行；其原理是每一条system函数执行时，其会创建一个子进程在系统上执行命令行，子进程的执行结果无法影响主进程</li>
+<li>上述原理会导致当需要执行多条命令行的时候可能得不到预期的结果；</li>
+</ul>
+<pre class="line-numbers language-python"><code class="language-python">os<span class="token punctuation">.</span>system<span class="token punctuation">(</span><span class="token string">'cd /usr/local'</span><span class="token punctuation">)</span>
+os<span class="token punctuation">.</span>mkdir<span class="token punctuation">(</span><span class="token string">'aaa.txt'</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>上述程序运行后会发现txt文件并没有创建在/usr/local文件夹下，而是在当前的目录下</p>
+<p>使用system执行多条命令</p>
+<ul>
+<li>为了保证system执行多条命令可以成功，多条命令需要在同一个子进程中运行;</li>
+</ul>
+<pre class="line-numbers language-python"><code class="language-python">os<span class="token punctuation">.</span>system<span class="token punctuation">(</span><span class="token string">'cd /usr/local &amp;&amp; mkdir aaa.txt'</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># 或者</span>
+os<span class="token punctuation">.</span>system<span class="token punctuation">(</span><span class="token string">'cd /usr/local ; mkdir aaa.txt'</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
                 
             </div>
@@ -475,7 +559,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/posts/2f35.html">http://example.com/posts/2f35.html</a>
+                    <a href="https://donxili.gitee.io/2021/10/04/os-mo-kuai-de-chang-yong-han-shu/">https://donxili.gitee.io/2021/10/04/os-mo-kuai-de-chang-yong-han-shu/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -517,8 +601,8 @@
                                     <span class="chip bg-color">Python</span>
                                 </a>
                             
-                                <a href="/tags/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
-                                    <span class="chip bg-color">数据类型</span>
+                                <a href="/tags/%E6%A0%87%E5%87%86%E5%BA%93/">
+                                    <span class="chip bg-color">标准库</span>
                                 </a>
                             
                         </div>
@@ -688,70 +772,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/4422.html">
+                <a href="/2021/10/04/os-mo-kuai-de-chang-yong-han-shu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="列表">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="Python os模块的常用函数">
                         
-                        <span class="card-title">列表</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-07-31
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Python/" class="post-category">
-                                    Python
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Python/">
-                        <span class="chip bg-color">Python</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%88%97%E8%A1%A8/">
-                        <span class="chip bg-color">列表</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/posts/2f35.html">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="Python内置数据类型">
-                        
-                        <span class="card-title">Python内置数据类型</span>
+                        <span class="card-title">Python os模块的常用函数</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -762,7 +794,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-21
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-04
                             </span>
                         <span class="publish-author">
                             
@@ -784,8 +816,61 @@
                         <span class="chip bg-color">Python</span>
                     </a>
                     
-                    <a href="/tags/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
-                        <span class="chip bg-color">数据类型</span>
+                    <a href="/tags/%E6%A0%87%E5%87%86%E5%BA%93/">
+                        <span class="chip bg-color">标准库</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/10/04/biao-zhun-ku-sys/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="Python sys模块的常用函数">
+                        
+                        <span class="card-title">Python sys模块的常用函数</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-04
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Python/" class="post-category">
+                                    Python
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Python/">
+                        <span class="chip bg-color">Python</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%A0%87%E5%87%86%E5%BA%93/">
+                        <span class="chip bg-color">标准库</span>
                     </a>
                     
                 </div>
@@ -854,100 +939,6 @@
 
 <script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
 
-
-    </div>
-    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
-        <div class="toc-widget card" style="background-color: white;">
-            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
-            <div id="toc-content"></div>
-        </div>
-    </div>
-</div>
-
-<!-- TOC 悬浮按钮. -->
-
-<div id="floating-toc-btn" class="hide-on-med-and-down">
-    <a class="btn-floating btn-large bg-color">
-        <i class="fas fa-list-ul"></i>
-    </a>
-</div>
-
-
-<script src="/libs/tocbot/tocbot.min.js"></script>
-<script>
-    $(function () {
-        tocbot.init({
-            tocSelector: '#toc-content',
-            contentSelector: '#articleContent',
-            headingsOffset: -($(window).height() * 0.4 - 45),
-            collapseDepth: Number('0'),
-            headingSelector: 'h2, h3, h4'
-        });
-
-        // modify the toc link href to support Chinese.
-        let i = 0;
-        let tocHeading = 'toc-heading-';
-        $('#toc-content a').each(function () {
-            $(this).attr('href', '#' + tocHeading + (++i));
-        });
-
-        // modify the heading title id to support Chinese.
-        i = 0;
-        $('#articleContent').children('h2, h3, h4').each(function () {
-            $(this).attr('id', tocHeading + (++i));
-        });
-
-        // Set scroll toc fixed.
-        let tocHeight = parseInt($(window).height() * 0.4 - 64);
-        let $tocWidget = $('.toc-widget');
-        $(window).scroll(function () {
-            let scroll = $(window).scrollTop();
-            /* add post toc fixed. */
-            if (scroll > tocHeight) {
-                $tocWidget.addClass('toc-fixed');
-            } else {
-                $tocWidget.removeClass('toc-fixed');
-            }
-        });
-
-        
-        /* 修复文章卡片 div 的宽度. */
-        let fixPostCardWidth = function (srcId, targetId) {
-            let srcDiv = $('#' + srcId);
-            if (srcDiv.length === 0) {
-                return;
-            }
-
-            let w = srcDiv.width();
-            if (w >= 450) {
-                w = w + 21;
-            } else if (w >= 350 && w < 450) {
-                w = w + 18;
-            } else if (w >= 300 && w < 350) {
-                w = w + 16;
-            } else {
-                w = w + 14;
-            }
-            $('#' + targetId).width(w);
-        };
-
-        // 切换TOC目录展开收缩的相关操作.
-        const expandedClass = 'expanded';
-        let $tocAside = $('#toc-aside');
-        let $mainContent = $('#main-content');
-        $('#floating-toc-btn .btn-floating').click(function () {
-            if ($tocAside.hasClass(expandedClass)) {
-                $tocAside.removeClass(expandedClass).hide();
-                $mainContent.removeClass('l9');
-            } else {
-                $tocAside.addClass(expandedClass).show();
-                $mainContent.addClass('l9');
-            }
-            fixPostCardWidth('artDetail', 'prenext-posts');
-        });
-        
-    });
-</script>
 
     
 
