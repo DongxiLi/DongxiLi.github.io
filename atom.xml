@@ -6,7 +6,7 @@
   <link href="https://donxili.gitee.io/atom.xml" rel="self"/>
   
   <link href="https://donxili.gitee.io/"/>
-  <updated>2021-11-07T05:27:32.993Z</updated>
+  <updated>2021-11-09T14:23:02.091Z</updated>
   <id>https://donxili.gitee.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>闭包和装饰器</title>
+    <link href="https://donxili.gitee.io/2021/11/09/zhuang-shi-qi/"/>
+    <id>https://donxili.gitee.io/2021/11/09/zhuang-shi-qi/</id>
+    <published>2021-11-09T14:21:30.140Z</published>
+    <updated>2021-11-09T14:23:02.091Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Python" scheme="https://donxili.gitee.io/categories/Python/"/>
+    
+    
+    <category term="Python" scheme="https://donxili.gitee.io/tags/Python/"/>
+    
+    <category term="装饰器，闭包" scheme="https://donxili.gitee.io/tags/%E8%A3%85%E9%A5%B0%E5%99%A8%EF%BC%8C%E9%97%AD%E5%8C%85/"/>
+    
+  </entry>
   
   <entry>
     <title>函数</title>
