@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Python sys模块的常用函数, Python,Mysql,Excel,Power BI,数据分析,数据可视化,机器学习">
+    <meta name="keywords" content="概率基础, Python,Mysql,Excel,Power BI,数据分析,数据可视化,机器学习">
     <meta name="description" content="专注于Web,分享生活,分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Python sys模块的常用函数 | 李东西</title>
+    <title>概率基础 | 李东西</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -219,12 +219,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Python sys模块的常用函数</h1>
+                    <h1 class="description center-align post-title">概率基础</h1>
                 </div>
             </div>
         </div>
@@ -246,12 +246,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Python/">
-                                <span class="chip bg-color">Python</span>
-                            </a>
-                        
-                            <a href="/tags/%E6%A0%87%E5%87%86%E5%BA%93/">
-                                <span class="chip bg-color">标准库</span>
+                            <a href="/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6/">
+                                <span class="chip bg-color">统计学</span>
                             </a>
                         
                     </div>
@@ -262,8 +258,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Python/" class="post-category">
-                                Python
+                            <a href="/categories/%E7%BB%9F%E8%AE%A1%E5%AD%A6/" class="post-category">
+                                统计学
                             </a>
                         
                     </div>
@@ -275,7 +271,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-10-04
+                    2021-09-29
                 </div>
                 
 
@@ -296,36 +292,234 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">import</span> sys
+                <h2 id="概率基础"><a href="#概率基础" class="headerlink" title="概率基础"></a>概率基础</h2><h3 id="数据的集中趋势"><a href="#数据的集中趋势" class="headerlink" title="数据的集中趋势"></a>数据的集中趋势</h3><p>我们经常会使用以下几个指标来描述一组数据的集中趋势：</p>
+<ol>
+<li>均值 - 均值代表某个数据集的整体水平，我们经常提到的客单价、平均访问时长、平均配送时长等指标都是均值。均值的缺点是容易受极值的影响，虽然可以使用加权平均值来消除极值的影响，但是可能事先并不清楚数据的权重；对于正数可以用几何平均值来替代算术平均值。<ul>
+<li>算术平均值：$$\bar{x}=\frac{\sum_{i=1}^{n}x_{i}}{n}=\frac{x_{1}+x_{2}+\cdots +x_{n}}{n}$$，例如计算最近30天日均DAU、日均新增访客等，都可以使用算术平均值。</li>
+<li>几何平均值：$$\left(\prod_{i=1}^{n}x_{i}\right)^{\frac{1}{n}}={\sqrt[{n}]{x_{1}x_{2} \cdots x_{n}}}$$，例如计算不同渠道的平均转化率、不同客群的平均留存率、不同品类的平均付费率等，就可以使用几何平均值。</li>
+</ul>
+</li>
+<li>中位数 - 将数据按照升序或降序排列后位于中间的数，它描述了数据的中等水平。</li>
+<li>众数 - 数据集合中出现频次最多的数据，它代表了数据的一般水平。数据的趋势越集中，众数的代表性就越好。众数不受极值的影响，但是无法保证唯一性和存在性。</li>
+</ol>
+<p>例子：有A和B两组数据。</p>
+<pre><code>A组：5, 6, 6, 6, 6, 8, 10
+B组：3, 5, 5, 6, 6, 9, 12
+</code></pre>
+<p>A组的均值：6.74，中位数：6，众数：6。</p>
+<p>B组的均值：6.57，中位数：6，众数：5, 6。</p>
+<blockquote>
+<p><strong>说明</strong>：在Excel中，可以使用AVERAGE、MEDIAN、MODE函数分别计算均值、中位数和众数。求中位数也可以使用QUARTILE.EXC或QUARTILE.INC函数，将第二个参数设置为2即可。</p>
+</blockquote>
+<p>对A组的数据进行一些调整。</p>
+<pre><code>A组：5, 6, 6, 6, 6, 8, 10, 200
+B组：3, 5, 5, 6, 6, 9, 12
+</code></pre>
+<p>A组的均值会大幅度提升，但中位数和众数却没有变化。</p>
+<blockquote>
+<p><strong>思考</strong>：怎样判断上面的200到底是不是一个异常值？</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>优点</th>
+<th>缺点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>均值</td>
+<td>充分利用了所有数据，适应性强</td>
+<td>容易收到极端值（异常值）的影响</td>
+</tr>
+<tr>
+<td>中位数</td>
+<td>能够避免被极端值（异常值）的影响</td>
+<td>不敏感</td>
+</tr>
+<tr>
+<td>众数</td>
+<td>能够很好的反映数据的集中趋势</td>
+<td>有可能不存在（数据没有明显集中趋势）</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p><strong>练习1</strong>：在“概率基础练习.xlsx”文件的表单“练习1”中，有一组用户订单支付金额的数据，计算订单的均值、中位数、众数。</p>
+<p><strong>练习2：</strong>在“概率基础练习.xlsx”文件的表单“练习2”中，有一组商品销售量的数据，现计划设定一个阈值，对阈值以下的商品对应的分销商进行优化，应该选择什么作为阈值比较合适？</p>
+</blockquote>
+<h3 id="数据的离散趋势"><a href="#数据的离散趋势" class="headerlink" title="数据的离散趋势"></a>数据的离散趋势</h3><p>如果说数据的集中趋势，说明了数据最主要的特征是什么；那么数据的离散趋势，则体现了这个特征的稳定性。例如 A 地区冬季平均气温<code>0</code>摄氏度，最低气温<code>-10</code>摄氏度；B 地区冬季平均气温<code>-2</code>摄氏度，最低气温<code>-4</code>摄氏度；如果你是一个特别怕冷的人，在选择 A 和 B 两个区域作为工作和生活的城市时，你会做出怎样的选择？</p>
+<ol>
+<li><p>极值：就是最大值（maximum）、最小值（minimum），代表着数据集的上限和下限。</p>
+<blockquote>
+<p><strong>说明</strong>：在Excel中，计算极值的函数是MAX和MIN。</p>
+</blockquote>
+</li>
+<li><p>极差：又称“全距”，是一组数据中的最大观测值和最小观测值之差，记作$R$。一般情况下，极差越大，离散程度越大，数据受极值的影响越严重。</p>
+</li>
+<li><p>四分位距离：$ IQR = Q_3 - Q_1 $。</p>
+</li>
+<li><p>方差：将每个值与均值的偏差进行平方，然后除以总数据量得到的值。简单来说就是表示数据与期望值的偏离程度。方差越大，就意味着数据越不稳定、波动越剧烈，因此代表着数据整体比较分散，呈现出离散的趋势；而方差越小，意味着数据越稳定、波动越平滑，因此代表着数据整体比较集中。</p>
+<ul>
+<li>总体方差：$$ \sigma^2 = \frac {\sum_{i=1}^{N}(X_i - \mu)^2} {N} $$。</li>
+<li>样本方差：$$ S^2 = \frac {\sum_{i=1}^{N}(X_i - \bar{X})^2} {N-1} $$。</li>
+</ul>
+<blockquote>
+<p><strong>说明</strong>：在Excel中，计算总体方差和样本方差的函数分别是VAR.P和VAR.S。</p>
+</blockquote>
+</li>
+<li><p>标准差：将方差进行平方根运算后的结果，与方差一样都是表示数据与期望值的偏离程度。</p>
+<ul>
+<li>总体标准差：$$ \sigma = \sqrt{\frac{\sum_{i=1}^{N}(X_i - \mu)^2}{N}} $$。</li>
+<li>样本标准差：$$ S = \sqrt{\frac{\sum_{i=1}^{N}(X_i - \bar{X})^2}{N-1}} $$。</li>
+</ul>
+<blockquote>
+<p><strong>说明</strong>：在Excel中，计算标准差的函数分别是STDEV.P和STDEV.S。</p>
+</blockquote>
+</li>
+</ol>
+<blockquote>
+<p><strong>练习3</strong>：复制“概率基础练习.xlsx”文件的表单“练习1”，将复制的表单命名为“练习3”，计算订单支付金额的最大值、最小值、极差、方差和标准差。</p>
+</blockquote>
+<h3 id="数据的频数分析"><a href="#数据的频数分析" class="headerlink" title="数据的频数分析"></a>数据的频数分析</h3><p>频数分析是指用一定的方式将数据分组，然后统计每个分组中样本的数量，再辅以图表（如直方图）就可以更直观的展示数据分布趋势的一种方法。</p>
+<p>频数分析的意义：</p>
+<ol>
+<li>大问题变小问题，迅速聚焦到需要关注的群体。</li>
+<li>找到合理的分类机制，有利于长期的数据分析（维度拆解）。</li>
+</ol>
+<p>例如：一个班有40个学生，考试成绩如下所示：</p>
+<pre><code>73, 87, 88, 65, 73, 76, 80, 95, 83, 69, 55, 67, 70, 94, 86, 81, 87, 95, 84, 92, 92, 76, 69, 97, 72, 90, 72, 85, 80, 83, 97, 95, 62, 92, 67, 73, 91, 95, 86, 77
+</code></pre>
+<p>用上面学过的知识，先解读学生考试成绩的数据。</p>
+<p>均值：81.275，中位数：83，众数：95。</p>
+<p>最高分：97，最低分：55，极差：42，方差：118.15，标准差：10.87。</p>
+<p>但是，仅仅依靠上面的数据是很难对一个数据集做出全面的解读，我们可以把学生按照考试成绩进行分组，如下所示，大家可以自行尝试在Excel或用Python来完成这个操作。</p>
+<table>
+<thead>
+<tr>
+<th>分数段</th>
+<th>学生人数</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>&lt;60</td>
+<td>1</td>
+</tr>
+<tr>
+<td>[60, 65)</td>
+<td>1</td>
+</tr>
+<tr>
+<td>[65, 69)</td>
+<td>5</td>
+</tr>
+<tr>
+<td>[70, 75)</td>
+<td>6</td>
+</tr>
+<tr>
+<td>[75, 80)</td>
+<td>3</td>
+</tr>
+<tr>
+<td>[80, 85)</td>
+<td>6</td>
+</tr>
+<tr>
+<td>[85, 90)</td>
+<td>6</td>
+</tr>
+<tr>
+<td>[90, 95)</td>
+<td>6</td>
+</tr>
+<tr>
+<td>&gt;=95</td>
+<td>6</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p><strong>练习4</strong>：在“概率基础练习.xlsx”文件的表单“练习4”中，有某App首页版本迭代上线后的A/B测试数据，数据代表了参与测试的用户7日的活跃天数，请分析A组和B组的数据并判定哪组表现更优。</p>
+<p><strong>练习5</strong>：在“概率基础练习.xlsx”文件的表单“练习5”中，有某App某个功能迭代上线后的A/B测试数据，数据代表了参与测试的用户30日的产品使用时长，请分析A组和B组的数据并判定哪组表现更优。</p>
+</blockquote>
+<h3 id="数据的概率分布"><a href="#数据的概率分布" class="headerlink" title="数据的概率分布"></a>数据的概率分布</h3><h4 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h4><ol>
+<li><p>随机试验：在相同条件下对某种随机现象进行观测的试验。随机试验满足三个特点：</p>
+<ul>
+<li>可以在相同条件下重复的进行。</li>
+<li>每次试验的结果不止一个，事先可以明确指出全部可能的结果。</li>
+<li>重复试验的结果以随机的方式出现（事先不确定会出现哪个结果）。</li>
+</ul>
+</li>
+<li><p>随机变量：如果$X$指定给概率空间$S$中每一个事件$e$有一个实数$X(e)$，同时针对每一个实数$r$都有一个事件集合$A_r$与其相对应，其中$A_r={e: X(e) \le r}$，那么$X$被称作随机变量。从这个定义看出，$X$的本质是一个实值函数，以给定事件为自变量的实值函数，因为函数在给定自变量时会产生因变量，所以将$X$称为随机变量。</p>
+<ul>
+<li>离散型随机变量：数据可以一一列出。</li>
+<li>连续型随机变量：数据不可以一一列出。</li>
+</ul>
+<p> 如果离散型随机变量的取值非常庞大时，可以近似看做连续型随机变量。</p>
+</li>
+<li><p>概率质量函数/概率密度函数：概率质量函数是描述离散型随机变量为特定取值的概率的函数，通常缩写为<strong>PMF</strong>。概率密度函数是描述连续型随机变量在某个确定的取值点可能性的函数，通常缩写为<strong>PDF</strong>。二者的区别在于，概率密度函数本身不是概率，只有对概率密度函数在某区间内进行积分后才是概率。</p>
+</li>
+</ol>
+<h4 id="离散型分布"><a href="#离散型分布" class="headerlink" title="离散型分布"></a>离散型分布</h4><ol>
+<li><p>伯努利分布（<em>Bernoulli distribution</em>）：又名<strong>两点分布</strong>或者<strong>0-1分布</strong>，是一个离散型概率分布。若伯努利试验成功，则随机变量取值为1。若伯努利试验失败，则随机变量取值为0。记其成功概率为$p (0 \le p \le 1)$，失败概率为$q=1-p$，则概率质量函数为：</p>
+<p> $$ {\displaystyle f_{X}(x)=p^{x}(1-p)^{1-x}=\left&lt;!–swig￼0–&gt;x=1,\q\ &amp;{\mbox{if }}x=0.\\end{matrix}}\right.} $$</p>
+</li>
+<li><p>二项分布（<em>Binomial distribution</em>）：$n$个独立的是/非试验中成功的次数的离散概率分布，其中每次试验的成功概率为$p$。一般地，如果随机变量$X$服从参数为$n$和$p$的二项分布，记为$X\sim B(n,p)$。$n$次试验中正好得到$k$次成功的概率由概率质量函数给出，$\displaystyle f(k,n,p)=\Pr(X=k)={n \choose k}p^{k}(1-p)^{n-k}$，对于$k= 0, 1, 2, …, n$，其中${n \choose k}={\frac {n!}{k!(n-k)!}}$。</p>
+</li>
+<li><p>泊松分布（<em>Poisson distribution</em>）：适合于描述单位时间内随机事件发生的次数的概率分布。如某一服务设施在一定时间内受到的服务请求的次数、汽车站台的候客人数、机器出现的故障数、自然灾害发生的次数、DNA序列的变异数、放射性原子核的衰变数等等。泊松分布的概率质量函数为：$P(X=k)=\frac{e^{-\lambda}\lambda^k}{k!}$，泊松分布的参数$\lambda$是单位时间（或单位面积）内随机事件的平均发生率。</p>
+<blockquote>
+<p><strong>说明</strong>：泊松分布是在没有计算机的年代，由于二项分布的运算量太大运算比较困难，为了减少运算量，数学家为二项分布提供的一种近似。</p>
+</blockquote>
+</li>
+</ol>
+<h4 id="分布函数和密度函数"><a href="#分布函数和密度函数" class="headerlink" title="分布函数和密度函数"></a>分布函数和密度函数</h4><p>对于连续型随机变量，我们不可能去罗列每一个值出现的概率，因此要引入分布函数的概念。<br>$$<br>F(x) = P{X \le x}<br>$$<br>如果将$ X $看成是数轴上的随机坐标，上面的分布函数表示了$ x $落在区间$ (-\infty, x) $中的概率。分布函数有以下性质：</p>
+<ol>
+<li>$ F(x) $是一个单调不减的函数；</li>
+<li>$ 0 \le F(x) \le 1$，且$ F(-\infty) = \lim_{x \to -\infty} F(x) = 0 $， $F(\infty) = \lim_{x \to \infty} F(x) = 1$；</li>
+<li>$ F(x) $是右连续的。</li>
+</ol>
+<p>概率密度函数就是给分布函数求导的结果，简单的说就是：<br>$$<br>F(x) = \int_{- \infty}^{x} f(t)dt<br>$$</p>
+<h4 id="连续型分布"><a href="#连续型分布" class="headerlink" title="连续型分布"></a>连续型分布</h4><ol>
+<li><p>均匀分布（<em>Uniform distribution</em>）：如果连续型随机变量$X$具有概率密度函数$f(x)=\begin{cases}{\frac{1}{b-a}} \quad &amp;{a \leq x \leq b} \ {0} \quad &amp;{\mbox{other}}\end{cases}$，则称$X$服从$[a,b]$上的均匀分布，记作$X\sim U[a,b]$。</p>
+</li>
+<li><p>指数分布（<em>Exponential distribution</em>）：如果连续型随机变量$X$具有概率密度函数$f(x)=\begin{cases} \lambda e^{- \lambda x} \quad &amp;{x \ge 0} \ {0} \quad &amp;{x \lt 0} \end{cases}$，则称$X$服从参数为$\lambda$的指数分布，记为$X \sim Exp(\lambda)$。指数分布可以用来表示独立随机事件发生的时间间隔，比如旅客进入机场的时间间隔、客服中心接入电话的时间间隔、知乎上出现新问题的时间间隔等等。指数分布的一个重要特征是无记忆性（无后效性），这表示如果一个随机变量呈指数分布，它的条件概率遵循：$P(T \gt s+t\ |\ T \gt t)=P(T \gt s), \forall s,t \ge 0$。</p>
+</li>
+<li><p>正态分布（<em>Normal distribution</em>）：又名<strong>高斯分布</strong>（<em>Gaussian distribution</em>），是一个非常常见的连续概率分布，经常用自然科学和社会科学中来代表一个不明的随机变量。若随机变量$X$服从一个位置参数为$\mu$、尺度参数为$\sigma$的正态分布，记为$X \sim N(\mu,\sigma^2)$，其概率密度函数为：$\displaystyle f(x)={\frac {1}{\sigma {\sqrt {2\pi }}}}e^{-{\frac {\left(x-\mu \right)^{2}}{2\sigma ^{2}}}}$。</p>
+ <img src="https://gitee.com/jackfrued/mypic/raw/master/20210716155507.png" width="80%">
 
-<span class="token comment" spellcheck="true"># argv在外部向程序传递参数</span>
-<span class="token comment" spellcheck="true"># sys.argv 返回一个列表</span>
-<span class="token comment" spellcheck="true"># sys.argv[0]第一个参数默认为文件当前脚本名</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>sys<span class="token punctuation">.</span>argv<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> sys<span class="token punctuation">.</span>argv<span class="token punctuation">)</span>
+<p> “3$\sigma$法则”：</p>
+ <img src="https://gitee.com/jackfrued/mypic/raw/master/20210716155542.png" width="75%">
 
-
-<span class="token comment" spellcheck="true"># 查看python解释器版本</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>f<span class="token string">'当前python解释器版本：{sys.version}'</span><span class="token punctuation">)</span>
-
-<span class="token comment" spellcheck="true"># sys.platform: 获取当前系统平台</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>f<span class="token string">'系统平台为：{sys.platform}'</span><span class="token punctuation">)</span>
-
-<span class="token comment" spellcheck="true"># sys.getdefaultencoding(): 获取系统当前编码</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>f<span class="token string">'系统当前编码：{sys.getdefaultencoding()}'</span><span class="token punctuation">)</span>
-
-<span class="token comment" spellcheck="true"># 返回当前解释器递归的最大深度</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>f<span class="token string">'当前解释器递归的最大深度：{sys.getrecursionlimit()}'</span><span class="token punctuation">)</span>
-
-<span class="token comment" spellcheck="true"># 修改最大递归深度</span>
-sys<span class="token punctuation">.</span>setrecursionlimit<span class="token punctuation">(</span><span class="token number">101</span><span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>f<span class="token string">'修改后的递归最大深度：{sys.getrecursionlimit()}'</span><span class="token punctuation">)</span>
-
-<span class="token comment" spellcheck="true"># 程序中间的退出，arg=0为正常退出</span>
-sys<span class="token punctuation">.</span>exit<span class="token punctuation">(</span><span class="token string">'程序出错，提前退出'</span><span class="token punctuation">)</span>
-
-<span class="token comment" spellcheck="true"># sys.path: 获取指定模块搜索路径的字符串集合，可以将写好的模块放在得到的某个路径下，就可以在程序中import时正确找到</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>sys<span class="token punctuation">.</span>path<span class="token punctuation">)</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p> 正态分布有一个非常重要的性质，<strong>大量统计独立的随机变量的平均值的分布趋于正态分布</strong>，这就是<strong>中心极限定理</strong>。中心极限定理的重要意义在于，我们可以用正态分布作为其他概率分布的近似。</p>
+<p> 一个例子：假设某校入学新生的智力测验平均分数与标准差分别为 100 与 12。那么随机抽取 50 个学生，他们智力测验平均分数大于 105 的概率是多少？小于 90 的概率是多少？</p>
+<p> 本例没有正态分布的假设，还好中心极限定理提供一个可行解，那就是当随机样本数量超过30，样本平均数 近似于一个正态变量，标准正态变量$ Z = \frac {\bar{X} - \mu} {\sigma / \sqrt{n}} $。</p>
+<p> 平均分数大于 105 的概率为：$ P(Z \gt \frac{105 - 100}{12 / \sqrt{50}}) = P(Z \gt 5/1.7) = P(Z \gt 2.94) = 0.0016$。</p>
+<p> 平均分数小于 90 的概率为：$ P(Z \lt \frac{90-100}{12/\sqrt{50}}) = P(Z &lt; -5.88) = 0.0000 $。</p>
+<blockquote>
+<p><strong>说明</strong>：上面标准正态分布的概率值可以查表得到。</p>
+</blockquote>
+</li>
+<li><p>伽马分布（<em>Gamma distribution</em>）：假设$X_1, X_2, … X_n$为连续发生事件的等候时间，且这$n$次等候时间为独立的，那么这$n$次等候时间之和$Y$（$Y=X_1+X_2+…+X_n$）服从伽玛分布，即$Y \sim \Gamma(\alpha,\beta)$，其中$\alpha=n, \beta=\lambda$，这里的$\lambda$是连续发生事件的平均发生频率。</p>
+</li>
+<li><p>卡方分布（<em>Chi-square distribution</em>）：若$k$个随机变量$Z_1,Z_2,…,Z_k$是相互独立且符合标准正态分布（数学期望为0，方差为1）的随机变量，则随机变量$Z$的平方和$X=\sum_{i=1}^{k}Z_i^2$被称为服从自由度为$k$的卡方分布，记为$X \sim \chi^2(k)$。</p>
+</li>
+</ol>
+<h3 id="其他内容"><a href="#其他内容" class="headerlink" title="其他内容"></a>其他内容</h3><h4 id="条件概率和贝叶斯定理"><a href="#条件概率和贝叶斯定理" class="headerlink" title="条件概率和贝叶斯定理"></a>条件概率和贝叶斯定理</h4><p><strong>条件概率</strong>是指事件A在事件B发生的条件下发生的概率，通常记为$P(A|B)$。设A与B为样本空间$\Omega$中的两个事件，其中$P(B) \gt 0$。那么在事件B发生的条件下，事件A发生的条件概率为：$P(A|B)=\frac{P(A \cap B)}{P(B)}$，其中$P(A \cap B)$是联合概率，即A和B两个事件共同发生的概率。</p>
+<p>事件A在事件B已发生的条件下发生的概率，与事件B在事件A已发生的条件下发生的概率是不一样的。然而，这两者是有确定的关系的，<strong>贝叶斯定理</strong>就是对这种关系的陈述，即：$P(A|B)=\frac{P(A)P(B|A)}{P(B)}$，其中：</p>
+<ul>
+<li>$P(A|B)$是已知B发生后，A的条件概率，也称为A的后验概率。</li>
+<li>$P(A)$是A的先验概率（也称为边缘概率），是不考虑B时A发生的概率。</li>
+<li>$P(B|A)$是已知A发生后，B的条件概率，称为B的似然性。</li>
+<li>$P(B)$是B的先验概率。</li>
+</ul>
+<p>按照上面的描述，贝叶斯定理可以表述为：<code>后验概率 = (似然性 * 先验概率) / 标准化常量</code>​，简单的说就是后验概率与先验概率和相似度的乘积成正比。</p>
+<h4 id="大数定理"><a href="#大数定理" class="headerlink" title="大数定理"></a>大数定理</h4><p>样本数量越多，则其算术平均值就有越高的概率接近期望值。</p>
+<ol>
+<li>弱大数定律（辛钦定理）：样本均值依概率收敛于期望值，即对于任意正数$\epsilon$，有：$\lim_{n \to \infty}P(|\bar{X_n}-\mu|&gt;\epsilon)=0$。</li>
+<li>强大数定律：样本均值以概率1收敛于期望值，即：$P(\lim_{n \to \infty}\bar{X_n}=\mu)=1$。</li>
+</ol>
+<h4 id="假设检验"><a href="#假设检验" class="headerlink" title="假设检验"></a>假设检验</h4><p>假设检验就是通过抽取样本数据，并且通过<strong>小概率反证法</strong>去验证整体情况的方法。假设检验的核心思想是小概率反证法（首先假设想推翻的命题是成立的，然后试图找出矛盾，找出不合理的地方来证明命题为假命题），即在<strong>零假设</strong>（null hypothesis）的前提下，估算某事件发生的可能性，如果该事件是小概率事件，在一次研究中本来是不可能发生的，但现在却发生了，这时候就可以推翻零假设，接受<strong>备择假设</strong>（alternative hypothesis）。如果该事件不是小概率事件，我们就找不到理由来拒绝之前的假设，实际中可引申为接受所做的无效假设。</p>
+<p>假设检验会存在两种错误情况，一种称为“拒真”，一种称为“取伪”。如果原假设是对的，但你拒绝了原假设，这种错误就叫作“拒真”，这个错误的概率也叫作显著性水平$\alpha$，或称为容忍度；如果原假设是错的，但你承认了原假设，这种错误就叫作“取伪”，这个错误的概率我们记为$\beta$。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>描述性统计通常用于研究表象，将现象用数据的方式描述出来（用整体的数据来描述整体的特征）；推理性统计通常用于推测本质（通过样本数据特征去推理总体数据特征），也就是你看到的表象的东西有多大概率符合你对隐藏在表象后的本质的猜测。</p>
 
                 
             </div>
@@ -352,7 +546,7 @@ sys<span class="token punctuation">.</span>exit<span class="token punctuation">(
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://donxili.gitee.io/2021/10/04/biao-zhun-ku-sys/">https://donxili.gitee.io/2021/10/04/biao-zhun-ku-sys/</a>
+                    <a href="https://donxili.gitee.io/2021/09/29/gai-lu-ji-chu/">https://donxili.gitee.io/2021/09/29/gai-lu-ji-chu/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -390,12 +584,8 @@ sys<span class="token punctuation">.</span>exit<span class="token punctuation">(
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Python/">
-                                    <span class="chip bg-color">Python</span>
-                                </a>
-                            
-                                <a href="/tags/%E6%A0%87%E5%87%86%E5%BA%93/">
-                                    <span class="chip bg-color">标准库</span>
+                                <a href="/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6/">
+                                    <span class="chip bg-color">统计学</span>
                                 </a>
                             
                         </div>
@@ -569,13 +759,13 @@ sys<span class="token punctuation">.</span>exit<span class="token punctuation">(
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/10/04/os-mo-kuai-de-chang-yong-han-shu/">
+                <a href="/2021/09/29/fang-chai-fen-xi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="Python os模块的常用函数">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="方差分析">
                         
-                        <span class="card-title">Python os模块的常用函数</span>
+                        <span class="card-title">方差分析</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -586,61 +776,8 @@ sys<span class="token punctuation">.</span>exit<span class="token punctuation">(
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-10-04
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-09-29
                         </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Python/" class="post-category">
-                                    Python
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Python/">
-                        <span class="chip bg-color">Python</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%A0%87%E5%87%86%E5%BA%93/">
-                        <span class="chip bg-color">标准库</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/09/29/can-shu-gu-ji/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="参数估计">
-                        
-                        <span class="card-title">参数估计</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-29
-                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -660,6 +797,47 @@ sys<span class="token punctuation">.</span>exit<span class="token punctuation">(
                         <span class="chip bg-color">统计学</span>
                     </a>
                     
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/09/24/shu-ju-fen-xi-fang-fa-lun/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="数据分析方法论">
+                        
+                        <span class="card-title">数据分析方法论</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            数据分析必读
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-24
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" class="post-category">
+                                    数据分析
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
                 </div>
                 
             </div>
