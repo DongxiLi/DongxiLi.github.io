@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="相关和回归, Python,Mysql,Excel,Power BI,数据分析,数据可视化,机器学习">
+    <meta name="keywords" content="参数估计, Python,Mysql,Excel,Power BI,数据分析,数据可视化,机器学习">
     <meta name="description" content="专注于Web,分享生活,分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>相关和回归 | 李东西</title>
+    <title>参数估计 | 李东西</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -219,12 +219,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">相关和回归</h1>
+                    <h1 class="description center-align post-title">参数估计</h1>
                 </div>
             </div>
         </div>
@@ -271,7 +271,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-09-29
+                    2021-12-02
                 </div>
                 
 
@@ -292,70 +292,26 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="相关和回归"><a href="#相关和回归" class="headerlink" title="相关和回归"></a>相关和回归</h2><p>我们知道，可以通过对指标的维度拆来解寻找指标变化的原因。当我们找到问题的原因时，自然会进一步思考一个问题：指标变化的原因这么多，其中的关键因素又是哪个呢？例如，我们在工作场景中时不时会讨论这些问题：</p>
+                <h2 id="参数估计"><a href="#参数估计" class="headerlink" title="参数估计"></a>参数估计</h2><p>推断型统计的核心就是用样本推测总体。在实际生产环境中，可能无法获得所有的数据，或者即便获取了所有的数据，但是没有足够的资源来分析所有的数据，在这种情况下，我们都需要用非常小量的样本特征去评估总体数据的特征，这其中的一项工作就是参数估计。</p>
+<p>参数估计应用的场景非常的多，例如：</p>
 <ol>
-<li>电商类产品想知道哪个品类销售对整体销售贡献更大；</li>
-<li>渠道运营想知道哪个渠道的用户对整体活跃作用更大；</li>
-<li>负责留存的想知道哪个客群对整体的留存关系更大；</li>
-<li>产品想知道到底哪些维度（城市、年龄、接入设备等）会影响整体活跃。</li>
+<li>在产品侧，我们可以用参数估计的方式评估A/B测试的效果。</li>
+<li>在运营侧，我们可以用参数估计的方式优化活动配置和推荐策略。</li>
+<li>在市场侧，我们可以用参数估计的方式制定广告投放策略。</li>
 </ol>
-<p>还有很多类似的场景，在这种情况下我们不仅要要找到数据变化的原因，还需要明确出不同原因的重要性。因为实际工作中可用资源有限，只能集中优势资源解决核心问题。</p>
-<h3 id="相关分析基本概念"><a href="#相关分析基本概念" class="headerlink" title="相关分析基本概念"></a>相关分析基本概念</h3><p>相关性分析，指对两个或多个指标进行分析，评估它们两两之间联系或相互影响的程度。相关性分析不仅可以分析出多个指标间是否存在相关关系，还能给出相关程度的量化值。在进行相关性分析时，我们会使用“相关系数”定量给出几个指标间联系和影响的程度，通常用 $ \rho $ 来表示，计算公式为：</p>
-<p>$$<br>\rho = \frac {cov(X, Y)} {\sqrt{var(X) \cdot var(Y)}}<br>$$<br>需要注意的是，$ \rho $  只能用来度量线性关系，它的取值在 $ [-1, 1] $ 之间。数据中的离群值会对 $ \rho $ 产生影响，在计算时必须先剔除，实际使用相关关系时，还需要<strong>关注相关关系的稳定性</strong>。</p>
-<p>我们用 $ \rho $ 值判断指标的相关性时遵循以下两个步骤。</p>
-<ol>
-<li>判断指标间是正相关、负相关，还是不相关。<ul>
-<li>当 $ \rho \gt 0 $，认为指标间是正相关，也就是两者的趋势一致。如果指标 A 与指标 B 的 $ \rho \gt 0 $，那么指标 A 上涨，指标 B 也会上涨；反之亦然。</li>
-<li>当 $ \rho \lt 0 $，认为指标间是负相关，也就是两者的趋势相反。如果指标 A 与指标 B 的 $ \rho \lt 0 $，那么指标 A 上涨，指标 B 会下降；反之亦然。</li>
-<li>当 $ \rho = 0 $，认为指标间是不相关的，但并不代表两个指标是统计独立的。</li>
-</ul>
+<h3 id="实施步骤"><a href="#实施步骤" class="headerlink" title="实施步骤"></a>实施步骤</h3><ol>
+<li><p>确定分析的置信水平</p>
 </li>
-<li>判断指标间的相关程度。<ul>
-<li>当 $ \rho $ 的值在 $ [0.5,1] $ 之间，认为指标间是强相关，指标间的业务联系非常紧密。</li>
-<li>当 $ \rho $ 的值在 $ [0.1,0.5) $ 之间，认为指标间是弱相关，指标间的业务联系不太紧密。</li>
-<li>当 $ \rho $ 的值在 $ [0,0.1) $ 之间，认为指标间是无相关，指标间的业务联系无任何联系，也就是说当我们去运营指标 A 时，指标 B 不会产生相应的变化。</li>
+<li><p>确定估计的参数类型</p>
+</li>
+<li><p>计算参数估计的区间</p>
+<ul>
+<li>数值型指标：$ A = z \times 样本标准差 / \sqrt{样本数量} $，其中 $ z $ 的值可以通过查表得到，如果置信水平选择95%，那么 $ z $ 的值就是1.96。大部分运营指标都是数值型指标，例如DAU、ARPU、转化率等。</li>
+<li>占比型指标：$ A = z \times \sqrt{占比 \times (1 - 占比) / 样本数量} $，$ z $ 值同上。占比型指标如性别占比、渠道占比、品类占比等。</li>
 </ul>
+<p> 最终得到的估计区间就是：$ [样本均值 - A, 样本均值 + A] $。 </p>
 </li>
 </ol>
-<h3 id="相关分析应用场景"><a href="#相关分析应用场景" class="headerlink" title="相关分析应用场景"></a>相关分析应用场景</h3><p>事实上，相关性分析的应用场景非常多，基本上当问到“这两个东西有什么关系”、“哪个指标的作用（贡献或价值）更大”、“我们应该重点解决哪个问题”这类问题时，都可以用相关性分析给出比较准确的回答，非常便于产品运营找到解决问题的核心抓手。</p>
-<img src="https://gitee.com/jackfrued/mypic/raw/master/20210713095938.png" width="80%">
-
-<p>在使用相关分析时，应注意以下几个方面：</p>
-<ol>
-<li>业务意义：当我们想知道A指标的情况时，可以监控B指标。</li>
-<li>注意事项：千万不要将相关关系判断为因果关系，相关关系是伴随关系而不是因果关系。</li>
-<li>强相关关系才是有业务价值的，建议寻找相关系数在 0.6 以上甚至 0.8 以上的指标。</li>
-<li>相关关系的本质是 Y 的变化有多少能被 X 解释，跟 X 和 Y 之间的斜率大小无关。</li>
-</ol>
-<h3 id="Excel计算相关系数"><a href="#Excel计算相关系数" class="headerlink" title="Excel计算相关系数"></a>Excel计算相关系数</h3><ol>
-<li>方法一：使用 CORREL 函数。</li>
-<li>方法二：使用“数据分析”模块的“相关系数”功能。</li>
-</ol>
-<img src="https://gitee.com/jackfrued/mypic/raw/master/20210713164021.png" width="75%">
-
-<h3 id="相关分析案例"><a href="#相关分析案例" class="headerlink" title="相关分析案例"></a>相关分析案例</h3><h4 id="分析哪个客群的留存对整体留存贡献更大"><a href="#分析哪个客群的留存对整体留存贡献更大" class="headerlink" title="分析哪个客群的留存对整体留存贡献更大"></a>分析哪个客群的留存对整体留存贡献更大</h4><p>留存的运营中我们最常看的就是新客的留存和活跃客群的留存，用来评估哪个客群的留存与整体的留存联系更紧密，以便制定后续运营的策略。</p>
-<img src="https://gitee.com/jackfrued/mypic/raw/master/20210928214403.png" style="zoom:65%;">
-
-<p>利用Excel进行相关分析的结果如下所示。</p>
-<img src="https://gitee.com/jackfrued/mypic/raw/master/20210928214522.png" style="zoom:65%;">
-
-<p>可以看出，活跃访客的留存率与整体留存率的相关是强相关；而新增访客的留存率与整体留存率的相关是弱相关，所以如果要提升整体留存率，我们的产品运营资源应当更多地投放给活跃用户，以提升整体的留存率；而新增访客，虽然不会拿到很多运营资源，但是我们也要去深入分析为什么新增访客的留存的贡献比较小，适时做一些提升这部分客群与整体留存的策略。</p>
-<h4 id="案例2：找出对购买转化率贡献最高的渠道"><a href="#案例2：找出对购买转化率贡献最高的渠道" class="headerlink" title="案例2：找出对购买转化率贡献最高的渠道"></a>案例2：找出对购买转化率贡献最高的渠道</h4><p>基本上电商运营会同时部署多个渠道，包括线上电商平台以及线下的门店。由于现有某产品从各个渠道获客的用户在产品上的购买转化率，需要评估哪些渠道的用户对整体购买转化率贡献最大，后续将重点营销此渠道。</p>
-<img src="https://gitee.com/jackfrued/mypic/raw/master/20210928214725.png" style="zoom:65%;">
-
-<h4 id="案例3：分析哪些因素对-DAU-的影响更大"><a href="#案例3：分析哪些因素对-DAU-的影响更大" class="headerlink" title="案例3：分析哪些因素对 DAU 的影响更大"></a>案例3：分析哪些因素对 DAU 的影响更大</h4><p>我们分析 DAU 时常会将它拆解为各种维度来分析，这里我们分析与 DAU 联系最紧密的维度到底是哪些，以帮助我们制定针对性的运营策略，如下图所示。</p>
-<img src="https://gitee.com/jackfrued/mypic/raw/master/20210928215043.png" style="zoom:65%;">
-
-<p>对于这样的报表，我们需要找出到底是哪几个城市、哪个操作系统，以及哪个年龄段的用户对于 DAU 的影响最大。如果能找出来这个关系，那么后续要提升 DAU，就有非常清晰的方向。</p>
-<h3 id="线性回归"><a href="#线性回归" class="headerlink" title="线性回归"></a>线性回归</h3><p>如果只有一个自变量 X，而且因变量 Y 和自变量 X 之间的数量变化关系呈现近似的线性关系，就可以建立一元线性回归方程，通过自变量 X 的值来预测因变量 Y 的值，这就是所谓的<strong>一元线性回归预测</strong>，回归方程如下所示：<br>$$<br>Y = aX + b<br>$$<br>我们可以通过历史数据（已知的 $ X $ 和 $ Y $ ），确定参数 $ a $ 和 $ b $ 的值，还原出回归方程，从而实现预测。很显然，$ a $和 $ b $ 的取值可以有很多种选择，那么什么才是最好的 $ a $ 和 $ b$ 呢？如果把真实值记为 $ y $，把预测值记为 $ \hat{y} $，那么让 $ SSR $ 值最小的 $ a $ 和 $ b $ 就是最好的 $ a $ 和 $ b $ ，称之为<strong>最小二乘解</strong>，其中$ SSR $ 值计算公式如下所示：<br>$$<br>SSR = \sum_{i=1}^{n}(y_i - \hat{y_i})^2<br>$$<br>损失函数是凹函数，找到使函数最小的<code>a</code>和<code>b</code>的值，可以通过向凹函数的拐点进行逼近的方式来找到更好的<code>a</code>和<code>b</code>的值，具体的公式如下所示：</p>
-<p>$$<br>a^\prime = a + (-1) \times \frac {\partial loss(a, b)} {\partial a} \times \Delta \<br>b^\prime = b + (-1) \times \frac {\partial loss(a, b)} {\partial b} \times \Delta<br>$$<br>对于上面的求 $ SSR $ 的函数来说，可以用下面的公式计算偏导数：<br>$$<br>f(a, b) = \frac {1} {N} \sum_{i=1}^{N}(y_i - (ax_i + b))^2  \<br>\frac {\partial {f(a, b)}} {\partial {a}} = \frac {2} {N} \sum_{i=1}^{N}(-x_iy_i + x_i^2a + x_ib) \<br>\frac {\partial {f(a, b)}} {\partial {b}} = \frac {2} {N} \sum_{i=1}^{N}(-y_i + x_ia + b)<br>$$<br>上面的方法称为<strong>梯度下降法</strong>。</p>
-<p>在Excel中，可以使用“数据分析”模块的“”来实现线性回归。</p>
-<img src="https://gitee.com/jackfrued/mypic/raw/master/20210714073655.png" width="75%">
-
-<p>对于回归分析，最为重要的是评价回归的结果是否理想，这关系到能否通过回归方程去预测将来，我们先看看决定系数（Multiple R-Squared，通常称之为$ R^2 $）。在统计学习中，决定系数用于度量因变量的变化中可由自变量解释部分所占的比例，也就是你的回归模型的解释力是否良好，$ R^2 $ 的值越接近<code>1</code>越好。<br>$$<br>SS_{tot} = \sum_{i}(y_{i} - \bar {y})^2 \<br>SS_{res} = \sum_{i}(y_{i} - \hat {y_i})^2 \<br>R^2 = 1 - \frac {SS_{res}} {SS_{tot}}<br>$$</p>
-<img src="https://gitee.com/jackfrued/mypic/raw/master/20210714074159.png" width="60%">
-
-<p>接下来我们还要对回归方程的显著性进行检验，主要包括 t 检验（回归系数的检验）和F检验（回归方程的检验）。对于F检验（F-statistic）的结果，主要关注其 p-value ，如果 p-value 小于0.05，那么说明拟合效果是不错的。</p>
 
                 
             </div>
@@ -382,7 +338,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://donxili.gitee.io/2021/09/29/xiang-guan-he-hui-gui/">https://donxili.gitee.io/2021/09/29/xiang-guan-he-hui-gui/</a>
+                    <a href="https://donxili.gitee.io/2021/12/02/can-shu-gu-ji/">https://donxili.gitee.io/2021/12/02/can-shu-gu-ji/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -591,11 +547,12 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/09/29/can-shu-gu-ji/">
+                <a href="/2021/12/02/can-shu-gu-ji/">
                     <div class="card-image">
                         
                         
@@ -611,9 +568,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-09-29
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-02
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -626,6 +583,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -644,13 +602,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/09/29/fang-chai-fen-xi/">
+                <a href="/2021/12/02/xiang-guan-he-hui-gui/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="方差分析">
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="相关和回归">
                         
-                        <span class="card-title">方差分析</span>
+                        <span class="card-title">相关和回归</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -661,7 +619,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-29
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-02
                             </span>
                         <span class="publish-author">
                             
@@ -753,6 +711,13 @@
 
 </main>
 
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
 
 
 

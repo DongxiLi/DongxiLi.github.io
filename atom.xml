@@ -6,7 +6,7 @@
   <link href="https://donxili.gitee.io/atom.xml" rel="self"/>
   
   <link href="https://donxili.gitee.io/"/>
-  <updated>2021-11-09T14:23:40.980Z</updated>
+  <updated>2021-12-02T07:57:29.078Z</updated>
   <id>https://donxili.gitee.io/</id>
   
   <author>
@@ -15,6 +15,106 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>参数估计</title>
+    <link href="https://donxili.gitee.io/2021/12/02/can-shu-gu-ji/"/>
+    <id>https://donxili.gitee.io/2021/12/02/can-shu-gu-ji/</id>
+    <published>2021-12-02T07:57:29.078Z</published>
+    <updated>2021-12-02T07:57:29.078Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="统计学" scheme="https://donxili.gitee.io/categories/%E7%BB%9F%E8%AE%A1%E5%AD%A6/"/>
+    
+    
+    <category term="统计学" scheme="https://donxili.gitee.io/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>相关和回归</title>
+    <link href="https://donxili.gitee.io/2021/12/02/xiang-guan-he-hui-gui/"/>
+    <id>https://donxili.gitee.io/2021/12/02/xiang-guan-he-hui-gui/</id>
+    <published>2021-12-02T07:56:46.867Z</published>
+    <updated>2021-12-02T07:56:54.589Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="统计学" scheme="https://donxili.gitee.io/categories/%E7%BB%9F%E8%AE%A1%E5%AD%A6/"/>
+    
+    
+    <category term="统计学" scheme="https://donxili.gitee.io/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>概率基础</title>
+    <link href="https://donxili.gitee.io/2021/12/02/gai-lu-ji-chu/"/>
+    <id>https://donxili.gitee.io/2021/12/02/gai-lu-ji-chu/</id>
+    <published>2021-12-02T07:55:43.617Z</published>
+    <updated>2021-12-02T07:56:13.037Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="统计学" scheme="https://donxili.gitee.io/categories/%E7%BB%9F%E8%AE%A1%E5%AD%A6/"/>
+    
+    
+    <category term="统计学" scheme="https://donxili.gitee.io/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>方差分析</title>
+    <link href="https://donxili.gitee.io/2021/12/02/fang-chai-fen-xi/"/>
+    <id>https://donxili.gitee.io/2021/12/02/fang-chai-fen-xi/</id>
+    <published>2021-12-02T07:54:18.315Z</published>
+    <updated>2021-12-02T07:54:28.221Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="统计学" scheme="https://donxili.gitee.io/categories/%E7%BB%9F%E8%AE%A1%E5%AD%A6/"/>
+    
+    
+    <category term="统计学" scheme="https://donxili.gitee.io/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6/"/>
+    
+  </entry>
   
   <entry>
     <title>闭包和装饰器</title>
@@ -121,106 +221,6 @@
     <category term="Python" scheme="https://donxili.gitee.io/tags/Python/"/>
     
     <category term="标准库" scheme="https://donxili.gitee.io/tags/%E6%A0%87%E5%87%86%E5%BA%93/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>参数估计</title>
-    <link href="https://donxili.gitee.io/2021/09/29/can-shu-gu-ji/"/>
-    <id>https://donxili.gitee.io/2021/09/29/can-shu-gu-ji/</id>
-    <published>2021-09-29T08:51:24.276Z</published>
-    <updated>2021-12-02T06:44:48.061Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="统计学" scheme="https://donxili.gitee.io/categories/%E7%BB%9F%E8%AE%A1%E5%AD%A6/"/>
-    
-    
-    <category term="统计学" scheme="https://donxili.gitee.io/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>相关和回归</title>
-    <link href="https://donxili.gitee.io/2021/09/29/xiang-guan-he-hui-gui/"/>
-    <id>https://donxili.gitee.io/2021/09/29/xiang-guan-he-hui-gui/</id>
-    <published>2021-09-29T08:51:19.635Z</published>
-    <updated>2021-12-02T06:44:48.062Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="统计学" scheme="https://donxili.gitee.io/categories/%E7%BB%9F%E8%AE%A1%E5%AD%A6/"/>
-    
-    
-    <category term="统计学" scheme="https://donxili.gitee.io/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>方差分析</title>
-    <link href="https://donxili.gitee.io/2021/09/29/fang-chai-fen-xi/"/>
-    <id>https://donxili.gitee.io/2021/09/29/fang-chai-fen-xi/</id>
-    <published>2021-09-29T08:51:13.000Z</published>
-    <updated>2021-12-02T06:44:48.062Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="统计学" scheme="https://donxili.gitee.io/categories/%E7%BB%9F%E8%AE%A1%E5%AD%A6/"/>
-    
-    
-    <category term="统计学" scheme="https://donxili.gitee.io/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>概率基础</title>
-    <link href="https://donxili.gitee.io/2021/09/29/gai-lu-ji-chu/"/>
-    <id>https://donxili.gitee.io/2021/09/29/gai-lu-ji-chu/</id>
-    <published>2021-09-29T01:30:44.494Z</published>
-    <updated>2021-12-02T07:37:54.120Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="统计学" scheme="https://donxili.gitee.io/categories/%E7%BB%9F%E8%AE%A1%E5%AD%A6/"/>
-    
-    
-    <category term="统计学" scheme="https://donxili.gitee.io/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6/"/>
     
   </entry>
   

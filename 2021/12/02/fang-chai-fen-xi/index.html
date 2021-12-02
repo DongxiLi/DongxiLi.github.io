@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="参数估计, Python,Mysql,Excel,Power BI,数据分析,数据可视化,机器学习">
+    <meta name="keywords" content="方差分析, Python,Mysql,Excel,Power BI,数据分析,数据可视化,机器学习">
     <meta name="description" content="专注于Web,分享生活,分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>参数估计 | 李东西</title>
+    <title>方差分析 | 李东西</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -219,12 +219,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">参数估计</h1>
+                    <h1 class="description center-align post-title">方差分析</h1>
                 </div>
             </div>
         </div>
@@ -271,7 +271,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-09-29
+                    2021-12-02
                 </div>
                 
 
@@ -292,26 +292,74 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="参数估计"><a href="#参数估计" class="headerlink" title="参数估计"></a>参数估计</h2><p>推断型统计的核心就是用样本推测总体。在实际生产环境中，可能无法获得所有的数据，或者即便获取了所有的数据，但是没有足够的资源来分析所有的数据，在这种情况下，我们都需要用非常小量的样本特征去评估总体数据的特征，这其中的一项工作就是参数估计。</p>
-<p>参数估计应用的场景非常的多，例如：</p>
+                <h2 id="方差分析"><a href="#方差分析" class="headerlink" title="方差分析"></a>方差分析</h2><h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><p>在产品运营中，我们会遇到各种需要评估运营效果的场景，包括促活的活动是否起到作用、A/B 测试的策略有无成效等等。具体例如，产品升级前的平均 DAU 是 155 万，产品升级后的平均 DAU 是 157 万，那么如何判断 DAU 提升的 2 万是正常的波动，还是升级带来的效果呢？对比同一组数据在实施某些策略前后的数据变化，判断数据波动是不是某一因素导致的，这种方法我们称之为方差分析。方差分析通常缩写为 ANOVA（Analysis of Variance），也叫“F 检验”，用于两个及两个以上分组样本的差异性检验。简单的说，<strong>分析差异的显著性是否明显的方法就是方差分析</strong>。</p>
+<p>举一个例子，如果我们需要分析优惠券的金额对用户的购买转化率是否能起到有效作用，我们可以将数据分成以下三个组：</p>
+<img src="https://gitee.com/jackfrued/mypic/raw/master/20210713085210.png" width="60%">
+
+<p>用户购买行为是随机的，购买率很高的不会很多，购买率极低的也不会很多，绝大部分用户的购买率都集中在某个值附近，这个值我们叫作整体购买率的平均值。如果每个客群分组自身的购买率均值与这个整体购买率平均值不一致，就会出现以下两种情况。</p>
 <ol>
-<li>在产品侧，我们可以用参数估计的方式评估A/B测试的效果。</li>
-<li>在运营侧，我们可以用参数估计的方式优化活动配置和推荐策略。</li>
-<li>在市场侧，我们可以用参数估计的方式制定广告投放策略。</li>
+<li><p>第一种情况</p>
+<p> 蓝色分组的购买率平均值（蓝色线）比整体平均值（黑色线）要高，有可能是最右边那个很高的购买率把分组的均值抬升的，同时蓝色分组的数据分布很散（方差大），此时不能有十足把握说明该组用户的购买转化率很高。</p>
+ <img src="https://gitee.com/jackfrued/mypic/raw/master/20210713085506.png" width="50%"></li>
+<li><p>第二种情况</p>
+<p> 绿色分组的购买率平均值（绿色线）比整体平均值（黑色线）要高，但是绿色分组的数据非常集中，都集中在分组的平均值（绿色线）附近，此时我们可以认为该组的转化率平均值与整体有明显区别。</p>
+ <img src="https://gitee.com/jackfrued/mypic/raw/master/20210713085608.png" width="50%"></li>
 </ol>
-<h3 id="实施步骤"><a href="#实施步骤" class="headerlink" title="实施步骤"></a>实施步骤</h3><ol>
-<li><p>确定分析的置信水平</p>
-</li>
-<li><p>确定估计的参数类型</p>
-</li>
-<li><p>计算参数估计的区间</p>
+<p>为了更好表述上面的问题，我们可以引入“组内方差”的概念，即描述每个分组内部数据分布的离散情况。如下图所示，对于上面蓝色和绿色分组的“组内方差”，显然蓝色的组内方差更大，绿色的组内方差更小。</p>
+<img src="https://gitee.com/jackfrued/mypic/raw/master/20210713085808.png" width="75%">
+
+<p>综上所述，如果上面三个分组的用户购买率平均值不在中线（整体购买率）左右，而是有明显的偏高或偏低，并且该组内的每个转化率都紧紧围绕在该组购买率平均值的附近（即组内方差很小）。那么我们就可以断定：该组的购买率与整体不一致，是该组对应优惠金额的影响造成的。</p>
+<h3 id="定量分析"><a href="#定量分析" class="headerlink" title="定量分析"></a>定量分析</h3><p>如果要进行定量分析，可以使用 F 检验值和 F crit 临界值这两个指标。F 检验值用来精确表达这几组差异大小的，F crit临界值是一个判断基线：</p>
 <ul>
-<li>数值型指标：$ A = z \times 样本标准差 / \sqrt{样本数量} $，其中 $ z $ 的值可以通过查表得到，如果置信水平选择95%，那么 $ z $ 的值就是1.96。大部分运营指标都是数值型指标，例如DAU、ARPU、转化率等。</li>
-<li>占比型指标：$ A = z \times \sqrt{占比 \times (1 - 占比) / 样本数量} $，$ z $ 值同上。占比型指标如性别占比、渠道占比、品类占比等。</li>
+<li>当 F &gt; F crit，这几组之间的差异超过判断基准了，认为不同优惠金额的分组间的购买率是不一样的，优惠金额这个因素会对购买率产生影响，也就是说通过运营优惠金额这个抓手，是可以提升用户购买转化率的；</li>
+<li>当 F &lt; F crit，则认为不同优惠金额的分组间的购买率是一样的，优惠金额这个因素不会对购买率产生影响，也就是说需要继续寻找其他与购买转化率有关的抓手。</li>
 </ul>
-<p> 最终得到的估计区间就是：$ [样本均值 - A, 样本均值 + A] $。 </p>
+<img src="https://gitee.com/jackfrued/mypic/raw/master/20210713090505.png">
+
+<blockquote>
+<p><strong>说明</strong>：图中 SS 代表方差、df 代表指标自由度、MS 是均方差、P-value 是差异的显著性水平。</p>
+</blockquote>
+<p>上图是用 Excel 得出的 A、B、C 三组的方差分析结果，如图所示 F  &lt; F crit，所以从定量分析角度，可以判定优惠金额不会对购买率产生影响。</p>
+<h3 id="实施方法"><a href="#实施方法" class="headerlink" title="实施方法"></a>实施方法</h3><p>实施方差分析可以分为以下三步走：</p>
+<ol>
+<li><p>判断样本是否满足“方差分析”的前提条件</p>
+<ul>
+<li>每个分组中的每个值都必须来自同一个总体样本；</li>
+<li>方差分析只能分析满足正态分布的指标，事实上，在产品运营中大部分指标都是正态分布，例如：<ul>
+<li>几乎所有的转化率都满足正态分布：购买率、点击率、转化率、活跃率、留存率、复购率等。</li>
+<li>几乎所有的业务量都满足正态分布：客单价、每日新增用户数、渠道引流的流量等。</li>
+<li>几乎所有的用户画像指标都满足正态分布：年龄、城市、登录次数、使用时长等。</li>
+</ul>
+</li>
+<li>分析的样本必须是随机抽样</li>
+</ul>
+</li>
+<li><p>计算 F 检验值和 F crit 临界值</p>
+</li>
+<li><p>如果有差异，需要评估差异大小</p>
+<p> 我们用一个新的指标来表示：$ R^2=SSA / SST $，其中 $ R^2 $ 表示差异大小，$ SSA $ 是组间误差平方和，$ SST $ 是总误差平方和。</p>
+<ul>
+<li>当 $ R^2 \gt 0.5 $，认为各个分组间的差异非常显著；</li>
+<li>当 $ R^2 $ 在 $ [0.1, 0.5] $ 之间时，认为各个分组间的差异一般显著；</li>
+<li>当 $ R^2 \lt 0.1 $ 时，认为各个分组间的差异微弱显著。</li>
+</ul>
 </li>
 </ol>
+<blockquote>
+<p><strong>练习</strong>：打开“方差分析练习.xlsx”文件，完成练习1。</p>
+</blockquote>
+<h3 id="多因素方差分析"><a href="#多因素方差分析" class="headerlink" title="多因素方差分析"></a>多因素方差分析</h3><p>上面的案例是针对一种策略来分析效果。我们把这种形式的方差分析叫作单因素方差分析，实际工作中，我们可能需要研究多种策略（例如运营中的渠道、活动、客群等）对结果的影响，我们称之为多因素方差分析。例如我们会在多个运营渠道上安排多种运营活动，评价各个渠道的转化率。此时，影响转化率的因素有渠道和活动两个因素，我们可以使用“无重复双因素方差分析”来检查数据。</p>
+<img src="https://gitee.com/jackfrued/mypic/raw/master/20210714125251.png" width="75%">
+
+<img src="https://gitee.com/jackfrued/mypic/raw/master/20210714130853.png" width="75%">
+
+<h3 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h3><p>工作中遇到以下两类场景就可以使用方差分析：</p>
+<ol>
+<li>同一个客群在实施某个策略前后的指标对比。</li>
+<li>两个或多个客群对比同一指标，评估同一指标在不同客群上的差异。</li>
+</ol>
+<img src="https://gitee.com/jackfrued/mypic/raw/master/20210714131318.png" width="85%">
+
 
                 
             </div>
@@ -338,7 +386,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://donxili.gitee.io/2021/09/29/can-shu-gu-ji/">https://donxili.gitee.io/2021/09/29/can-shu-gu-ji/</a>
+                    <a href="https://donxili.gitee.io/2021/12/02/fang-chai-fen-xi/">https://donxili.gitee.io/2021/12/02/fang-chai-fen-xi/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -551,13 +599,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/10/04/biao-zhun-ku-sys/">
+                <a href="/2021/12/02/gai-lu-ji-chu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="Python sys模块的常用函数">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="概率基础">
                         
-                        <span class="card-title">Python sys模块的常用函数</span>
+                        <span class="card-title">概率基础</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -568,8 +616,57 @@
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-10-04
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-12-02
                         </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%BB%9F%E8%AE%A1%E5%AD%A6/" class="post-category">
+                                    统计学
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6/">
+                        <span class="chip bg-color">统计学</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/11/09/zhuang-shi-qi/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="闭包和装饰器">
+                        
+                        <span class="card-title">闭包和装饰器</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-09
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -589,57 +686,8 @@
                         <span class="chip bg-color">Python</span>
                     </a>
                     
-                    <a href="/tags/%E6%A0%87%E5%87%86%E5%BA%93/">
-                        <span class="chip bg-color">标准库</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/09/29/xiang-guan-he-hui-gui/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="相关和回归">
-                        
-                        <span class="card-title">相关和回归</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-29
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E7%BB%9F%E8%AE%A1%E5%AD%A6/" class="post-category">
-                                    统计学
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6/">
-                        <span class="chip bg-color">统计学</span>
+                    <a href="/tags/%E8%A3%85%E9%A5%B0%E5%99%A8%EF%BC%8C%E9%97%AD%E5%8C%85/">
+                        <span class="chip bg-color">装饰器，闭包</span>
                     </a>
                     
                 </div>
@@ -713,6 +761,13 @@
 
 </main>
 
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
 
 
 
